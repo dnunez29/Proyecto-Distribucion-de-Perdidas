@@ -82,10 +82,77 @@ Ahora se procede a dar una leve explicación de cada una de las variables que co
 Como se pudo observar, la base cuenta con una cantidad considerable de variables de interés, donde leyendo la descripción de cada una se puede entender e intuir el posible impacto que tengan en la elegibilidad de las personas. Sin embargo, se tratará de reducir la cantidad de variables haciendo un análisis exploratorio de los datos de tal manera que se pueda eliminar variables que estén correlacionados entre sí. Para llevar a cabo dicho proceso, se utilizara el modelo de cópulas para eliminar o unificar este tipo variables y se utilizarán modelos predictivos como la regresión logística y Random Forest para determinar la elegibilidad de las personas. 
 
 
+### Principios y/o teorías
 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+
+
+### Fichas bibliográficas
+
+\noindent\rule{14cm}{0.4pt}
+
+
+- \textbf{Título:} The Grouped t-copula with an Application to Credit Risk
+
+- \textbf{Autor(es):} Stéphane Daul, Enrico De Giorgi, Filip Lindskog & Alexander McNeil
+
+- \textbf{Año:} 2003
+
+- \textbf{Nombre del tema:} Cópulas
+ 
+- \textbf{Forma de organizarlo:}
+
+  -\textbf{Cronológico:} 2003
+  
+  -\textbf{Metodológico:} Grouped t-Copulas 
+  
+  -\textbf{Temático:} Métodos para explicar la depedencia de covariables   
+  
+  -\textbf{Teoría:} Uso de cópulas en el riesgo crediticio
+
+- \textbf{Resumen en una oración:}   
+
+- \textbf{Argumento central:} Lo esencial de este artículo es la justificación del uso en particular de la t-Cópulas agrupadas en problemas de riesgo crediticio. 
+
+- \textbf{Problemas con el tema:} Los parámetros de los grados de libertad calculados por lo autores fueron considerablemente altos, sin embargo, aún así siguen dando incrementos importantes en el aumento del riesgo comparado con el modelo con cópula Gaussiana. 
+
+- \textbf{Resumen en un parráfo:} Se extiende el concepto de t-Cópula para generar una nueva t-Cópula agrupada que describe de manera más efectiva la dependencia que existe entre factores de riesgo en el ámbito financiero. En el artículo también se explica el proceso de cálculo de los nuevos parámetros de las t-Cópulas agrupadas. Básicamente la idea que hay de fondo es juntar los diferentes factores de riesgo en esta t-Cópula agrupada donde las variables aleatorias dentro de esta cópula tienen una t-cópula con diferentes grados de libertad. Como resultado, esto da una estructura de dependencia más flexible que se ajusta mejor para modelos de riesgos que tengan múltiples factores. A modo de conclusión, utilizan el value-at-risk para comparar el modelo usando t-Cópulas con el modelo de t-Cópulas agrupadas y este segundo siempre arroja resultados con medidas de riesgo mayores, por lo que se tiene un modelo más conservador y preciso. 
+
+
+\noindent\rule{14cm}{0.4pt}
+
+
+- \textbf{Título:} Application of Vine Copulas to Credit Portfolio
+Risk Modeling
+
+- \textbf{Autor(es):} Marco Geidosch & Matthias Fischer
+
+- \textbf{Año:} 2016
+
+- \textbf{Nombre del tema:} Cópulas
+
+- \textbf{Forma de organizarlo:}
+
+  -\textbf{Cronológico:} 2015
+  
+  -\textbf{Metodológico:} Vine Copulas
+  
+  -\textbf{Temático:}  Métodos para explicar la depedencia de covariables
+  
+  -\textbf{Teoría:} Uso de cópulas para modelar problemas relacionados con riesgo
+
+- \textbf{Resumen en una oración:} Dado lo poco flexibles que pueden llegar a ser los modelos convencionales de cópulas se propone el uso de Vine Cópulas para modelar problemas multivariados relacionados con riesgo
+
+- \textbf{Argumento central:} Mostrar la superioridad de las Vine Cópulas sobre las cópulas convencionales para la modelación del riesgo
+
+- \textbf{Problemas con el tema:} La flexibilidad que presentan las Vine Cópulas viene con la desventaja de que hay una abundante número de estructuras de las que se puede escoger y a priori no se sabe cuál es la que mejor describe los datos. 
+
+- \textbf{Resumen en un parráfo:} El uso de cópulas convencionales presenta dos limitantes, la primera es que cuando el número de dimensiones es mayor que dos, el número de familias de cópulas aplicables se limita al caso elíptico y arquimediano. La segunda limitante es que solo dependencias simétricas y simples pueden ser modeladas y eso está lejos de ser considerado un escenario real. De ahí nace la necesidad de usar Vine Cópulas. Las Vines Cópulas se usan para describir cópulas de varias variables usando como base cópulas bivariadas o "pair-copulas" . La idea que existe de fondo con los Vines Cópulas es que distribuciones multivariadas se pueden descomponer secuencialmente en descomposiciones bivariadas y para llevar acabo dicho proceso se hace uso de os D-vine y los R-vine. Lo que se hace es tomar la densidad multivariada de la distribución y se transforma en funciones de densidad de las cópulas bivariadas. 
+
+
+
