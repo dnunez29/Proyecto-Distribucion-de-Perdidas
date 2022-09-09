@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.6)  8 SEP 2022 22:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.6)  8 SEP 2022 22:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Proyecto-de-Perdidas.tex
-(Proyecto-de-Perdidas.tex
+**./Bitacoras_Grupo5.tex
+(Bitacoras_Grupo5.tex
 LaTeX2e <2022-06-01> patch level 3
 L3 programming layer <2022-06-16> (C:\Users\andre\AppData\Local\Programs\MiKTeX
 \tex/latex/memoir\memoir.cls
@@ -1107,11 +1107,11 @@ LaTeX Font Info:    Trying to load font information for T1+ppl on input line 15
 1.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-) (Proyecto-de-Perdidas.aux
+) (Bitacoras_Grupo5.aux
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
 )
-\openout1 = `Proyecto-de-Perdidas.aux'.
+\openout1 = `Bitacoras_Grupo5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 151.
 LaTeX Font Info:    ... okay on input line 151.
@@ -1224,11 +1224,11 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Data encoding 'utf8' specified.
 (biblatex)             No need to reencode data.
-\openout4 = `Proyecto-de-Perdidas-blx.bib'.
+\openout4 = `Bitacoras_Grupo5-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Proyecto-de-Perdidas.bbl' found.
-(Proyecto-de-Perdidas.bbl)
+Package biblatex Info: ... file 'Bitacoras_Grupo5.bbl' found.
+(Bitacoras_Grupo5.bbl)
 Package biblatex Info: Reference section=0 on input line 151.
 Package biblatex Info: Reference segment=0 on input line 151.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
@@ -1301,7 +1301,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
 24.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (Proyecto-de-Perdidas.toc
+) (Bitacoras_Grupo5.toc
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1413,25 +1413,25 @@ Overfull \hbox (12.00995pt too wide) in paragraph at lines 666--667
 
 ]
 \tf@toc=\write5
-\openout5 = `Proyecto-de-Perdidas.toc'.
+\openout5 = `Bitacoras_Grupo5.toc'.
 
-(Proyecto-de-Perdidas.aux
+(Bitacoras_Grupo5.aux
 LaTeX Info: Redefining \sptext on input line 28.
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
 )
-Package logreq Info: Writing requests to 'Proyecto-de-Perdidas.run.xml'.
-\openout1 = `Proyecto-de-Perdidas.run.xml'.
+Package logreq Info: Writing requests to 'Bitacoras_Grupo5.run.xml'.
+\openout1 = `Bitacoras_Grupo5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  26060 strings out of 478351
- 442527 string characters out of 2837053
- 1021783 words of memory out of 3000000
+ 442435 string characters out of 2837053
+ 1021759 words of memory out of 3000000
  43819 multiletter control sequences out of 15000+600000
  531202 words of font info for 263 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,13n,91p,1909b,1961s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 86i,13n,91p,1905b,1961s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:
 /Users/andre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Use
 rs/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/U
@@ -1441,7 +1441,7 @@ C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pf
 b><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a
 .pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/upl
 ri8a.pfb>
-Output written on Proyecto-de-Perdidas.pdf (10 pages, 287586 bytes).
+Output written on Bitacoras_Grupo5.pdf (10 pages, 287586 bytes).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)

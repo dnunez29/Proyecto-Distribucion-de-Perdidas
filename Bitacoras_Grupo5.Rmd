@@ -3,7 +3,8 @@ bibliography: referencias_proyecto.bib
 csl: apa.csl
 output:
   pdf_document: 
-    toc_depth: 0
+    toc: yes
+    toc_depth: 3
     includes:
       in_header: preambulo.tex
       before_body: titulo.tex
@@ -21,6 +22,14 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- ```{r child='Bitacora2.Rmd'} -->
 <!-- ``` -->
 
+
+```{r child='Anexos.Rmd'}
+```
+
 ```{r child='Referencias.Rmd'}
 ```
+
+
+
+
 
