@@ -487,7 +487,7 @@ CM1 <- confusionMatrix(as.factor(logit_P), as.factor(actual), mode = "everything
 ```
 
 
-Para determinar si al solicitante se le dará el crédito, el umbral será del 0.5, por lo que si el resultado de la regresión es mayor a 0.5, se le da el crédito y en caso contrario no. Los resultados de la regresion
+Para determinar si al solicitante se le dará el crédito, el umbral será del 0.5, por lo que si el resultado de la regresión es mayor a 0.5, se le da el crédito y en caso contrario no. El resultado de la regresión arroja una curva ROC como se muestra a continuación:
 
 ```{r Logistic Regression ROC, fig.cap="Curva ROC"}
 # roc_score <- roc(actual, logit_P, plot = TRUE)
@@ -504,7 +504,6 @@ rocplot
 
 ```
 
-El resultado de la regresión arroja una curva ROC como se muestra a continuación:
 
 
 ```{r Logistic Regression 2}
