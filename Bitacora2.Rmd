@@ -1,8 +1,152 @@
 # Bitacora 2
 
+```{r}
+library(readr)
+library(dplyr)
+library(tidyverse)
+library(formattable)
+library(kableExtra)
+library(xtable)
+library(ggplot2)
+library(hrbrthemes)
+library(viridis)
+```
+
+
+## Fichas bibliográficas nuevas
+
+
+- \textbf{Título:} Modelado de parejas aleatorias usando cópulas
+
+- \textbf{Autor(es):} Gabriel Escarela & Angélica Hernández
+
+- \textbf{Año:} 2009
+
+- \textbf{Nombre del tema:} Modelos de cópulas
+
+- \textbf{Forma de organizarlo:}
+
+  -\textbf{Cronológico:} 2009
+  
+  -\textbf{Metodológico:} Modelos de cópulas
+  
+  -\textbf{Temático:}  Cópulas bivariadas
+  
+  -\textbf{Teoría:} Teoría de cópulas
+
+- \textbf{Resumen en una oración:} Definición formal de las cópulas bivariadas junto con ejemplos de su utilidad
+
+- \textbf{Argumento central:} Teoría de cópulas y su construcción teórica
+
+- \textbf{Problemas con el tema:} Solo funcionan cuando se tienen 2 variables. 
+
+- \textbf{Resumen en un párrafo:} Las cópulas bivariadas son funciones que intentan correlacionar dos distribuciones univariadas por lo que estos modelos ayudan a obtener una distribución conjunta a partir de varias funciones de distribución asociadas a variables aleatorias con una cierta relación entre sí. Es decir, con este método se construye una distribución multivariada a partir de las distribuciones univariadas de las variables respectivas. Este tipo de modelo también resulta en una forma de estructurar la dependencia de estas parejas de variables aleatorias en distribuciones conjuntas. Es por esto que son tan populares puesto que tienen una gran flexibilidad para encontrar distribuciones conjuntas a partir de cualquier pareja aleatoria, lo que es usual tener en muchas disciplinas.
+
+\noindent\rule{14cm}{0.4pt}
+
+- \textbf{Título:} An Introduction to Statistical
+Learning with Applications in R - Chapter 4: Classification
+
+- \textbf{Autor(es):} Gareth James, Daniela Witten, Trevor Hastie & Robert Tibshirani
+
+- \textbf{Año:} 2021
+
+- \textbf{Nombre del tema:} Métodos de clasificación
+
+- \textbf{Forma de organizarlo:}
+
+  -\textbf{Cronológico:} 2021
+  
+  -\textbf{Metodológico:} Métodos de clasificación
+  
+  -\textbf{Temático:}  Regresión logística para clasificación
+  
+  -\textbf{Teoría:} Realizar modelos de clasificación 
+
+- \textbf{Resumen en una oración:} Implementar métodos de clasificación y sus pruebas para determinar la calidad del modelo.
+
+- \textbf{Argumento central:} Métodos de clasificación y sus pruebas con ejemplos programados en R.
+
+- \textbf{Problemas con el tema:} No es un problema como tal, pero se menciona que hay que tener cuidado pues hay varios métodos de clasificación y tal vez el escogido no sea el más conveniente. 
+
+- \textbf{Resumen en un párrafo:} A diferencia de los métodos de regresión, se teoriza un nuevo tipo de regresión llamada regresión logística, la cual sirve para clasificar de manera binaria una variable. Entonces en vez de entrenar un modelo para determinar si hay una correlación entre la variable dependiente y las covariables, se entrena para clasificar en alguna de dos categorías a la variable dependiente de acuerdo a sus covariables. También se mencionan diagnósticos de los modelos de clasificación que ayudan a determinar si un modelo es mejor que otro o está mejor ajustado como por ejemplo el concepto de especificidad y sensibilidad los cuales miden la tasa de falsos positivos y los falsos negativos respectivamente. Y como de acuerdo al tipo de problema para el cual se está realizando el modelo, se debe considerar ajustes del modelo para aumentar estas medidas. Otro diágnostico bastante utilizado es el de la curva ROC (Receiver Operation Curve), la cual sirve para graficar la tasa de falsos positivos con la sensibilidad del modelo. 
+
+\noindent\rule{14cm}{0.4pt}
+
+- \textbf{Título:} La regresión logística
+
+- \textbf{Autor(es):} Horacio Chitarroni
+
+- \textbf{Año:} 2002
+
+- \textbf{Nombre del tema:} Regresión logística
+
+- \textbf{Forma de organizarlo:}
+
+  -\textbf{Cronológico:} 2002
+  
+  -\textbf{Metodológico:} Métodos de clasificación
+  
+  -\textbf{Temático:}  Regresión logística para clasificación
+  
+  -\textbf{Teoría:} Realizar modelos de clasificación 
+
+- \textbf{Resumen en una oración:} Implementar métodos de clasificación con ejemplos e interpretación de resultados
+
+- \textbf{Argumento central:} Método de regresión logística y su implementación 
+
+- \textbf{Problemas con el tema:} El autor no menciona problemas.
+
+- \textbf{Resumen en un párrafo:} El modelo de regresión logística es un instrumento de análisis multivariado y dependiendo del enfoque se puede utilizar para realizar predicciones o inferencia. Se menciona que es muy útil cuando la variable dependiente es de carácter dicotómico (binario). Asimismo, se aclara que cuando las covariables son categóricas estas deberían de recibir una transformación y convertirlas en variables "dummy", es decir, variables simuladas. Este tipo de modelo se puede utilizar de manera predictiva, el cual no solo determina la probabilidad de la variable dependiente sino el peso que tienen las covariables para realizar la predicción, lo cual también ayuda a nivel interpretativo pues se pueden determinar que variables son más significativas que otras para el modelo. 
+\noindent\rule{14cm}{0.4pt}
+
+\newpage
 
 ## Ordenamiento de literatura
 
+La literatura se va a ordenar de manera metodológica por lo que se tienen dos grupos, la literatura ligada a los métodos de clasificación, y la literatura enfocada en cópulas. 
+
+```{r Ordenamiento Literatura Regresion}
+
+r1 <- c("Metodológico", "Regresión logística", "Métodos de clasificación","An Introduction to Statistical
+Learning","2021", "James et al.")
+
+r2 <- c("Metodológico", "Regresión logística", "Regresión logística","La regresión logística","2002", "Horacio Chitarroni")
+
+data.liter <- data.frame(rbind(r1,r2))
+
+rownames(data.liter) <- c()
+
+data.liter %>% kbl(caption="Clasificación Binaria",
+      format="latex",
+      row.names = NA,
+      col.names = c("Tipo de grupo","Nombre del grupo","Nombre del tema","Título","Año","Autor(es)"), align = 'c')%>%
+      kable_styling(latex_options = c("HOLD_position"),full_width = T)
+
+```
+
+```{r Ordenamiento Literatura Copulas}
+
+r1 <- c("Metodológico", "Cópulas", "Grouped t-Copulas ","The Grouped t-copula with an Application to Credit Risk","2003", "Daul et al.")
+
+r2 <- c("Metodológico", "Cópulas", "Vine Copulas","Application of Vine Copulas to Credit Portfolio
+Risk Modeling","2016", "Geidosch & Fischer")
+
+r3 <- c("Metodológico", "Cópulas", "Cópulas bivariadas","Modelado de parejas aleatorias usando cópulas","2009", "Escarela & Hernández") 
+
+data.liter <- data.frame(rbind(r1,r2,r3))
+
+rownames(data.liter) <- c()
+
+data.liter %>% kbl(caption="Cópulas",
+      format="latex",
+      row.names = NA,
+      col.names = c("Tipo de grupo","Nombre del grupo","Nombre del tema","Título","Año","Autor(es)"), align = 'c')%>%
+      kable_styling(latex_options = c("HOLD_position"),full_width = T)
+
+```
+
+\newpage
 
 ## Análisis estadístico
 
@@ -90,7 +234,7 @@ tabla1 <- data %>% group_by(Purpose) %>% summarize(n =n())
 
 tabla1 %>% kbl(caption="Distribución de la variable Próposito del Crédito",
       format="latex",
-      col.names = c("Próposito","Cantidad de observaciones"), align = 'c')%>% 
+      col.names = c("Propósito","Cantidad de observaciones"), align = 'c')%>% 
   footnote(general = "Elaboración propia con datos extraídos de Kaggle") %>% kable_styling(latex_options = "HOLD_position")
 ```
 
@@ -389,7 +533,7 @@ rocplot <- ggplot(df, aes(m = logit_P, d = actual)) +
 
 ```
 
-
+\newpage
 
 ## Fichas de Resultados
 
@@ -438,5 +582,23 @@ rocplot <- ggplot(df, aes(m = logit_P, d = actual)) +
 - \textbf{Resumen en un parráfo:} Se desarrollaron una regresión logística que arroja un área debajo de la curva de alrededor del 70 $\%$. La precisión es de un 75 $\%$  y la sensibilidad del 82 $\%$ aproximadamente. Asimismo, entre las variables más significantes de este modelo destaca el balance actual, el estado de pago actual del pasado crédito solicitado, la duración del crédito solicitado y el tiempo que lleva el solicitante en su actual empleo. Por otro lado, entre las variables que arrojan menos significancia destacan la edad del solicitante, el monto del crédito, el tipo de apartamento u hogar que tenga y si tiene créditos en otros bancos o instituciones. A partir de estos resultados se comenzará a usar modelos de cópulas para verificar la independecia existente entre la clasificación recién hecha y las variables significativas del modelo. 
 
 
+\newpage
+
 ## Enlaces de Literatura
+
+Para un primer acercamiento a contestar la pregunta de investigación, antes de poder determinar correlaciones entre las variables de estudio para determinar las pérdidas del banco por impago crediticio se necesita una manera de determinar alguna medida como el score crediticio por individuo. Es por esto que primero se va a realizar un modelo de clasificación de elegibilidad de crédito, para lo cual se implementó un modelo de regresión logística. Este tipo de regresión como menciona James, a diferencia de los métodos de regresión, se teoriza un nuevo tipo de regresión llamada regresión logística, la cual sirve para clasificar de manera binaria una variable. Entonces en vez de entrenar un modelo para determinar si hay una correlación entre la variable dependiente y las covariables, se entrena para clasificar en alguna de dos categorías a la variable dependiente de acuerdo a sus covariables.  Esta definición del modelo es similar a la que hace Chitarroni en su artículo ya que lo define como un instrumento de análisis multivariado y dependiendo del enfoque se puede utilizar para realizar predicciones o inferencia. Se menciona que es muy útil cuando la variable dependiente es de carácter dicotómico (binario). Asimismo, se aclara que cuando las covariables son categóricas estas deberían de recibir una transformación y convertirlas en variables "dummy", es decir, variables simuladas. 
+
+Sin embargo, en el artículo expuesto por Chitarroni se le da más peso a las pruebas de significancia de variables así como a la interpretabilidad de los resultados enfocado más en un modelo predictivo de manera que especifica que este tipo de modelo se puede utilizar de manera predictiva, el cual no solo determina la probabilidad de la variable dependiente sino el peso que tienen las covariables para realizar la predicción, lo cual también ayuda a nivel interpretativo pues se pueden determinar que variables son más significativas que otras para el modelo. Mientras que en su libro James también  menciona diagnósticos de los modelos de clasificación que ayudan a determinar si un modelo es mejor que otro o está mejor ajustado como por ejemplo el concepto de especificidad y sensibilidad los cuales miden la tasa de falsos positivos y los falsos negativos respectivamente. Y como de acuerdo al tipo de problema para el cual se está realizando el modelo, se debe considerar ajustes del modelo para aumentar estas medidas. Otro diágnostico bastante utilizado es el de la curva ROC (Receiver Operation Curve), la cual sirve para graficar la tasa de falsos positivos con la sensibilidad del modelo. 
+
+Tomando en consideración ambos enfoques se puede ver que con los resultados obtenidos en el modelo realizado se logra desarrollar una regresión logística que arroja un área debajo de la curva de alrededor del 70 $\%$. La precisión es de un 75 $\%$  y la sensibilidad del 82 $\%$ aproximadamente. Asimismo, entre las variables más significantes de este modelo destaca el balance actual, el estado de pago actual del pasado crédito solicitado, la duración del crédito solicitado y el tiempo que lleva el solicitante en su actual empleo. Por otro lado, entre las variables que arrojan menos significancia destacan la edad del solicitante, el monto del crédito, el tipo de apartamento u hogar que tenga y si tiene créditos en otros bancos o instituciones. A partir de estos resultados se comenzará a usar modelos de cópulas para verificar la independecia existente entre la clasificación recién hecha y las variables significativas del modelo.
+
+Para la segunda parte del trabajo, donde ya se plantea el hecho de encontrar las pérdidas del banco, se planean utilizar modelos que involucren cópulas. Estos modelos sirven para encontrar distribuciones conjuntas que generalmente tienen un alto grado de correlación entre sí, por lo que analizarlas por separado no es lo más recomendable. Pues como menciona Escarela, las cópulas bivariadas son funciones que intentan correlacionar dos distribuciones univariadas por lo que estos modelos ayudan a obtener una distribución conjunta a partir de varias funciones de distribución asociadas a variables aleatorias con una cierta relación entre sí. Es decir, con este método se construye una distribución multivariada a partir de las distribuciones univariadas de las variables respectivas. Este tipo de modelo también resulta en una forma de estructurar la dependencia de estas parejas de variables aleatorias en distribuciones conjuntas. Es por esto que son tan populares puesto que tienen una gran flexibilidad para encontrar distribuciones conjuntas a partir de cualquier pareja aleatoria, lo que es usual tener en muchas disciplinas.
+
+Sin embargo para el enfoque del trabajo estas no son de mucha utlidad pues como menciona Geidosch el  uso de cópulas convencionales presenta dos limitantes, la primera es que cuando el número de dimensiones es mayor que dos, el número de familias de cópulas aplicables se limita al caso elíptico y arquimediano. La segunda limitante es que solo dependencias simétricas y simples pueden ser modeladas y eso está lejos de ser considerado un escenario real. De ahí nace la necesidad de usar Vine Cópulas. Las Vines Cópulas se usan para describir cópulas de varias variables usando como base cópulas bivariadas o "pair-copulas" . La idea que existe de fondo con los Vines Cópulas es que distribuciones multivariadas se pueden descomponer secuencialmente en descomposiciones bivariadas y para llevar acabo dicho proceso se hace uso de los D-vine y los R-vine. Lo que se hace es tomar la densidad multivariada de la distribución y se transforma en funciones de densidad de las cópulas bivariadas. 
+
+Estas limitantes son las que motivan también a Daul a encontrar modelos más generales ya que en su artículo extiende el concepto de t-Cópula para generar una nueva t-Cópula agrupada que describe de manera más efectiva la dependencia que existe entre factores de riesgo en el ámbito financiero. En el artículo también se explica el proceso de cálculo de los nuevos parámetros de las t-Cópulas agrupadas. Básicamente la idea que hay de fondo es juntar los diferentes factores de riesgo en esta t-Cópula agrupada donde las variables aleatorias dentro de esta cópula tienen una t-cópula con diferentes grados de libertad. Como resultado, esto da una estructura de dependencia más flexible que se ajusta mejor para modelos de riesgos que tengan múltiples factores. A modo de conclusión, utilizan el value-at-risk para comparar el modelo usando t-Cópulas con el modelo de t-Cópulas agrupadas y este segundo siempre arroja resultados con medidas de riesgo mayores, por lo que se tiene un modelo más conservador y preciso. 
+
+
+
+
 
