@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.6)  16 OCT 2022 19:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.6)  16 OCT 2022 20:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Bitacoras_Grupo5.tex
-(Bitacoras_Grupo5.tex
+**./Anteproyecto_Grupo5.tex
+(Anteproyecto_Grupo5.tex
 LaTeX2e <2022-06-01> patch level 3
 L3 programming layer <2022-06-16> (C:\Users\andre\AppData\Local\Programs\MiKTeX
 \tex/latex/memoir\memoir.cls
@@ -1214,48 +1214,48 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 Package biblatex Warning: Conflicting options.
 (biblatex)                '<namepart>inits' conflicts with 'uniquename=full'.
-(biblatex)                Setting 'uniquename=init' on input line 167.
+(biblatex)                Setting 'uniquename=init' on input line 174.
 
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 16
-7.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 17
+4.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-) (Bitacoras_Grupo5.aux
+) (Anteproyecto_Grupo5.aux
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
 )
-\openout1 = `Bitacoras_Grupo5.aux'.
+\openout1 = `Anteproyecto_Grupo5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 167.
-LaTeX Font Info:    ... okay on input line 167.
-LaTeX Info: Redefining \microtypecontext on input line 167.
-Package microtype Info: Applying patch `item' on input line 167.
-Package microtype Info: Applying patch `toc' on input line 167.
-Package microtype Info: Applying patch `eqnum' on input line 167.
-Package microtype Info: Applying patch `footnote' on input line 167.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Info: Redefining \microtypecontext on input line 174.
+Package microtype Info: Applying patch `item' on input line 174.
+Package microtype Info: Applying patch `toc' on input line 174.
+Package microtype Info: Applying patch `eqnum' on input line 174.
+Package microtype Info: Applying patch `footnote' on input line 174.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 167.
+LaTeX Info: Redefining \showhyphens on input line 174.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1287,7 +1287,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 167.
+Package hyperref Info: Link coloring OFF on input line 174.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1296,14 +1296,14 @@ Package hyperref Info: Link coloring OFF on input line 167.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
 * v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=443.57848pt
+* \textwidth=500.484pt
 * \textheight=624.25346pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
 * \topmargin=-16.97922pt
 * \headheight=12.0pt
 * \headsep=18.06749pt
@@ -1322,8 +1322,8 @@ Package hyperref Info: Link coloring OFF on input line 167.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \. on input line 167.
-LaTeX Info: Redefining \% on input line 167.
+LaTeX Info: Redefining \. on input line 174.
+LaTeX Info: Redefining \% on input line 174.
 Package biblatex Info: Trying to load language 'spanish'...
 Package biblatex Info: ... file 'spanish.lbx' found.
 
@@ -1337,84 +1337,86 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Data encoding 'utf8' specified.
 (biblatex)             No need to reencode data.
-\openout4 = `Bitacoras_Grupo5-blx.bib'.
+\openout4 = `Anteproyecto_Grupo5-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Bitacoras_Grupo5.bbl' found.
-(Bitacoras_Grupo5.bbl)
-Package biblatex Info: Reference section=0 on input line 167.
-Package biblatex Info: Reference segment=0 on input line 167.
+Package biblatex Info: ... file 'Anteproyecto_Grupo5.bbl' found.
+(Anteproyecto_Grupo5.bbl)
+Package biblatex Info: Reference section=0 on input line 174.
+Package biblatex Info: Reference segment=0 on input line 174.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 2
-00.
+07.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-200.
+207.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-200.
+207.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-200.
+207.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 200.
+(Font)              scaled to size 12.50409pt on input line 207.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 200.
+(Font)              scaled to size 9.37807pt on input line 207.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 200.
+(Font)              scaled to size 7.29405pt on input line 207.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 200.
+(Font)              scaled to size 12.50409pt on input line 207.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 200.
+(Font)              scaled to size 9.37807pt on input line 207.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 200.
+(Font)              scaled to size 7.29405pt on input line 207.
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-200.
+207.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-<images/ucr_marca_de_agua.png, id=3, 180.675pt x 68.255pt>
-File: images/ucr_marca_de_agua.png Graphic file (type png)
-<use images/ucr_marca_de_agua.png>
-Package pdftex.def Info: images/ucr_marca_de_agua.png  used on input line 216.
+<../images/ucr_marca_de_agua.png, id=3, 180.675pt x 68.255pt>
+File: ../images/ucr_marca_de_agua.png Graphic file (type png)
+<use ../images/ucr_marca_de_agua.png>
+Package pdftex.def Info: ../images/ucr_marca_de_agua.png  used on input line 22
+3.
 (pdftex.def)             Requested size: 150.63287pt x 56.90575pt.
-<images/EMat_escuela_matematica_horizontal_1.png, id=5, 128.8815pt x 23.1264pt>
-
-File: images/EMat_escuela_matematica_horizontal_1.png Graphic file (type png)
-<use images/EMat_escuela_matematica_horizontal_1.png>
-Package pdftex.def Info: images/EMat_escuela_matematica_horizontal_1.png  used 
-on input line 217.
+<../images/EMat_escuela_matematica_horizontal_1.png, id=5, 128.8815pt x 23.1264
+pt>
+File: ../images/EMat_escuela_matematica_horizontal_1.png Graphic file (type png
+)
+<use ../images/EMat_escuela_matematica_horizontal_1.png>
+Package pdftex.def Info: ../images/EMat_escuela_matematica_horizontal_1.png  us
+ed on input line 224.
 (pdftex.def)             Requested size: 128.88707pt x 23.1274pt.
-<images/granosgirasol.png, id=6, 623.32875pt x 620.3175pt>
-File: images/granosgirasol.png Graphic file (type png)
-<use images/granosgirasol.png>
-Package pdftex.def Info: images/granosgirasol.png  used on input line 230.
+<../images/granosgirasol.png, id=6, 623.32875pt x 620.3175pt>
+File: ../images/granosgirasol.png Graphic file (type png)
+<use ../images/granosgirasol.png>
+Package pdftex.def Info: ../images/granosgirasol.png  used on input line 237.
 (pdftex.def)             Requested size: 307.14578pt x 305.66199pt.
 [1
 
 
-{C:/Users/andre/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/gra
-nosgirasol.png> <./images/ucr_marca_de_agua.png> <./images/EMat_escuela_matemat
-ica_horizontal_1.png>]
+{C:/Users/andre/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <../images/gr
+anosgirasol.png> <../images/ucr_marca_de_agua.png> <../images/EMat_escuela_mate
+matica_horizontal_1.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
-40.
+47.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (Bitacoras_Grupo5.toc
+) (Anteproyecto_Grupo5.toc
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1435,20 +1437,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.242 \hypertarget
-                  {bituxe1cora-1}{% [1
+l.249 \hypertarget
+                  {objetivos}{% [1
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 243.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 250.
 [1
 
 
+] [2
+
 ]
-LaTeX Info: Redefining \. on input line 386.
-LaTeX Info: Redefining \% on input line 386.
-LaTeX Info: Redefining \. on input line 386.
-LaTeX Info: Redefining \% on input line 386.
+LaTeX Info: Redefining \. on input line 372.
+LaTeX Info: Redefining \% on input line 372.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.77002pt, for example:
@@ -1457,37 +1459,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[2]
-LaTeX Info: Redefining \. on input line 461.
-LaTeX Info: Redefining \% on input line 461.
-LaTeX Info: Redefining \. on input line 461.
-LaTeX Info: Redefining \% on input line 461.
+[3] [4
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[3]
-LaTeX Info: Redefining \. on input line 538.
-LaTeX Info: Redefining \% on input line 538.
-LaTeX Info: Redefining \. on input line 538.
-LaTeX Info: Redefining \% on input line 538.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[4]
-LaTeX Info: Redefining \. on input line 620.
-LaTeX Info: Redefining \% on input line 620.
-LaTeX Info: Redefining \. on input line 620.
-LaTeX Info: Redefining \% on input line 620.
+]
+LaTeX Info: Redefining \. on input line 483.
+LaTeX Info: Redefining \% on input line 483.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.77002pt, for example:
@@ -1497,10 +1473,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [5]
-LaTeX Info: Redefining \. on input line 677.
-LaTeX Info: Redefining \% on input line 677.
-LaTeX Info: Redefining \. on input line 677.
-LaTeX Info: Redefining \% on input line 677.
+<Anteproyecto_Grupo5_files/figure-latex/Graph6-1.pdf, id=75, 289.08pt x 216.81p
+t>
+File: Anteproyecto_Grupo5_files/figure-latex/Graph6-1.pdf Graphic file (type pd
+f)
+<use Anteproyecto_Grupo5_files/figure-latex/Graph6-1.pdf>
+Package pdftex.def Info: Anteproyecto_Grupo5_files/figure-latex/Graph6-1.pdf  u
+sed on input line 531.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+[6
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.534 
+      ]
+<Anteproyecto_Grupo5_files/figure-latex/Graph5-1.pdf, id=81, 289.08pt x 216.81p
+t>
+File: Anteproyecto_Grupo5_files/figure-latex/Graph5-1.pdf Graphic file (type pd
+f)
+<use Anteproyecto_Grupo5_files/figure-latex/Graph5-1.pdf>
+Package pdftex.def Info: Anteproyecto_Grupo5_files/figure-latex/Graph5-1.pdf  u
+sed on input line 545.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 580.
+LaTeX Info: Redefining \% on input line 580.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.77002pt, for example:
@@ -1509,13 +1508,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[6] [7
-
-]
-LaTeX Info: Redefining \. on input line 824.
-LaTeX Info: Redefining \% on input line 824.
-LaTeX Info: Redefining \. on input line 824.
-LaTeX Info: Redefining \% on input line 824.
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.580 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.580 
+       <./Anteproyecto_Grupo5_files/figure-latex/Graph6-1.pdf> <./Anteproyecto_
+Grupo5_files/figure-latex/Graph5-1.pdf>]
+<Anteproyecto_Grupo5_files/figure-latex/Graph3-1.pdf, id=101, 289.08pt x 216.81
+pt>
+File: Anteproyecto_Grupo5_files/figure-latex/Graph3-1.pdf Graphic file (type pd
+f)
+<use Anteproyecto_Grupo5_files/figure-latex/Graph3-1.pdf>
+Package pdftex.def Info: Anteproyecto_Grupo5_files/figure-latex/Graph3-1.pdf  u
+sed on input line 589.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 618.
+LaTeX Info: Redefining \% on input line 618.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.77002pt, for example:
@@ -1524,11 +1540,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[8]
-LaTeX Info: Redefining \. on input line 828.
-LaTeX Info: Redefining \% on input line 828.
-LaTeX Info: Redefining \. on input line 828.
-LaTeX Info: Redefining \% on input line 828.
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.2}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.618 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.618 
+       <./Anteproyecto_Grupo5_files/figure-latex/Graph3-1.pdf>]
+<Anteproyecto_Grupo5_files/figure-latex/Graph2-1.pdf, id=113, 289.08pt x 216.81
+pt>
+File: Anteproyecto_Grupo5_files/figure-latex/Graph2-1.pdf Graphic file (type pd
+f)
+<use Anteproyecto_Grupo5_files/figure-latex/Graph2-1.pdf>
+Package pdftex.def Info: Anteproyecto_Grupo5_files/figure-latex/Graph2-1.pdf  u
+sed on input line 650.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+<Anteproyecto_Grupo5_files/figure-latex/Graph1-1.pdf, id=114, 289.08pt x 216.81
+pt>
+File: Anteproyecto_Grupo5_files/figure-latex/Graph1-1.pdf Graphic file (type pd
+f)
+<use Anteproyecto_Grupo5_files/figure-latex/Graph1-1.pdf>
+Package pdftex.def Info: Anteproyecto_Grupo5_files/figure-latex/Graph1-1.pdf  u
+sed on input line 662.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 665.
+LaTeX Info: Redefining \% on input line 665.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.77002pt, for example:
@@ -1537,11 +1579,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[9]
-LaTeX Info: Redefining \. on input line 871.
-LaTeX Info: Redefining \% on input line 871.
-LaTeX Info: Redefining \. on input line 871.
-LaTeX Info: Redefining \% on input line 871.
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.3}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.665 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.4}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.665 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.665 
+       <./Anteproyecto_Grupo5_files/figure-latex/Graph2-1.pdf>]
+<Anteproyecto_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf, id=127, 
+289.08pt x 216.81pt>
+File: Anteproyecto_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf Grap
+hic file (type pdf)
+<use Anteproyecto_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf>
+Package pdftex.def Info: Anteproyecto_Grupo5_files/figure-latex/Logistic Regres
+sion ROC-1.pdf  used on input line 693.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 696.
+LaTeX Info: Redefining \% on input line 696.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.77002pt, for example:
@@ -1551,29 +1617,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [10
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
+has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.871 \newpage
-              
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.2}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.871 \newpage
-              ]
-<Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf, id=123, 289.08pt x 216.81pt>
-
-File: Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf Graphic file (type pdf)
-<use Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf>
-Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf  used
- on input line 922.
-(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-LaTeX Info: Redefining \. on input line 933.
-LaTeX Info: Redefining \% on input line 933.
-LaTeX Info: Redefining \. on input line 933.
-LaTeX Info: Redefining \% on input line 933.
+l.696 
+       <./Anteproyecto_Grupo5_files/figure-latex/Graph1-1.pdf>]
+LaTeX Info: Redefining \. on input line 698.
+LaTeX Info: Redefining \% on input line 698.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.77002pt, for example:
@@ -1583,243 +1634,48 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [11
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.3}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.933 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.933 
-       <./Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf, id=140, 289.08pt x 216.81pt>
+l.698 \chapter{Anexos}\label{anexos}}
+                                      <./Anteproyecto_Grupo5_files/figure-latex
+/Logistic Regression ROC-1.pdf>]
+<../images/Uve_Gowin.png, id=151, 531.1845pt x 287.8755pt>
+File: ../images/Uve_Gowin.png Graphic file (type png)
+<use ../images/Uve_Gowin.png>
+Package pdftex.def Info: ../images/Uve_Gowin.png  used on input line 703.
+(pdftex.def)             Requested size: 500.50494pt x 271.2487pt.
 
-File: Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf Graphic file (type pdf)
-<use Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf>
-Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf  used
- on input line 936.
-(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf, id=141, 289.08pt x 216.81pt>
-
-File: Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf Graphic file (type pdf)
-<use Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf>
-Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf  used
- on input line 980.
-(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-LaTeX Info: Redefining \. on input line 983.
-LaTeX Info: Redefining \% on input line 983.
-LaTeX Info: Redefining \. on input line 983.
-LaTeX Info: Redefining \% on input line 983.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[12
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.983 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.4}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.983 
-       <./Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf>]
-LaTeX Info: Redefining \. on input line 1038.
-LaTeX Info: Redefining \% on input line 1038.
-LaTeX Info: Redefining \. on input line 1038.
-LaTeX Info: Redefining \% on input line 1038.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[13
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1038 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.5}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1038 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.6}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1038 
-        <./Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf, id=165, 289.08pt x 216.81pt>
-
-File: Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf Graphic file (type pdf)
-<use Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf>
-Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf  used
- on input line 1041.
-(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf, id=166, 289.08pt x 216.81pt>
-
-File: Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf Graphic file (type pdf)
-<use Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf>
-Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf  used
- on input line 1053.
-(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-LaTeX Info: Redefining \. on input line 1062.
-LaTeX Info: Redefining \% on input line 1062.
-LaTeX Info: Redefining \. on input line 1062.
-LaTeX Info: Redefining \% on input line 1062.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[14
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1062 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1062 
-        <./Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf> <./Bitacoras_Grupo
-5_files/figure-latex/Graph1-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf, id=183, 289
-.08pt x 216.81pt>
-File: Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf Graphic
- file (type pdf)
-<use Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf>
-Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Logistic Regressio
-n ROC-1.pdf  used on input line 1084.
-(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-LaTeX Info: Redefining \. on input line 1088.
-LaTeX Info: Redefining \% on input line 1088.
-LaTeX Info: Redefining \. on input line 1088.
-LaTeX Info: Redefining \% on input line 1088.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[15
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1088 \newpage
-                <./Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-
-1.pdf>]
-LaTeX Info: Redefining \. on input line 1182.
-LaTeX Info: Redefining \% on input line 1182.
-LaTeX Info: Redefining \. on input line 1182.
-LaTeX Info: Redefining \% on input line 1182.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[16]
-LaTeX Info: Redefining \. on input line 1205.
-LaTeX Info: Redefining \% on input line 1205.
-LaTeX Info: Redefining \. on input line 1205.
-LaTeX Info: Redefining \% on input line 1205.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[17]
-LaTeX Info: Redefining \. on input line 1298.
-LaTeX Info: Redefining \% on input line 1298.
-LaTeX Info: Redefining \. on input line 1298.
-LaTeX Info: Redefining \% on input line 1298.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[18]
-LaTeX Info: Redefining \. on input line 1316.
-LaTeX Info: Redefining \% on input line 1316.
-LaTeX Info: Redefining \. on input line 1316.
-LaTeX Info: Redefining \% on input line 1316.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.77002pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.77002pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
-
-[19]
-<images/Uve_Gowin.png, id=215, 531.1845pt x 287.8755pt>
-File: images/Uve_Gowin.png Graphic file (type png)
-<use images/Uve_Gowin.png>
-Package pdftex.def Info: images/Uve_Gowin.png  used on input line 1321.
-(pdftex.def)             Requested size: 443.59825pt x 240.40813pt.
-
-Overfull \hbox (12.01978pt too wide) in paragraph at lines 1321--1322
+Overfull \hbox (12.02095pt too wide) in paragraph at lines 703--704
 [][] 
  []
 
-[20
+[12
 
- <./images/Uve_Gowin.png>] [21
+ <../images/Uve_Gowin.png>] [13
 
 ]
 \tf@toc=\write5
-\openout5 = `Bitacoras_Grupo5.toc'.
+\openout5 = `Anteproyecto_Grupo5.toc'.
 
-(Bitacoras_Grupo5.aux
+(Anteproyecto_Grupo5.aux
 LaTeX Info: Redefining \sptext on input line 28.
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
 )
-Package logreq Info: Writing requests to 'Bitacoras_Grupo5.run.xml'.
-\openout1 = `Bitacoras_Grupo5.run.xml'.
+Package logreq Info: Writing requests to 'Anteproyecto_Grupo5.run.xml'.
+\openout1 = `Anteproyecto_Grupo5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27791 strings out of 478351
- 472645 string characters out of 2837053
- 1051714 words of memory out of 3000000
- 45417 multiletter control sequences out of 15000+600000
- 533415 words of font info for 285 fonts, out of 8000000 for 9000
+ 27661 strings out of 478351
+ 471672 string characters out of 2837053
+ 1050090 words of memory out of 3000000
+ 45387 multiletter control sequences out of 15000+600000
+ 529407 words of font info for 238 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,15n,91p,1905b,1963s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 86i,13n,91p,1908b,1963s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:
 /Users/andre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Use
 rs/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pf
@@ -1830,9 +1686,9 @@ b8a.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/
 uplr8a.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palati
 no/uplr8a.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/pal
 atino/uplri8a.pfb>
-Output written on Bitacoras_Grupo5.pdf (23 pages, 384329 bytes).
+Output written on Anteproyecto_Grupo5.pdf (15 pages, 348565 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 73915 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 249 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 69763 words of extra memory for PDF output out of 74296 (max. 10000000)
 
