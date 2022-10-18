@@ -36,13 +36,31 @@ Determinar la pérdida esperada de un banco a la hora de decidir la elegibilidad
 
 # Marco Teórico
 
-*TRES CONCEPTOS* JUSTIFICACION MATEMATICA DE LOS MODELOS A UTILIZAR
-
 Para un primer acercamiento a contestar la pregunta de investigación, antes de poder determinar correlaciones entre las variables de estudio para determinar las pérdidas del banco por impago crediticio se necesita una manera de determinar alguna medida como el score crediticio por individuo. Es por esto que primero se va a realizar un modelo de clasificación de elegibilidad de crédito, para lo cual se implementó un modelo de regresión logística. Este tipo de regresión como menciona James, a diferencia de los métodos de regresión, se teoriza un nuevo tipo de regresión llamada regresión logística, la cual sirve para clasificar de manera binaria una variable. Entonces en vez de entrenar un modelo para determinar si hay una correlación entre la variable dependiente y las covariables, se entrena para clasificar en alguna de dos categorías a la variable dependiente de acuerdo a sus covariables. Esta definición del modelo es similar a la que hace Chitarroni en su artículo ya que lo define como un instrumento de análisis multivariado y dependiendo del enfoque se puede utilizar para realizar predicciones o inferencia. Se menciona que es muy útil cuando la variable dependiente es de carácter dicotómico (binario). Asimismo, se aclara que cuando las covariables son categóricas estas deberían de recibir una transformación y convertirlas en variables "dummy", es decir, variables simuladas.
+
+Para el modelo de regresión logística se va a utilizar la siguiente forma:
+
+\begin{equation}p(\boldsymbol{X}) = \frac{e^{\beta_0 + X_1\beta_1+\cdots+X_p\beta_p}}{1+e^{\beta_0 + X_1\beta_1+\cdots+X_p\beta_p}}\end{equation}
+
+En donde se cumple $0<p(X)<1$ y $X_k$  con $k=1,...,p$ corresponden a las covariables con las que se entrena el modelo. (James et al., 2021)
 
 Sin embargo, en el artículo expuesto por Chitarroni se le da más peso a las pruebas de significancia de variables así como a la interpretabilidad de los resultados enfocado más en un modelo predictivo de manera que especifica que este tipo de modelo se puede utilizar de manera predictiva, el cual no solo determina la probabilidad de la variable dependiente sino el peso que tienen las covariables para realizar la predicción, lo cual también ayuda a nivel interpretativo pues se pueden determinar que variables son más significativas que otras para el modelo. Mientras que en su libro James también menciona diagnósticos de los modelos de clasificación que ayudan a determinar si un modelo es mejor que otro o está mejor ajustado como por ejemplo el concepto de especificidad y sensibilidad los cuales miden la tasa de falsos positivos y los falsos negativos respectivamente. Y como de acuerdo al tipo de problema para el cual se está realizando el modelo, se debe considerar ajustes del modelo para aumentar estas medidas. Otro diágnostico bastante utilizado es el de la curva ROC (Receiver Operation Curve), la cual sirve para graficar la tasa de falsos positivos con la sensibilidad del modelo.
 
 Para la segunda parte del trabajo, donde ya se plantea el hecho de encontrar las pérdidas del banco, se planean utilizar modelos que involucren cópulas. Estos modelos sirven para encontrar distribuciones conjuntas que generalmente tienen un alto grado de correlación entre sí, por lo que analizarlas por separado no es lo más recomendable. Pues como menciona Escarela, las cópulas bivariadas son funciones que intentan correlacionar dos distribuciones univariadas por lo que estos modelos ayudan a obtener una distribución conjunta a partir de varias funciones de distribución asociadas a variables aleatorias con una cierta relación entre sí. Es decir, con este método se construye una distribución multivariada a partir de las distribuciones univariadas de las variables respectivas. Este tipo de modelo también resulta en una forma de estructurar la dependencia de estas parejas de variables aleatorias en distribuciones conjuntas. Es por esto que son tan populares puesto que tienen una gran flexibilidad para encontrar distribuciones conjuntas a partir de cualquier pareja aleatoria, lo que es usual tener en muchas disciplinas.
+
+Por lo que es importante definir el concepto de cópula bidimensional, la cual es una función bivariada de un vector aleatorio $\boldsymbol{V} = (V_1,V_2)$ cuyas marginales $V_1$ y $V_2$ son uniformes en el intervalo $\boldsymbol{I} = (0,1)$. Por lo que la cópula es una función $C\,: \boldsymbol{I}^2 \rightarrow\boldsymbol{I}$ que satisface las siguientes 2 condiciones:
+
+-   Acotamiento
+
+\begin{align}\lim_{v_j\rightarrow 1^-} C(v1,v2) = v_{3-j}\\ \lim_{v_j\rightarrow 0} C(v1,v2) = 0\end{align}
+
+con $j=1,2$ y $(v_1,v_2)^T \in \boldsymbol{I}^2$
+
+-   Incremento
+
+\begin{equation}C(u_2,v_2) - C(u_2,v_1) - C(u_1,v_2) + C(u_1,v_1) \geq 0\end{equation}
+
+para toda $u_1,u_2,v_1,v_2 \in \boldsymbol{I}$ tal que $u_1 \leq u_2$ y $v_1 \leq v_2$
 
 Sin embargo para el enfoque del trabajo estas no son de mucha utlidad pues como menciona Geidosch el uso de cópulas convencionales presenta dos limitantes, la primera es que cuando el número de dimensiones es mayor que dos, el número de familias de cópulas aplicables se limita al caso elíptico y arquimediano. La segunda limitante es que solo dependencias simétricas y simples pueden ser modeladas y eso está lejos de ser considerado un escenario real. De ahí nace la necesidad de usar Vine Cópulas. Las Vines Cópulas se usan para describir cópulas de varias variables usando como base cópulas bivariadas o "pair-copulas" . La idea que existe de fondo con los Vines Cópulas es que distribuciones multivariadas se pueden descomponer secuencialmente en descomposiciones bivariadas y para llevar acabo dicho proceso se hace uso de los D-vine y los R-vine. Lo que se hace es tomar la densidad multivariada de la distribución y se transforma en funciones de densidad de las cópulas bivariadas.
 
@@ -388,7 +406,7 @@ data.final <- data.test %>% dplyr::select(which(chi < 0.001)) %>% cbind(Credit_A
 # (chi.foreign <-chisq.test(table(Creditability, Foreign_Worker)))[3]
 ```
 
-Estas pruebas mostraron que las variables más significativas son: Acount Balance, Payment Status, Purpose of the credit,  Savings/Stock Value, Length of Current Employment, Type Apartment y Most Valuable Asset A partir de estas variables se desarrolla un modelo de regresión logística en el toma un 60$\%$ para entrenamiento y un 40 $\%$ para testing.
+Estas pruebas mostraron que las variables más significativas son: Acount Balance, Payment Status, Purpose of the credit, Savings/Stock Value, Length of Current Employment, Type Apartment y Most Valuable Asset A partir de estas variables se desarrolla un modelo de regresión logística en el toma un 60$\%$ para entrenamiento y un 40 $\%$ para testing.
 
 ```{r Logistic Regression}
 library(pROC)
@@ -432,7 +450,7 @@ rocplot
 
 ```
 
-Asimismo, este modelo arroja una precisión aproximada del 76 $\%$ con un intervalo de confianza de ]0.71, 0.80[. Además se tiene una sensibilidad de 82 $\%$, lo que indica que el modelo es bueno para clasificar a buenos deudores como buenos. Por otro lado, se tiene una especificidad de apenas el 61$\%$ por lo que se concluye que el modelo no es óptimo para clasificar a malos deudores como malos.   
+Asimismo, este modelo arroja una precisión aproximada del 76 $\%$ con un intervalo de confianza de $]0.71, 0.80[$. Además se tiene una sensibilidad de 82 $\%$, lo que indica que el modelo es bueno para clasificar a buenos deudores como buenos. Por otro lado, se tiene una especificidad de apenas el 61$\%$ por lo que se concluye que el modelo no es óptimo para clasificar a malos deudores como malos.
 
 ```{r Logistic Regression 2}
 
@@ -461,11 +479,15 @@ rocplot <- ggplot(df, aes(m = logit_P, d = actual)) +
 
 ```
 
+\newpage
+
 # Anexos
 
 ## UVE de Gowin
 
 \includegraphics{../images/Uve_Gowin.png}
+
+\newpage
 
 # Referencias
 
