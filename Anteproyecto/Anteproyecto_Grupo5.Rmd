@@ -36,13 +36,14 @@ Determinar la pérdida esperada de un banco a la hora de decidir la elegibilidad
 
 # Marco Teórico
 
-Para un primer acercamiento a contestar la pregunta de investigación, antes de poder determinar correlaciones entre las variables de estudio para determinar las pérdidas del banco por impago crediticio se necesita una manera de determinar alguna medida como el score crediticio por individuo. Es por esto que primero se va a realizar un modelo de clasificación de elegibilidad de crédito, para lo cual se implementó un modelo de regresión logística. Este tipo de regresión como menciona James, a diferencia de los métodos de regresión, se teoriza un nuevo tipo de regresión llamada regresión logística, la cual sirve para clasificar de manera binaria una variable. Entonces en vez de entrenar un modelo para determinar si hay una correlación entre la variable dependiente y las covariables, se entrena para clasificar en alguna de dos categorías a la variable dependiente de acuerdo a sus covariables. Esta definición del modelo es similar a la que hace Chitarroni en su artículo ya que lo define como un instrumento de análisis multivariado y dependiendo del enfoque se puede utilizar para realizar predicciones o inferencia. Se menciona que es muy útil cuando la variable dependiente es de carácter dicotómico (binario). Asimismo, se aclara que cuando las covariables son categóricas estas deberían de recibir una transformación y convertirlas en variables "dummy", es decir, variables simuladas.
+Para un primer acercamiento a contestar la pregunta de investigación, se tienen que definir conceptos importantes como el de crédito que es "una operación de financiación donde un 'acreedor' presta una cierta cifra monetaria a un 'deudor', quien garantiza al acreedor que retornará esta cantidad solicitada más una cantidad adicional, llamada 'intereses'" (\cite{credito_def}). Además, se tiene que definir la pérdida esperada como "el valor esperado de pérdida por riesgo crediticio en un horizonte de tiempo determinado" (\cite{perdida_def}). Y finalmente el concepto de elegibilidad que según la RAE es la cualidad de la persona que pueda ser elegida para algo (\cite{eleg_def}). Con estos términos claros se se puede continuar con intentar responder la pregunta del trabajo, por lo que antes de poder determinar correlaciones entre las variables de estudio para determinar las pérdidas del banco por impago crediticio se necesita una manera de determinar alguna medida como el score crediticio por individuo. Es por esto que primero se va a realizar un modelo de clasificación de elegibilidad de crédito, para lo cual se implementó un modelo de regresión logística. Este tipo de regresión como menciona James, a diferencia de los métodos de regresión, se teoriza un nuevo tipo de regresión llamada regresión logística, la cual sirve para clasificar de manera binaria una variable. Entonces en vez de entrenar un modelo para determinar si hay una correlación entre la variable dependiente y las covariables, se entrena para clasificar en alguna de dos categorías a la variable dependiente de acuerdo a sus covariables. Esta definición del modelo es similar a la que hace Chitarroni en su artículo ya que lo define como un instrumento de análisis multivariado y dependiendo del enfoque se puede utilizar para realizar predicciones o inferencia. Se menciona que es muy útil cuando la variable dependiente es de carácter dicotómico (binario). Asimismo, se aclara que cuando las covariables son categóricas estas deberían de recibir una transformación y convertirlas en variables "dummy", es decir, variables simuladas.
 
 Para el modelo de regresión logística se va a utilizar la siguiente forma:
 
+```{=tex}
 \begin{equation}p(\boldsymbol{X}) = \frac{e^{\beta_0 + X_1\beta_1+\cdots+X_p\beta_p}}{1+e^{\beta_0 + X_1\beta_1+\cdots+X_p\beta_p}}\end{equation}
-
-En donde se cumple $0<p(X)<1$ y $X_k$  con $k=1,...,p$ corresponden a las covariables con las que se entrena el modelo. (James et al., 2021)
+```
+En donde se cumple $0<p(X)<1$ y $X_k$ con $k=1,...,p$ corresponden a las covariables con las que se entrena el modelo. (\cite{james2021introduction})
 
 Sin embargo, en el artículo expuesto por Chitarroni se le da más peso a las pruebas de significancia de variables así como a la interpretabilidad de los resultados enfocado más en un modelo predictivo de manera que especifica que este tipo de modelo se puede utilizar de manera predictiva, el cual no solo determina la probabilidad de la variable dependiente sino el peso que tienen las covariables para realizar la predicción, lo cual también ayuda a nivel interpretativo pues se pueden determinar que variables son más significativas que otras para el modelo. Mientras que en su libro James también menciona diagnósticos de los modelos de clasificación que ayudan a determinar si un modelo es mejor que otro o está mejor ajustado como por ejemplo el concepto de especificidad y sensibilidad los cuales miden la tasa de falsos positivos y los falsos negativos respectivamente. Y como de acuerdo al tipo de problema para el cual se está realizando el modelo, se debe considerar ajustes del modelo para aumentar estas medidas. Otro diágnostico bastante utilizado es el de la curva ROC (Receiver Operation Curve), la cual sirve para graficar la tasa de falsos positivos con la sensibilidad del modelo.
 
@@ -52,15 +53,38 @@ Por lo que es importante definir el concepto de cópula bidimensional, la cual e
 
 -   Acotamiento
 
+```{=tex}
 \begin{align}\lim_{v_j\rightarrow 1^-} C(v1,v2) = v_{3-j}\\ \lim_{v_j\rightarrow 0} C(v1,v2) = 0\end{align}
-
+```
 con $j=1,2$ y $(v_1,v_2)^T \in \boldsymbol{I}^2$
 
 -   Incremento
 
+```{=tex}
 \begin{equation}C(u_2,v_2) - C(u_2,v_1) - C(u_1,v_2) + C(u_1,v_1) \geq 0\end{equation}
-
+```
 para toda $u_1,u_2,v_1,v_2 \in \boldsymbol{I}$ tal que $u_1 \leq u_2$ y $v_1 \leq v_2$
+
+Una vez con esta definición, se procede a mencionar el Teorema Sklar el cual sirve para establecer una función de distribución bivariada mediante dos funciones de distribución univariadas continuas y una función de cópula.
+
+**Teorema Sklar.** *Sean* $Y_1, Y_2$ variables aleatorias con función de distribución conjunta $F$, con marginales $F_1,F_2$ respectivamente. Entonces existe una cópula $C$ que satisface
+
+```{=tex}
+\begin{equation}\label{eqn:sklar}F(y_1,y_2) = C[F_1(y_1),F_2(y_2)]\end{equation}
+```
+*para toda* $y_1,y_2\in \mathbb{R}$. Si $F_1,F_2$ son continuas, entonces $C$ es única. Inversamente, si $C$ es una cópula y $F_1,F_2$ son funciones de distribución, entonces $F$ definida en \ref{eqn:sklar} es una función de distribución conjunta con marginales $F_1,F_2$.
+
+Con este resultado, y con la hipótesis extra que $F_1(y_1),F_2(y_2)$ y $C(v_1,v_2)$ son diferenciables entonces la densidad conjunta de $(Y_1,Y_2)$ se puede expresar como
+
+```{=tex}
+\begin{equation}\label{eqn:dens_cop}f(y_1,y_2)=f_1(y_1)f_2(y_2)\times c[F_1(y_1),F_2(y_2)]\end{equation}
+```
+donde $f_1(y_1),f_2(y_2)$ son las funciones de densidad marginales y
+
+```{=tex}
+\begin{equation}c(v_1,v_2)=\frac{\partial^2C(v_1,v_2)}{\partial v_1\partial v_2} \,\,\,\, (v_1,v_2)^T\in (0,1)^2 \end{equation}
+```
+(\cite{escarela2009modelado})
 
 Sin embargo para el enfoque del trabajo estas no son de mucha utlidad pues como menciona Geidosch el uso de cópulas convencionales presenta dos limitantes, la primera es que cuando el número de dimensiones es mayor que dos, el número de familias de cópulas aplicables se limita al caso elíptico y arquimediano. La segunda limitante es que solo dependencias simétricas y simples pueden ser modeladas y eso está lejos de ser considerado un escenario real. De ahí nace la necesidad de usar Vine Cópulas. Las Vines Cópulas se usan para describir cópulas de varias variables usando como base cópulas bivariadas o "pair-copulas" . La idea que existe de fondo con los Vines Cópulas es que distribuciones multivariadas se pueden descomponer secuencialmente en descomposiciones bivariadas y para llevar acabo dicho proceso se hace uso de los D-vine y los R-vine. Lo que se hace es tomar la densidad multivariada de la distribución y se transforma en funciones de densidad de las cópulas bivariadas.
 
