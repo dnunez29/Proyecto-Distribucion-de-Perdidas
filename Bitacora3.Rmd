@@ -4,6 +4,9 @@
 
 ### Ajuste del modelo
 
+
+
+
 ```{r echo=FALSE}
 # library(actuar)
 # library(fitdistrplus)
@@ -29,16 +32,22 @@
 ```{r Correlacion entre las variables de estudio}
 # library(fitdistrplus)
 # library(actuar)
-# hist(test$Credit_Amount)
+hist(test$Credit_Amount)
+hist(logit_P_real)
+
 ```
 
 
 ```{r primer intento de copula, echo=FALSE, include=FALSE}
 library(copula)
 library(VineCopula)
-
 #correlacion empirica entre las variables (Tau de Kendall)
 corr.emp <- cor(test$Credit_Amount, logit_P_real, method = "kendall")
+
+#Data.frame con los datos del testing
+data.test.fija <- read.csv("test_fijo.csv")
+
+##### AQUI PARA EL PSEUDO Y ESO LLAME A LAS COLUMNAS DE DATA.TEST.FIJA
 
 #Primero definimos las pseudo-observaciones (de las probabilidades no hace falta pues ya estan entre 0 y 1)
 pseudo.credit <- pobs(test$Credit_Amount)
