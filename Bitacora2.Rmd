@@ -350,7 +350,7 @@ tabla3 %>% kbl(caption="Resumen de 5 números",
 
 Dado a que eventualmente la idea es realizar un modelo de Cópulas entre los resultados del proceso de clasificación de los solicitantes con la variable Monto del Crédito, sería importante describir de manera exhaustiva esta variable. A continuación un histograma que muestrala distribución de los montos: 
 
-```{r Graph2, fig.cap= "Histograma de la variable Monto del Crédito" }
+```{r Graph2, fig.cap= "Histograma de la variable Monto del Crédito"}
 graph2 <- data %>% ggplot(aes(x = Credit_Amount))+
   geom_histogram(fill = "antiquewhite", color = "black")+
   theme_light()+
@@ -358,6 +358,7 @@ graph2 <- data %>% ggplot(aes(x = Credit_Amount))+
 graph2
 
 ```
+
 
 El histograma muestra una fuerte asimetría hacia su derecho indicando la tendencia en la solicitud de crédito de montos bajos. Esto en efecto se puede ver el siguiente diagrama de caja y bigotes que también busca mostrar de manera más detallada la distribución intercuantílica de los montos:
 
@@ -478,8 +479,8 @@ Logistic.1 <- glm(Creditability ~ Account_Balance + Payment_Status_of_Previous_C
 
 #summary(Logistic.1)
 
-logit_P <- predict(Logistic.1, newdata = test, type = 'response')
-logit_P <- ifelse(logit_P > 0.5, 1, 0)
+logit_P_real <- predict(Logistic.1, newdata = test, type = 'response')
+logit_P <- ifelse(logit_P_real > 0.5, 1, 0)
 actual <- as.numeric(unlist(test[,1]))
 df <- data.frame(logit_P, actual)
 

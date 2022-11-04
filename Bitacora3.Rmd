@@ -1,0 +1,115 @@
+# Bitacora 3
+
+## Parte de planificacion
+
+### Ajuste del modelo
+
+```{r echo=FALSE}
+# library(actuar)
+# library(fitdistrplus)
+# #Dividir los montos en intervalo y contar la frecuencia por intervalo
+# data.freq <- data.final %>% mutate(intervalo = cut(Credit_Amount, c(0,seq(2000,20000, by=2000)), dig.lab = 5,labels = c("0-2000","2000-4000","4000-6000","6000-8000","8000-10000","10000-12000","12000-14000","14000-16000","16000-18000","18000-20000") )) %>% group_by(intervalo) %>% summarise(freq = n())
+# 
+# data.freq$intervalo <- as.factor(data.freq$intervalo)
+# 
+# fit.pois <- fitdist(data.freq$freq, distr = 'pois')
+# 
+# 
+# 
+# fit.geom <- fitdist(data.freq$freq, distr='geom')
+# 
+# min(-fit.geom$loglik,-fit.pois$loglik)
+# 
+# 
+# hist(rgeom(10000,0.00892))
+# 
+# ggplot(data = data.freq, aes(x=intervalo, y=freq) )  + geom_bar(stat = "identity")
+
+```
+```{r Correlacion entre las variables de estudio}
+# library(fitdistrplus)
+# library(actuar)
+# hist(test$Credit_Amount)
+```
+
+
+```{r primer intento de copula, echo=FALSE, include=FALSE}
+library(copula)
+library(VineCopula)
+
+#correlacion empirica entre las variables (Tau de Kendall)
+corr.emp <- cor(test$Credit_Amount, logit_P_real, method = "kendall")
+
+#Primero definimos las pseudo-observaciones (de las probabilidades no hace falta pues ya estan entre 0 y 1)
+pseudo.credit <- pobs(test$Credit_Amount)
+pseudo.elegib <- pobs(logit_P_real)
+
+u <- as.matrix(data.frame(pseudo.credit, logit_P_real))
+
+b <- BiCopSelect(pseudo.credit,logit_P_real,familyset = NA)
+b
+
+#De esto obtenemos que el mejor ajuste se hace con una frank copula
+#Sin embargo, vamos a estimar el parametro utilizando otro paquete
+
+fit <- fitCopula(frankCopula(dim=2), data = u)
+fit
+AIC(fit)
+
+tau(frankCopula(param=coef(fit)))
+
+```
+
+
+
+
+
+
+
+### Diagnósticos del modelo
+
+
+
+```{r gof-test, echo=FALSE, include=FALSE}
+#Le hacemos fit a varias copulas para comparar
+normal.mdl <- fitCopula(normalCopula(dim=2),data=u)
+tcop.mdl <- fitCopula(tCopula(dim=2), data=u)
+clayton.mdl <- fitCopula(claytonCopula(dim=2), data = u)
+
+#AIC de los modelos (entre mas pequenno mejor)
+aic.df <- data.frame( Copula = c("Frank", "Normal", "t", "Clayton"), AIC = c(AIC(fit), AIC(normal.mdl), AIC(tcop.mdl), AIC(clayton.mdl))  )
+
+#SN de los modelos (Test Cramer-von-Mises)
+mm <- as.matrix(data.frame(test$Credit_Amount, logit_P_real))
+
+#Gof test
+gof.frank <- gofCopula(frankCopula(dim=2,param=-3.6), mm, N=50)
+
+gof.normal <- gofCopula(normalCopula(dim=2), mm, N=50)
+
+gof.t <- gofCopula(tCopula(dim=2,df.fixed = T), mm, N=50) 
+
+gof.clayton <- gofCopula(claytonCopula(dim = 2), mm, N=50)
+
+sn.df <- data.frame(Copula = c("Frank", "Normal", "t", "Clayton"), S_n  = c(gof.frank$statistic, gof.normal$statistic, gof.t$statistic, gof.clayton$statistic))
+```
+
+
+
+### Fichas de resultados
+
+
+
+
+
+### Estructra del proyecto
+
+
+
+
+
+## Parte escrita
+
+
+
+## Parte de reflexión
