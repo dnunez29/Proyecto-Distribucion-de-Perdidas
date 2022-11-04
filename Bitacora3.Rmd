@@ -41,21 +41,27 @@ hist(logit_P_real)
 ```{r primer intento de copula, echo=FALSE, include=FALSE}
 library(copula)
 library(VineCopula)
+
+data.test.fija <- read.csv("test_fijo.csv")
+
+credit.fijo <- data.test.fija$credit.amount.fijo
+logit.fijo <- data.test.fija$logit.fijo
+
 #correlacion empirica entre las variables (Tau de Kendall)
-corr.emp <- cor(test$Credit_Amount, logit_P_real, method = "kendall")
+corr.emp <- cor(credit.fijo, logit.fijo, method = "kendall")
 
 #Data.frame con los datos del testing
-data.test.fija <- read.csv("test_fijo.csv")
+
 
 ##### AQUI PARA EL PSEUDO Y ESO LLAME A LAS COLUMNAS DE DATA.TEST.FIJA
 
 #Primero definimos las pseudo-observaciones (de las probabilidades no hace falta pues ya estan entre 0 y 1)
-pseudo.credit <- pobs(test$Credit_Amount)
+pseudo.credit <- pobs(credit.fijo)
 pseudo.elegib <- pobs(logit_P_real)
 
-u <- as.matrix(data.frame(pseudo.credit, logit_P_real))
+u <- as.matrix(data.frame(pseudo.credit, logit.fijo))
 
-b <- BiCopSelect(pseudo.credit,logit_P_real,familyset = NA)
+b <- BiCopSelect(pseudo.credit,data.test.fija$logit.fijo,familyset = NA)
 b
 
 #De esto obtenemos que el mejor ajuste se hace con una frank copula
@@ -68,9 +74,6 @@ AIC(fit)
 tau(frankCopula(param=coef(fit)))
 
 ```
-
-
-
 
 
 
@@ -89,7 +92,7 @@ clayton.mdl <- fitCopula(claytonCopula(dim=2), data = u)
 aic.df <- data.frame( Copula = c("Frank", "Normal", "t", "Clayton"), AIC = c(AIC(fit), AIC(normal.mdl), AIC(tcop.mdl), AIC(clayton.mdl))  )
 
 #SN de los modelos (Test Cramer-von-Mises)
-mm <- as.matrix(data.frame(test$Credit_Amount, logit_P_real))
+mm <- as.matrix(data.frame(credit.fijo, logit.fijo))
 
 #Gof test
 gof.frank <- gofCopula(frankCopula(dim=2,param=-3.6), mm, N=50)
@@ -107,7 +110,65 @@ sn.df <- data.frame(Copula = c("Frank", "Normal", "t", "Clayton"), S_n  = c(gof.
 
 ### Fichas de resultados
 
+\textbf{Hallazgo \# 1}
 
+
+- \textbf{Nombre del hallazgo:} Correlación empírica negativa entre el monto del crédito y la probabilidad de elegibilidad
+
+- \textbf{Resumen en una oración:} Se muestra una correlación negativa lo que indica que ambas variables se mueven en direcciones opuestas. 
+
+- \textbf{Principal característica:} La correlación se calculó utilizando la asociación de Kendall, también conocido como tau de Kendall
+
+- \textbf{Problemas con el tema:} Dependiendo del método con el que se calcule la correlación, la misma puede variar. Por ejemplo, para el caso de la correlación de Pearson el resulado es de -0.46, mientras que con Kendall es de -0.30 aproximadamente. 
+
+- \textbf{Resumen en un párrafo:} La correlación empírica de ambas variables es negativa y da un valor de -0.30 aproximadamente. Esta correlación se calculó con el método del tau de Kendall ya que es el método más popular para comparar dependencia entre modelos de cópulas. Este resultado indica que si el monto a solicitar por parte del cliente es muy alto, disminuyen las probabilidades de ser elegido. Lo mismo pasa de manera análoga cuando el monto del crédito es bajo, en donde las probabilidades de ser elegido aumentan. Vale la pena mencionar que no se tiene una correlación perfecta, esto se debe a que hay muchos más factores que influyen en la elegibilidad de los solicitantes, no solo el monto. 
+
+\noindent\rule{14cm}{0.4pt}
+
+\textbf{Hallazgo \# 2}
+
+
+- \textbf{Nombre del hallazgo:} Una correlación negativa disminuye el número de cópulas que podrían hacer un buen ajuste. 
+
+- \textbf{Resumen en una oración:} Hay ciertos tipos de cópulas que están hechas para modelar únicamente correlaciones positivas, por lo que una relación negativa hace que se reduzca los tipos de cópulas a escoger
+
+- \textbf{Principal característica:} La correlación negativa no es compatible con las cópulas de Clayton, Gumbel, Joe, BB1, BB6, BB7 y BB8. 
+
+- \textbf{Problemas con el tema:} El hecho de que se esté reduciendo la variedad de cópulas de dónde escoger para ajustar a los datos no es lo óptimo ya que el modelo ajustado puede que no vaya a ser el mejor. 
+
+- \textbf{Resumen en un párrafo:} La asociación negativa indicada anteriormente funciona como una especie de filtro a la hora de escoger la cópula que mejor ajusta los datos. Esto sucede porque no todas las cópulas pueden modelar relaciones negativas. Esto trae ciertas desventajas ya que se reduce el número de cópulas de dónde escoger para modelar la distribución conjunta.  
+
+\noindent\rule{14cm}{0.4pt}
+
+\textbf{Hallazgo \# 3}
+
+
+- \textbf{Nombre del hallazgo:} La Frank Copula mostró ser la mejor cópula para los datos
+
+- \textbf{Resumen en una oración:} Se probaron múltiples cópulas entre las cuales distinguen la gaussiana, la t-student,la Frank y la Gumbel.  
+
+- \textbf{Principal característica:} El AIC fue el método usado para determinar la mejor cópula. 
+
+- \textbf{Problemas con el tema:} La cópula que muestra ser la mejor depende directamente de las probabilidades calculadas con la regresión logística, es decir, si se decide volver a predecir las probabiliades arrojadas por la regresión logística se tendría un nuevo vector de probabilidades por lo que probablemente el modelo de cópula óptimo pueda variar. 
+
+- \textbf{Resumen en un párrafo:} Se probaron múltiples combinanciones de cópulas para determinar cuál era la que mejor se adaptaba a los datos. Entre las principales usadas se distinguen la gaussiana, la t-student y la Frank. La Frank se escogió como la mejor con un AIC de -63.46, mientras que las demás tuvieron AIC de -55.04 y -53.04 respectivamente. 
+
+\noindent\rule{14cm}{0.4pt}
+
+\textbf{Hallazgo \# 4}
+
+
+- \textbf{Nombre del hallazgo:} Relación entre la correlación empírica y la teórica calculada por el modelo   
+
+- \textbf{Resumen en una oración:} La correlación empírica era de -0.30 aproximadamente mientras que la correlación teórica calculada por el modelo de cópula de Frank es de -0.36. 
+
+- \textbf{Principal característica:} 
+
+- \textbf{Problemas con el tema:} Como se había mencionado anteriormente, hay múltiples formas de calcular la correlación por lo que la relación entre el estadístico teórico y empírico depende y varía con la forma en la que se calcula la correlación. 
+
+- \textbf{Resumen en un párrafo:} Otra buena forma de medir qué tan bien ajustado está el modelo a los datos es comparar sus correlaciones. Lo ideal sería que la dependencia teórica calculada por el modelo sea bastante similar a la dependencia empírica. En este caso, se da que la empírica corresponde a un valor aproximado de -0.30 mientras que la correlación teórica calculada por el modelo de cópula de Frank es de -0.36. Hay una diferencia de 0.06 puntos porcentuales entre ambas correlaciones, pero a groso modo, ambos explican el fenómeno de la asociación entre ambas variables bastante parecido indicando el buen ajuste del modelo.   
+
+\noindent\rule{14cm}{0.4pt}
 
 
 
