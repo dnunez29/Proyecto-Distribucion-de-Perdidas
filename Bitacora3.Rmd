@@ -4,8 +4,6 @@
 ## Ajuste del modelo
 
 
-
-
 ```{r echo=FALSE}
 # library(actuar)
 # library(fitdistrplus)
@@ -28,8 +26,6 @@
 # ggplot(data = data.freq, aes(x=intervalo, y=freq) )  + geom_bar(stat = "identity")
 
 ```
-
-
 
 
 ```{r Correlacion entre las variables de estudio}
@@ -109,8 +105,6 @@ AIC(fit)
 tau(frankCopula(param=coef(fit)))
 
 ```
-
-
 
 
 ## Diagnósticos del modelo
@@ -782,4 +776,9 @@ Dicho esto, si se calcula la correlación empírica entre las probabilidades de 
 Lo anterior expuesto se puede identificar como el primer hallazgo y resulta ser muy útil ya que esta asociación negativa funciona como una especie de filtro a la hora de escoger la cópula que mejor ajusta los datos. Esto sucede porque no todas las cópulas pueden modelar relaciones negativas. Esto trae ciertas desventajas ya que se reduce el número de cópulas de dónde escoger para modelar la distribución conjunta. La dependencia negativa no es compatible con las cópulas de Clayton, Gumbel, Joe, BB1, BB6, BB7 y BB8. 
 
 De las cópulas posibles, se probaron múltiples combinaciones entre las cuales distinguen la gaussiana, la t-student y la Frank. Todo esto para determinar cuál era la que mejor se adaptaba a los datos. El AIC fue el método usado para determinar la mejor cópula. El hallazgo primario aquí sería que la Frank se escogió como la mejor con un AIC de -63.46, mientras que las demás tuvieron AIC de -55.04 y -53.04 respectivamente. Además, otro hallazgo primario que rectifica la escogencia de esta cópula para este problema es la relación que existe entre la correlación empírica y la teórica calculada por la cópula. Lo ideal sería que la dependencia teórica calculada por el modelo sea bastante similar a la dependencia empírica. En este caso, se da que la empírica corresponde a un valor aproximado de -0.30 mientras que la correlación teórica calculada por el modelo de cópula de Frank es de -0.36. Hay una diferencia de 0.06 puntos porcentuales entre ambas correlaciones, pero a groso modo, ambos explican el fenómeno bastante parecido indicando el buen ajuste de la cópula con los datos.
+
+
+### Reflexión
+
+A través del proceso de análisis de datos y del primer intento de modelaje, se tomó la decisión de modificar el rumbo de la investigación donde la misma ya no se enfocará en determinar la pérdida esperada del banco. Ahora su eje principal girará alrededor de encontrar la función de densidad conjunta entre la probabilidad de ser elegido para un crédito y el monto de dicho crédito. Se construirá esta función con cópulas, esto con el fin de contemplar la dependencia entre ambas variables. Una vez con esta función se pueden calcular probabilidades relacionadas con riesgo como el Value-at-Risk. 
 

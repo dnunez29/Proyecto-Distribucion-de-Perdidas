@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.16)  4 NOV 2022 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.16)  4 NOV 2022 21:32
 entering extended mode
 **./Bitacoras_Grupo5.tex
 (Bitacoras_Grupo5.tex
@@ -1620,6 +1620,17 @@ l.242 \hypertarget
                   {bituxe1cora-1}{% [1
 
 ]
+LaTeX Info: Redefining \. on input line 242.
+LaTeX Info: Redefining \% on input line 242.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[2]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 243.
 [1
@@ -1732,7 +1743,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [10]
-<Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf, id=153, 289.08pt x 216.81pt>
+<Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf, id=160, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf>
@@ -1752,14 +1763,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [11 <./Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf, id=170, 289.08pt x 216.81pt>
+<Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf, id=176, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf>
 Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf  used
  on input line 936.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf, id=171, 289.08pt x 216.81pt>
+<Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf, id=177, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf>
@@ -1792,14 +1803,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [13 <./Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf, id=195, 289.08pt x 216.81pt>
+<Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf, id=201, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf>
 Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf  used
  on input line 1041.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf, id=196, 289.08pt x 216.81pt>
+<Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf, id=202, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf>
@@ -1820,7 +1831,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14 <./Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf> <./Bitacoras_Grupo5_fi
 les/figure-latex/Graph1-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf, id=213, 289
+<Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf, id=219, 289
 .08pt x 216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf Graphic
  file (type pdf)
@@ -1894,7 +1905,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19]
 <Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de estudio
--1.pdf, id=245, 289.08pt x 216.81pt>
+-1.pdf, id=251, 289.08pt x 216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de es
 tudio-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de est
@@ -1903,7 +1914,7 @@ Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Correlacion entre
 las variables de estudio-1.pdf  used on input line 1321.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
 <Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de estudio
--2.pdf, id=246, 289.08pt x 216.81pt>
+-2.pdf, id=252, 289.08pt x 216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de es
 tudio-2.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de est
@@ -1933,7 +1944,7 @@ File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
  <./Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de estu
 dio-1.pdf> <./Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variabl
 es de estudio-2.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-9-1.pdf, id=266, 289.08pt x 
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-9-1.pdf, id=272, 289.08pt x 
 216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (t
 ype pdf)
@@ -1941,7 +1952,7 @@ ype pdf)
 Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-9-1.
 pdf  used on input line 1352.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-10-1.pdf, id=267, 289.08pt x
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-10-1.pdf, id=273, 289.08pt x
  216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (
 type pdf)
@@ -2028,7 +2039,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [26]
-<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-14-1.pdf, id=321, 289.08pt x
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-14-1.pdf, id=327, 289.08pt x
  216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (
 type pdf)
@@ -2049,7 +2060,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [27]
-<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-15-1.pdf, id=326, 289.08pt x
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-15-1.pdf, id=332, 289.08pt x
  216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file (
 type pdf)
@@ -2071,7 +2082,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [28 <./Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-14-1.pdf> <./Bitacoras
 _Grupo5_files/figure-latex/unnamed-chunk-15-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-16-1.pdf, id=346, 289.08pt x
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-16-1.pdf, id=353, 289.08pt x
  216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (
 type pdf)
@@ -2092,7 +2103,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [29 <./Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-16-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-17-1.pdf, id=359, 289.08pt x
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-17-1.pdf, id=365, 289.08pt x
  216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (
 type pdf)
@@ -2100,7 +2111,7 @@ type pdf)
 Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-17-1
 .pdf  used on input line 1893.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-18-1.pdf, id=360, 289.08pt x
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-18-1.pdf, id=366, 289.08pt x
  216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (
 type pdf)
@@ -2160,7 +2171,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [33]
-<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-25-1.pdf, id=416, 289.08pt x
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-25-1.pdf, id=422, 289.08pt x
  216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-25-1.pdf Graphic file (
 type pdf)
@@ -2194,10 +2205,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [35 <./Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-25-1.pdf>]
-LaTeX Info: Redefining \. on input line 2196.
-LaTeX Info: Redefining \% on input line 2196.
-LaTeX Info: Redefining \. on input line 2196.
-LaTeX Info: Redefining \% on input line 2196.
+LaTeX Info: Redefining \. on input line 2209.
+LaTeX Info: Redefining \% on input line 2209.
+LaTeX Info: Redefining \. on input line 2209.
+LaTeX Info: Redefining \% on input line 2209.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.77002pt, for example:
@@ -2207,13 +2218,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [36]
-<images/Uve_Gowin.png, id=442, 531.1845pt x 287.8755pt>
+<images/Uve_Gowin.png, id=449, 938.00438pt x 518.43687pt>
 File: images/Uve_Gowin.png Graphic file (type png)
 <use images/Uve_Gowin.png>
-Package pdftex.def Info: images/Uve_Gowin.png  used on input line 2201.
-(pdftex.def)             Requested size: 443.59825pt x 240.40813pt.
+Package pdftex.def Info: images/Uve_Gowin.png  used on input line 2214.
+(pdftex.def)             Requested size: 443.56723pt x 245.16048pt.
 
-Overfull \hbox (12.01978pt too wide) in paragraph at lines 2201--2202
+Overfull \hbox (11.98875pt too wide) in paragraph at lines 2214--2215
 [][] 
  []
 
@@ -2238,10 +2249,10 @@ Package logreq Info: Writing requests to 'Bitacoras_Grupo5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27977 strings out of 478699
- 480652 string characters out of 2841711
- 1037700 words of memory out of 3000000
- 45106 multiletter control sequences out of 15000+600000
+ 27983 strings out of 478699
+ 480721 string characters out of 2841711
+ 1037751 words of memory out of 3000000
+ 45108 multiletter control sequences out of 15000+600000
  482033 words of font info for 346 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,16n,93p,1873b,1998s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2284,9 +2295,9 @@ ograms/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Daniel Nunez/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/D
 aniel Nunez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.
 pfb>
-Output written on Bitacoras_Grupo5.pdf (40 pages, 597030 bytes).
+Output written on Bitacoras_Grupo5.pdf (41 pages, 763289 bytes).
 PDF statistics:
- 666 PDF objects out of 1000 (max. 8388607)
- 169 named destinations out of 1000 (max. 500000)
- 84325 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 677 PDF objects out of 1000 (max. 8388607)
+ 173 named destinations out of 1000 (max. 500000)
+ 84333 words of extra memory for PDF output out of 89155 (max. 10000000)
 
