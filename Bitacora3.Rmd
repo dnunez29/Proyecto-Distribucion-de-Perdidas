@@ -1,8 +1,7 @@
 # Bitacora 3
 
-## Parte de planificacion
 
-### Ajuste del modelo
+## Ajuste del modelo
 
 
 
@@ -34,13 +33,13 @@
 
 
 ```{r Correlacion entre las variables de estudio}
-# library(fitdistrplus)
+
+library(fitdistrplus)
 library(actuar)
 
 
 hist(test$Credit_Amount, breaks=20, col="green")
 hist(logit_P_real)
-
 
 fit.credit <- fitdist( (test$Credit_Amount/100) , distr = "gamma")
 summary(fit.credit)
@@ -55,12 +54,34 @@ summary(fit.logit)
 ```{r primer intento de copula, echo=FALSE, include=FALSE}
 library(copula)
 library(VineCopula)
+library(ggplot2)
 
 data.test.fija <- read.csv("test_fijo.csv")
 
 credit.fijo <- data.test.fija$credit.amount.fijo
 logit.fijo <- data.test.fija$logit.fijo
+```
 
+
+```{r fig.cap="Histograma de los montos de crédito de la base de prueba"}
+graph.credit.fijo <- data.test.fija %>% ggplot(aes(x = credit.amount.fijo))+
+  geom_histogram(fill = "antiquewhite", color = "black")+
+  theme_light()+
+  labs(x = "Monto", y = "", caption = "Elaboración propia con datos extraídos de Kaggle")
+graph.credit.fijo
+```
+
+
+```{r fig.cap="Histograma de los probabilidades de elegibilidad"}
+graph.logit.fijo <- data.test.fija %>% ggplot(aes(x = logit.fijo))+
+  geom_histogram(fill = "antiquewhite", color = "black")+
+  theme_light()+
+  labs(x = "Monto", y = "", caption = "Elaboración propia con datos extraídos de Kaggle")
+graph.logit.fijo
+```
+
+
+```{r}
 #correlacion empirica entre las variables (Tau de Kendall)
 corr.emp <- cor(credit.fijo, logit.fijo, method = "kendall")
 
@@ -92,58 +113,58 @@ tau(frankCopula(param=coef(fit)))
 
 
 
-### Diagnósticos del modelo
+## Diagnósticos del modelo
 
 
 ```{r gof-test, echo=FALSE, include=FALSE}
-#Le hacemos fit a varias copulas para comparar
-normal.mdl <- fitCopula(normalCopula(dim=2),data=u)
-tcop.mdl <- fitCopula(tCopula(dim=2), data=u)
-clayton.mdl <- fitCopula(claytonCopula(dim=2), data = u)
-
-#AIC de los modelos (entre mas pequenno mejor)
-aic.df <- data.frame( Copula = c("Frank", "Normal", "t", "Clayton"), AIC = c(AIC(fit), AIC(normal.mdl), AIC(tcop.mdl), AIC(clayton.mdl))  )
-
-#SN de los modelos (Test Cramer-von-Mises)
-mm <- as.matrix(data.frame(credit.fijo, logit.fijo))
-
-#Gof test
-gof.frank <- gofCopula(frankCopula(dim=2,param=-3.6), mm, N=50)
-
-gof.normal <- gofCopula(normalCopula(dim=2), mm, N=50)
-
-gof.t <- gofCopula(tCopula(dim=2,df.fixed = T), mm, N=50) 
-
-gof.clayton <- gofCopula(claytonCopula(dim = 2), mm, N=50)
-
-sn.df <- data.frame(Copula = c("Frank", "Normal", "t", "Clayton"), S_n  = c(gof.frank$statistic, gof.normal$statistic, gof.t$statistic, gof.clayton$statistic))
+# #Le hacemos fit a varias copulas para comparar
+# normal.mdl <- fitCopula(normalCopula(dim=2),data=u)
+# tcop.mdl <- fitCopula(tCopula(dim=2), data=u)
+# clayton.mdl <- fitCopula(claytonCopula(dim=2), data = u)
+# 
+# #AIC de los modelos (entre mas pequenno mejor)
+# aic.df <- data.frame( Copula = c("Frank", "Normal", "t", "Clayton"), AIC = c(AIC(fit), AIC(normal.mdl), AIC(tcop.mdl), AIC(clayton.mdl))  )
+# 
+# #SN de los modelos (Test Cramer-von-Mises)
+# mm <- as.matrix(data.frame(credit.fijo, logit.fijo))
+# 
+# #Gof test
+# gof.frank <- gofCopula(frankCopula(dim=2,param=-3.6), mm, N=50)
+# 
+# gof.normal <- gofCopula(normalCopula(dim=2), mm, N=50)
+# 
+# gof.t <- gofCopula(tCopula(dim=2,df.fixed = T), mm, N=50) 
+# 
+# gof.clayton <- gofCopula(claytonCopula(dim = 2), mm, N=50)
+# 
+# sn.df <- data.frame(Copula = c("Frank", "Normal", "t", "Clayton"), S_n  = c(gof.frank$statistic, gof.normal$statistic, gof.t$statistic, gof.clayton$statistic))
 ```
 
 
 
 ```{r distribucion bivariada}
-library(scatterplot3d)
-my_dist <- mvdc(frankCopula(param=-3.6,dim=2), margins = c("gamma","norm"), paramMargins = list( list(shape=fit.credit$estimate[1], rate=fit.credit$estimate[2]  ),list(mean=fit.logit$estimate[1], sd=fit.logit$estimate[2])  ))
-
-# Generate random sample observations from the multivariate distribution
-v <- rMvdc(5000, my_dist)
-# Compute the density
-pdf_mvd <- dMvdc(v, my_dist)
-# Compute the CDF
-cdf_mvd <- pMvdc(v, my_dist)
-
-# 3D plain scatterplot of the generated bivariate distribution
-par(mfrow = c(1, 2))
-scatterplot3d(v[,1],v[,2], pdf_mvd, color="red", main="Density", xlab = "u1", ylab="u2", zlab="pMvdc",pch=".")
-scatterplot3d(v[,1],v[,2], cdf_mvd, color="red", main="CDF", xlab = "u1", ylab="u2", zlab="pMvdc",pch=".")
-persp(my_dist, dMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Density")
-contour(my_dist, dMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Contour plot")
-persp(my_dist, pMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "CDF")
-contour(my_dist, pMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Contour plot")
+# library(scatterplot3d)
+# my_dist <- mvdc(frankCopula(param=-3.6,dim=2), margins = c("gamma","norm"), paramMargins = list( list(shape=fit.credit$estimate[1], rate=fit.credit$estimate[2]  ),list(mean=fit.logit$estimate[1], sd=fit.logit$estimate[2])  ))
+# 
+# # Generate random sample observations from the multivariate distribution
+# v <- rMvdc(5000, my_dist)
+# # Compute the density
+# pdf_mvd <- dMvdc(v, my_dist)
+# # Compute the CDF
+# cdf_mvd <- pMvdc(v, my_dist)
+# 
+# # 3D plain scatterplot of the generated bivariate distribution
+# par(mfrow = c(1, 2))
+# scatterplot3d(v[,1],v[,2], pdf_mvd, color="red", main="Density", xlab = "u1", ylab="u2", zlab="pMvdc",pch=".")
+# scatterplot3d(v[,1],v[,2], cdf_mvd, color="red", main="CDF", xlab = "u1", ylab="u2", zlab="pMvdc",pch=".")
+# persp(my_dist, dMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Density")
+# contour(my_dist, dMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Contour plot")
+# persp(my_dist, pMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "CDF")
+# contour(my_dist, pMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Contour plot")
 
 ```
 
-### Fichas de resultados
+## Fichas de resultados
 
 \textbf{Hallazgo \# 1}
 
@@ -207,14 +228,558 @@ contour(my_dist, pMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Contour plot")
 
 
 
-### Estructra del proyecto
+## Estructra del proyecto
+
+A continuación, se clasifican los principales elementos de la investigación en primarios y secundarios de acuerdo con su peso para contestar la pregunta de investigación:
+
+```{=tex}
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\multicolumn{2}{c}{\textbf{Elementos del reporte}}                                                \\ \hline
+\multicolumn{1}{c}{\textbf{Primarios}}                 & \multicolumn{1}{c}{\textbf{Secundarios}} \\ \hline
+\multicolumn{1}{l|}{Justificación de la investigación} & Idea intuitiva de la regresión logística \\
+\multicolumn{1}{l|}{Análisis de datos}                 & Idea intuitiva de las cópulas            \\
+\multicolumn{1}{l|}{Cópulas}                           & Regresión Logística                      \\
+\multicolumn{1}{l|}{Frank Copulas}                     & Resultados de Regresión Logística        \\
+\multicolumn{1}{l|}{Hallazgos 3 y 4}                   & Hallazgos 1 y 2                          \\
+\multicolumn{1}{l|}{Hallazgo 7 y 8}                    & Tau de Kendall                           \\
+\multicolumn{1}{l|}{}                                  & Hallazgo 5 y 6                          
+\end{tabular}
+\caption{Clasificación de los elementos principales de la investigación}
+\label{tab:my-table}
+\end{table}
+```
+
+Asimismo, el ordenamiento de la literatura de acuerdo con la clasificación ya hecha:
+
+```{=tex}
+\begin{table}[H]
+\centering
+\begin{tabular}{cl}
+\multicolumn{2}{c}{\textbf{Ordenamiento de la literatura}}                                                                                                                                     \\ \hline
+\textbf{Sección} & \multicolumn{1}{c}{\textbf{Temas a tratar}}                                                                                                                                 \\ \hline
+Introducción     & \begin{tabular}[c]{@{}l@{}}- Justificación de la investigación (P)\\ - Idea intuitiva de la regresión logística (S)\\ - Idea intuitiva de las cópulas (S)\end{tabular}      \\ \hline
+Metodología      & \begin{tabular}[c]{@{}l@{}}- Descripción y análisis de los datos (P)\\ - Regresión logística  (S)\\ - Cópulas (P)\\ - Frank Cópulas (P)\\ - Tau de Kendall (S)\end{tabular} \\ \hline
+Resultados       & \begin{tabular}[c]{@{}l@{}}- Resultados de la regresión (S)\\ -Hallazgo 1 y 2 (S)\\ -Hallazgo 3 y 4 (P)\\ -Hallazgo 5 y 6 (S)\\ -Hallazgo 7 y 8 (P)\end{tabular}            \\ \hline
+\end{tabular}
+\caption{Ordenamiento de la literatura de acuerdo a la clasificación hecha}
+\label{tab:my-table}
+\end{table}
+```
+
+
+## Introducción 
+
+Día con día personas se presentan a entidades bancarias con el fin de solicitar préstamos. A pesar de lo que se pueda pensar, esto es un negocio muy rentable para los bancos, sin embargo, el otorgamiento de esos préstamos debe realizarse de manera responsable y considerando múltiples criterios. Y dado el contexto actual en donde se está atravesando por una crisis económica importante en todo el mundo, la solicitud de préstamos se ha vuelto una forma común de financiamiento para afrontar la crisis. Este puede ser uno de los principales problemas a lo que se enfrentan las entidades financieras, determinar a cuáles personas es rentable prestarles dinero.
+
+Este proyecto se encarga de estudiar ese fenómeno con herramientas estadísticas como lo es la regresión logística, sin embargo, para dar una respuesta aún más completa hará faltar hacer de otros métodos estadísticos. Esto debido a que este tipo de modelos por lo general no contemplan si existe relación entre las variables estudiadas. Esa posible dependencia hará que el modelo se vea afectado. Mediante este proyecto se propone realizar un análisis de dependencia adicional para intentar relacionar esa probabilidad de elegibilidad del individuo con otras variables de interés como el monto del crédito. De esta forma, se distinguen dos principales etapas en el trabajo, la primera es la construcción de esas probabilidades de elegibilidad mediante una regresión logística. Para esta etapa, se usaron datos de un banco alemán que mantiene su nombre en anonimato y hay muchas variables que este banco considera de interés para otorgar un préstamo dentro de las cuales se destaca la edad, el monto del préstamo, la cantidad de préstamos que tiene, entre otras. El análisis descriptivo de las variables se realiza más adelante en la investigación. 
+
+Una vez calculadas esas probabilidades de elegibilidad, se procede con la segunda etapa del trabajo, la cual es la construcción de una función marginal que explique esos datos. La idea principal sería comparar esta distribución marginal con la distribución marginal de otras variables de interés como el monto del crédito. Para ello, se pretende la creación de una sola función de distribución que explique la relación y dependencia entre ambas variables. Es precisamente en esta etapa en la que usan cópulas para la creación del producto esperado que vendría siendo la distribución conjunta. 
+
+La construcción de esta distribución conjunta es necesaria para extraer conclusiones en donde se esté contemplando la relación que existe entre ambas variables. La idea del trabajo es extraer estas conclusiones a partir de la probabilidad de elegibilidad y su relación con el monto del crédito. 
+
+
+## Metodología 
+
+Para un primer acercamiento a contestar la pregunta de investigación, se tienen que definir conceptos importantes como el de crédito que se define como "una operación de financiación donde un 'acreedor' presta una cierta cifra monetaria a un 'deudor', quien garantiza al acreedor que retornará esta cantidad solicitada más una cantidad adicional, llamada 'intereses'" (\cite{credito_def}). Además, se tiene que definir la pérdida esperada como "el valor esperado de pérdida por riesgo crediticio en un horizonte de tiempo determinado" (\cite{perdida_def}). Y finalmente el concepto de elegibilidad que según la RAE es la cualidad de la persona que pueda ser elegida para algo (\cite{eleg_def}). 
+
+### Descripción y Análisis de Datos 
+
+Para efectos de la investigación se va a trabajar con una base de datos de un banco alemán que contiene información de personas solicitantes de un crédito y con base en esta información se determina su elegibilidad. Los datos fueron recuperados de kaggle y originalmente fueron obtenidos de \href{https://online.stat.psu.edu/stat508/resource/analysis/gcd}{Penn State Eberly College of Science}. Los datos son públicos y son de libre acceso, sin embargo, por motivos de confidencialidad el nombre del banco nunca se menciona. Vale la pena mencionar que en el sitio de donde se extrajeron los datos, no se indica un contexto temporal de los mismos. 
+
+La población de estudio se define como las personas que solicitaron un crédito en esta entidad bancaria ubicada en Alemania mientras que la unidad estadística se define como la persona solicitante de un crédito en el banco alemán estudiado. La muestra para el desarrollo de dicha investigación consta de 1000 individuos. Asimismo, la base cuenta con 21 variables de interés donde en su columna matriz se encuentra la variable binaria de elegibilidad, que toma el valor de 1 si fue elegible y el valor de 0 si no lo fue.
+
+Además, es importante resaltar que cuando se intenta desarrollar un modelo de score crediticio es común estudiar muchas características que pueden ser relevantes para determinar la probabilidad de impago de un individuo, sin embargo, a nivel estadístico usualmente no es lo más apropiado. Debido a esto, se realiza un proceso de depuración de la base con el fin de reducir la cantidad de categorías presentes en cada variable categórica. Más adelante se detallan los pormenores de este proceso. A continuación, una leve explicación de cada una de las variables que conforman esta base:
+
+-   Elegibilidad: toma el valor de 1 si fue elegible y el valor de 0 si no lo fue.
+
+-   Accout Balance: variable categórica que toma el valor de 1 si la persona no cuenta con ninguna cuenta en el banco, el valor de 2 si no tiene un balance pendiente con el banco y el valor de 3 si sí tiene un balance pendiente.
+
+-   Duration: la duración en meses del crédito solicitado
+
+-   Payment Status of Previous Credit: variable categórica que toma el valor de 1 si el individuo presenta problema con el pago del crédito anterior, el valor de 2 si ya lo pagó y el valor de 3 si no tiene problemas con el crédito anterior
+
+-   Purpose: variable categórica que toma el valor de 1 si es para un auto, 2 si es préstamos relacionados a vivienda, 3 si es para un crédito empresarial y 4 si es para cualquier otra cosa.
+
+-   Credit Amount: el monto del crédito solicitado en "Deutsche Mark" (DM), que es la unidad monetaria usada en la base.
+
+-   Saving/Stock value: toma el valor de 1 si no tiene nada de ahorros o de stock, de 2 si el valor es menor a los 100 DM, 3 si se está en el intervalo [100, 500[ DM , 4 si está en [500, 1000[ DM y 5 si está arriba de los 1000 DM.
+
+-   Length of currrent employment: variable categórica que toma el valor de 1 si es desempleado, de 2 si tiene menos de año, de 3 si es de 1 a 4 años, de 4 si es de 4 a 7 años y de 5 si es mayor a 7 años.
+
+-   Sex/marital status: toma el valor de 1 si es un hombre divorciado, el de 2 si es hombre soltero, el de 3 si es hombre casado/viudo y el de 4 si es mujer
+
+-   Guarantors: variable binaria que toma el valor de 1 si la persona tiene un fiador y de 0 si no lo tiene.
+
+-   Duration in current address: variable categórica que determina cuánto tiempo lleva la persona viviendo en la última dirección registrada. Toma el valor de 1 si es menos de un año, el de 2 si lleva entre uno y 4 años, el de 3 si lleva entre 4 y 7 años y el de 4 si lleva más de 7 años.
+
+-   Most valuable asset: toma el valor de 1 si no tiene ninguno, el de 2 si es un carro, el de 3 si es un seguro de vida y el de 4 si son bienes raíces.
+
+-   Edad: edad en años
+
+-   Tarjetas de créditos: toma el valor de 1 si el aplicante tiene tarjetas con otros bancos, el valor ed 2 si tiene tarjetas de créditos con empresas y el de 3 si no tiene nada.
+
+-   Type of department: toma el valor de 1 si no paga renta/hipoteca, el de 2 en caso de pague renta o hipoteca y el de 3 si es dueño de la vivienda/apartamento.
+
+-   No. of credits at this bank: toma el valor de 1 si solo tiene 1, el de 2 si tiene entre 2 y 3 créditos, el de 3 si tiene entre 4 y 5 créditos y el de 4 tiene más de 6 créditos.
+
+-   Occupation: 1 en caso de que sea desempleado o no calificado, 2 en caso de que sea un residente permanente no calificado, 3 en caso de que sea una persona calificada y 4 en caso de que sea un ejecutivo/a.
+
+-   No. of dependents: número de personas que mantiene. Toma el valor de 1 si son más de 3 y de 2 si son entre 0 y 2 personas.
+
+-   Foreign worker: variable binaria que toma el valor de 0 en caso de que sea un trabajador extranjero y 1 en caso de que no lo sea.
+
+Como se pudo observar, la base cuenta con una cantidad considerable de variables de interés, donde leyendo la descripción de cada una se puede entender e intuir el posible impacto que tengan en la elegibilidad de las personas, pero vale la pena distinguir variables como "Payment Status" que es de esperarse que tenga un nivel significancia importante dentro del modelo.
+
+Debido a ese exceso de variables, se tratará de reducirlas haciendo un análisis exploratorio de los datos de tal manera que se pueda eliminar variables que estén correlacionados entre sí. Para llevar a cabo dicho proceso, se utilizara el modelo de cópulas para eliminar o unificar este tipo variables y se utilizarán modelos predictivos como la regresión logística para determinar la elegibilidad de las personas.
+
+Dado que la mayoría de variables son categóricas, primero se realizó un proceso de depuración de la base con el fin de reducir el número de variables estudiados. Para ello, primeramente se reducirán la cantidad de categorías que existen en cada uno de las variables combinando categorías que compartan carácterísticas o presenten muy pocas observaciones. Por ejemplo, en el caso de la variable del Próposito del Crédito, hay 11 categorías diferentes pero se simplificó de tal manera que solo hubiera 4 categorías. La primera son los préstamos relacionados a la compra de un Automóvil, ya sea nuevo o de segunda mano. La segunda a los préstamos realizados al Hogar, ya sea para compra de muebles o remodelaciones. Una tercera catogoría relacionada a créditos Empresariales y una última categoría que incluyera todos los préstamos cuya razón de solicitud no entre en las categorías anteriores.
+
+```{r}
+
+library(readr)
+library(dplyr)
+library(tidyverse)
+library(formattable)
+library(kableExtra)
+library(xtable)
+library(ggplot2)
+library(hrbrthemes)
+library(viridis)
+
+data <- read_csv("german.csv")
+attach(data)
+
+
+data <- data %>% mutate(Account_Balance = case_when(Account_Balance == 1 ~ 1, 
+                           Account_Balance == 2 ~ 2,
+                           Account_Balance %in% c(3,4) ~ 3 ))
+
+data <- data %>% mutate(Payment_Status_of_Previous_Credit = case_when(
+  Payment_Status_of_Previous_Credit %in% c(0,1) ~ 1,
+  Payment_Status_of_Previous_Credit %in% c(2,4) ~ 2,
+  Payment_Status_of_Previous_Credit == 3 ~ 3))
+
+data <- data %>%  mutate(Value_Savings_Stocks = case_when(
+  Value_Savings_Stocks == 1 ~ 1, 
+  Value_Savings_Stocks == 2 ~ 2,
+  Value_Savings_Stocks %in% c(3,4) ~ 3,
+  Value_Savings_Stocks == 5 ~ 4
+))
+
+
+data <- data %>% mutate(Length_of_current_employment = case_when(
+  Length_of_current_employment %in% c(1,2) ~ 1, 
+  Length_of_current_employment == 3 ~ 2, 
+  Length_of_current_employment == 4 ~ 3, 
+  Length_of_current_employment == 5 ~ 4
+))
+
+data <- data %>% mutate(Sex_Marital_Status = case_when(
+  Sex_Marital_Status %in% c(1,2) ~ 1, 
+  Sex_Marital_Status == 3 ~ 2, 
+  Sex_Marital_Status == 4 ~ 3
+))
+
+data <- data %>%  mutate(No_of_Credits_at_this_Bank = case_when(
+  No_of_Credits_at_this_Bank == 1 ~ 1, 
+  No_of_Credits_at_this_Bank %in% c(2,3,4) ~ 2
+))
+
+data <- data %>% mutate(Guarantors = case_when(
+  Guarantors == 1 ~ 1, 
+  Guarantors == 2 ~ 2
+))
+
+data <- data %>% mutate(Concurrent_Credits = case_when(
+  Concurrent_Credits %in% c(1,2) ~ 1, 
+  Concurrent_Credits == 3 ~ 2
+))
+
+data <- data %>%  mutate(Purpose = case_when(
+  Purpose %in% c(1,2) ~ 1, 
+  Purpose %in% c(3,4,5,6) ~ 2, 
+  Purpose == 10 ~ 3,
+  Purpose %in% c(7,8,9,0) ~ 4
+))
+
+```
+
+```{r echo=FALSE, include=FALSE}
+
+tabla1 <- data %>% group_by(Purpose) %>% summarize(n =n())
+
+tabla1 %>% kbl(caption="Distribución de la variable Próposito del Crédito",
+      format="latex",
+      col.names = c("Propósito","Cantidad de observaciones"), align = 'c')%>%
+  footnote(general = "Elaboración propia con datos extraídos de Kaggle") %>% kable_styling(latex_options = "HOLD_position")
+```
+
+Una vez hecha estas modificaciones, se puede extraer información interesante como la cantidad de préstamos solicitados por propósito cuyo gráfico se muestra a continuación:
+
+```{r fig.cap="Distribución de la variable Próposito del crédito"}
+
+graph6 <- tabla1 %>% ggplot(aes(x = Purpose, y = n)) +
+  geom_bar(stat="identity", alpha=.6, width=.3, color = "black", fill = "antiquewhite")+
+  #coord_flip()+
+  theme_test()+
+  labs(x = "", y = "", caption = "Elaboración propia con datos extraídos de Kaggle")+
+  scale_x_discrete(limits = c("Auto", "Hogar", "Empresa", "Otro"))
+graph6
+
+```
+
+El gráfico anterior revela que la mayoría de préstamos solicitados son con asuntos relacionadas al hogar, mientras que hay una porción muy bajo de préstamos destinados al área empresarial.
+
+Asimismo, en el siguiente gráfico se muestra la relación que existe entre el monto del crédito según su propósito, donde cabe destacar que aunque los motivos empresariales es la razón menos frecuente en la base de datos, el crédito solicitado de mayor monto tiene como razón dicho motivo. Mediante este análisis fue que se descartó la posibilidad de combinar lel próposito "Empresa" con alguna otra categoría, ya que hay información importante que pueda revelar.
+
+```{r  fig.cap="Distribución del Monto del Crédito según su próposito"}
+graph5 <- data %>% ggplot(aes(x=Purpose, y = Credit_Amount)) + 
+  geom_point(fill = "antiquewhite", color = "black", shape =  23)+
+  theme_light()+
+  labs(x = "", y = "", caption = "Elaboración propia con datos extraídos de Kaggle")+
+  scale_x_discrete(limits = c("Auto", "Hogar", "Empresa", "Otro"))
+graph5
+```
+
+Haciendo una análisis similar para las edades, se llega a la conclusión de que existe una tendencia mayor en las personas cuyas edades estén en el rango de 20 a 40 años a solicitar préstamos como lo muestra la siguiente tabla:
+
+```{r Tabla2}
+tabla2 <- data %>%  group_by(Age = cut(Age_years, breaks = c(10,20,30,40,50,60,70,80))) %>% count(Age) %>% na.omit(tabla1) 
+
+tabla2 %>% kbl(caption="Distribución de las edades",
+      format="latex",
+      col.names = c("Rango de edad","Cantidad de observaciones"), align = 'c') %>% 
+  footnote(general = "Elaboración propia con datos extraídos de Kaggle")%>% kable_styling(latex_options = "HOLD_position")
+
+```
+
+De manera gráfica, la densidad de la variable edad viene dada por el siguiente gráfico donde se nota una asimetría hacia a la derecha que deja en evidencia lo que se habló anteriormente donde hay una tendencia mucho mayor en las personas entre los 20 y los 40 años de solictar préstamos.
+
+```{r  fig.cap="Histograma de la variable Edad"}
+
+graph3 <- data %>% ggplot(aes(x = Age_years))+
+  #geom_histogram(fill = "antiquewhite", color = "black")+
+  geom_density()+
+  theme_light()+
+  labs(x = "Edad", y = "", caption = "Elaboración propia con datos extraídos de Kaggle")
+graph3
+
+```
+
+Otra variable que es de esperarse que sea de importancia es el Balance Actual que el solicitante tiene. Esta variable es categórica y toma el valor de 0 en caso de que el solicitante no tenga ninguna cuenta abierta con el Banco, el valor 1 en caso de que sí tenga una cuenta con el banco pero no tenga saldo o balance, y por último, toma el valor de 3 en caso de que sí tenga balance. La distribución de frecuencias viene dada por:
+
+```{r  Tabla4}
+
+tabla4 <- data %>% group_by(Account_Balance) %>% summarize(n =n())
+
+tabla4 %>% kbl(caption="Distribución de la variable Balance Actual",
+      format="latex",
+      col.names = c("Balance Actual","Cantidad de observaciones"), align = 'c') %>% 
+  footnote(general = "Elaboración propia con datos extraídos de Kaggle")%>% kable_styling(latex_options = "HOLD_position")
+
+```
+
+La mayoría de variables que se encuentran en la base son de carácter categórico, por lo que se presenta el siguiente cuadro que muestra información sobre las variables de carácter númerico continuo:
+
+```{r  Tabla3}
+tabla3.1 <- data %>% summarize(
+  Min = min(Credit_Amount),
+  Q1 = quantile(Credit_Amount, 0.25),
+  Mediana = median(Credit_Amount),
+  Q3 = quantile(Credit_Amount,0.75),
+  Max = max(Credit_Amount)
+) 
+
+tabla3.2 <- data %>% summarize(
+  Min = min(Duration_of_Credit_monthly),
+  Q1 = quantile(Duration_of_Credit_monthly, 0.25),
+  Mediana = median(Duration_of_Credit_monthly),
+  Q3 = quantile(Duration_of_Credit_monthly,0.75),
+  Max = max(Duration_of_Credit_monthly)
+) 
+
+
+tabla3.3 <- data %>% summarize(
+  Min = min(Age_years),
+  Q1 = quantile(Age_years, 0.25),
+  Mediana = median(Age_years),
+  Q3 = quantile(Age_years,0.75),
+  Max = max(Age_years)
+) 
+
+tabla3 <- rbind(tabla3.1, tabla3.2, tabla3.3)
+rownames(tabla3) <- c("Monto del crédito", "Duración en meses del crédito", "Edad")
+
+tabla3 %>% kbl(caption="Resumen de 5 números",
+      format="latex", align = 'c') %>% 
+  footnote(general = "Elaboración propia con datos extraídos de Kaggle")%>% kable_styling(latex_options = "HOLD_position")
+
+```
+
+Dado a que eventualmente la idea es realizar un modelo de Cópulas entre los resultados del proceso de clasificación con el Monto del Crédito, sería importante describir de manera exhaustiva esta variable. A continuación un histograma que muestra la distribución de los montos:
+
+```{r fig.cap= "Histograma de la variable Monto del Crédito" }
+graph2 <- data %>% ggplot(aes(x = Credit_Amount))+
+  geom_histogram(fill = "antiquewhite", color = "black")+
+  theme_light()+
+  labs(x = "Monto", y = "", caption = "Elaboración propia con datos extraídos de Kaggle")
+graph2
+
+```
+
+El histograma muestra una fuerte asimetría hacia su derecha indicando la tendencia en la solicitud de crédito de montos bajos. Esto en efecto se puede ver el siguiente diagrama de caja y bigotes que también busca mostrar de manera más detallada la distribución intercuantílica de los montos:
+
+```{r fig.cap="Diagrama de Caja y Bigotes de la variable Monto del Crédito"}
+
+
+data.graph1 <- data.frame(
+  name = c(rep("Distribución",1000)),
+  value = Credit_Amount
+)
+
+graph1 <- data.graph1 %>% ggplot(aes(x=name,y=Credit_Amount)) +
+  geom_boxplot(width = 0.3, fill = "antiquewhite") +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  # theme_ipsum() +
+  theme_bw()+
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  labs(x = "", y = "Monto", caption = "Elaboración propia con datos extraídos de Kaggle")
+
+graph1
+
+```
+
+El gráfico es congruente con lo visto en el histograma y queda aún más en evidencia lo dicho anteriormente pues alrededor del 50$\%$ de los créditos solicitados fueron por montos menores a los 2500 DM que si comparamos este momento con el monto máximo solicitado de 18424 DM, se puede notar una gran diferencia.
+
+```{r}
+tabla5 <- data %>%  group_by(Foreign_Worker) %>%  summarize(n = n())
+
+```
+
+```{r}
+
+graph4 <- data %>% ggplot(aes(x = Duration_of_Credit_monthly))+
+  geom_density()+
+  #geom_histogram(fill = "antiquewhite", color = "black")+
+  theme_test()+
+  labs(x = "Duración en meses", y = "", title = "Gráfico 2.4:  Histograma de la variable Duración del crédito", caption = "Elaboración propia con datos extraídos de Kaggle")
+
+
+```
+
+Dada la cantidad de variables categóricas con las que cuenta la base, se realizarán pruebas de tal manera que se puedan distinguir las variables de mayor relevancia y, a partir de las mismas, descartar las menos relevantes. Para ello se utilizará el la prueba de independencia Chi-Cuadrado. Se busca que los $p-values$ sean cercanos a cero con tal de afirmar que las variables son estadísticamente significantes en el estudio.
+
+```{r}
+
+# Todas estas variables parecen ser significativas
+
+# (t.amount <- t.test(table(Creditability, Credit_Amount))[3])
+# (t.age <- t.test(table(Creditability, Age_years))[3])
+# (t.duration <- t.test(Creditability, Duration_of_Credit_monthly)[3])
+
+```
+
+```{r}
+
+data.test <- data %>% dplyr::select(Account_Balance, Payment_Status_of_Previous_Credit, Purpose, Value_Savings_Stocks, Length_of_current_employment, Instalment_per_cent, Sex_Marital_Status, Duration_in_Current_address, Type_of_apartment,  Most_valuable_available_asset, No_of_Credits_at_this_Bank, Guarantors, Occupation, Concurrent_Credits, No_of_dependents,Telephone,Foreign_Worker)
+
+
+dim <- dim(data.test)[2]
+chi <- c()
+
+for (i in 1:dim) {
+  chi[i] <- chisq.test(table(Creditability, as.numeric(unlist(data.test[,i])) ))[3]
+}
+
+chi <- as.numeric(unlist(chi))
+
+data.final <- data.test %>% dplyr::select(which(chi < 0.001)) %>% cbind(Credit_Amount, Age_years, Duration_of_Credit_monthly) %>%  relocate(Credit_Amount, Age_years, Duration_of_Credit_monthly)
+
+```
+
+```{r}
+# (chi.account.balance <-chisq.test(table(Creditability, Account_Balance)))[3]
+# (chi.payment <-chisq.test(table(Creditability, Payment_Status_of_Previous_Credit)))[3]
+# (chi.purpose <-chisq.test(table(Creditability, Purpose)))[3]
+# (chi.savings <- chisq.test(table(Creditability, Value_Savings_Stocks)))[3]
+# (chi.length.employ <- chisq.test(table(Creditability, Length_of_current_employment)))[3]
+# (chi.installment <- chisq.test(table(Creditability, Instalment_per_cent)))[3]
+# (chi.sex <-chisq.test(table(Creditability, Sex_Marital_Status)))[3]
+# (chi.address <-chisq.test(table(Creditability, Duration_in_Current_address)))[3]
+# (chi.apartment <-chisq.test(table(Creditability, Type_of_apartment)))[3]
+# (chi.asset <-chisq.test(table(Creditability, Most_valuable_available_asset)))[3]
+# (chi.credits <-chisq.test(table(Creditability, No_of_Credits_at_this_Bank)))[3]
+# (chi.guarantor <-chisq.test(table(Creditability, Guarantors)))[3]
+# (chi.occupation <-chisq.test(table(Creditability, Occupation)))[3]
+# (chi.concurrent <-chisq.test(table(Creditability, Concurrent_Credits)))[3]
+# (chi.dependents <-chisq.test(table(Creditability, No_of_dependents)))[3]
+# (chi.telephone <-chisq.test(table(Creditability, Telephone)))[3]
+# (chi.foreign <-chisq.test(table(Creditability, Foreign_Worker)))[3]
+```
+
+Estas pruebas mostraron que las variables más significativas son: Acount Balance, Payment Status, Purpose of the credit, Savings/Stock Value, Length of Current Employment, Type Apartment y Most Valuable Asset A partir de estas variables se desarrolla un modelo de regresión logística en el toma un 60$\%$ para entrenamiento y un 40 $\%$ para testing.
+
+### Regresión Logística
+
+
+Con estos términos claros se puede continuar con el intento responder la pregunta del trabajo, por lo que antes de poder calcular las pérdidas del banco por impago se necesita una manera de determinar el score crediticio por individuo. Es por esto que primero se va a realizar un modelo de clasificación de elegibilidad de crédito, para lo cual se implementó un modelo de regresión logística. Este tipo de regresión como menciona James, a diferencia de los métodos de regresión, esta sirve para clasificar de manera binaria una variable. Entonces en vez de entrenar un modelo para determinar si hay una correlación entre la variable dependiente y las covariables, se entrena para clasificar en alguna de dos categorías a la variable dependiente de acuerdo a sus covariables. Esta definición del modelo es similar a la que hace Chitarroni en su artículo ya que lo define como un instrumento de análisis multivariado y dependiendo del enfoque se puede utilizar para realizar predicciones o inferencia. Se menciona que es muy útil cuando la variable dependiente es de carácter dicotómico (binario). Asimismo, se aclara que cuando las covariables son categóricas estas deberían de recibir una transformación y convertirlas en variables "dummy", es decir, variables simuladas.
+
+Para el modelo de regresión logística se va a utilizar la siguiente forma:
+
+```{=tex}
+\begin{equation}p(\boldsymbol{X}) = \frac{e^{\beta_0 + X_1\beta_1+\cdots+X_p\beta_p}}{1+e^{\beta_0 + X_1\beta_1+\cdots+X_p\beta_p}}\end{equation}
+```
+En donde se cumple $0<p(X)<1$ y $X_k$ con $k=1,...,p$ corresponden a las covariables con las que se entrena el modelo. (\cite{james2021introduction})
+
+Sin embargo, en el artículo expuesto por Chitarroni, se le da más peso a las pruebas de significancia de variables así como a la interpretabilidad de los resultados ya que este tipo de modelo no solo determina la probabilidad de la variable dependiente sino el peso que tienen las covariables para realizar la predicción. Esto ayuda a nivel interpretativo pues se pueden determinar qué variables son más significativas. Mientras que en su libro, James también menciona diagnósticos de los modelos de clasificación que ayudan a determinar si un modelo es mejor que otro o está mejor ajustado como por ejemplo el concepto de especificidad y sensibilidad los cuales miden la tasa de falsos positivos y los falsos negativos respectivamente. De acuerdo al tipo de problema para el cual se está realizando el modelo, se debe considerar ajustes para aumentar estas medidas. Otro diagnóstico bastante utilizado es el de la curva ROC (Receiver Operation Curve), la cual sirve para graficar la tasa de falsos positivos con la sensibilidad del modelo.
+
+### Cópulas
+
+Para la segunda parte del trabajo, donde ya se planean utilizar modelos que involucren cópulas. Estos modelos sirven para encontrar distribuciones conjuntas que generalmente tienen un alto grado de correlación entre sí, por lo que analizarlas por separado no es lo más recomendable. Como menciona Escarela, las cópulas bivariadas son funciones que intentan correlacionar dos distribuciones univariadas por lo que estos modelos ayudan a obtener una distribución conjunta a partir de varias funciones de distribución asociadas a variables aleatorias con una cierta relación entre sí. Es decir, con este método se construye una distribución multivariada a partir de las distribuciones univariadas de las variables respectivas. Este tipo de modelo también resulta en una forma de estructurar la dependencia de estas parejas de variables aleatorias en distribuciones conjuntas. Es por esto que son tan populares puesto que tienen una gran flexibilidad para encontrar distribuciones conjuntas a partir de cualquier pareja aleatoria, lo que es usual tener en muchas disciplinas.
+
+Por lo que es importante definir el concepto de cópula bidimensional, la cual es una función bivariada de un vector aleatorio $\boldsymbol{V} = (V_1,V_2)$ cuyas marginales $V_1$ y $V_2$ son uniformes en el intervalo $\boldsymbol{I} = (0,1)$. Por lo que la cópula es una función $C\,: \boldsymbol{I}^2 \rightarrow\boldsymbol{I}$ que satisface las siguientes 2 condiciones:
+
+- Acotamiento: 
+
+```{=tex}
+\begin{align}\lim_{v_j\rightarrow 1^-} C(v1,v2) = v_{3-j}\\ \lim_{v_j\rightarrow 0} C(v1,v2) = 0\end{align}
+```
+con $j=1,2$ y $(v_1,v_2)^T \in \boldsymbol{I}^2$
+
+- Incremento 
+
+```{=tex}
+\begin{equation}C(u_2,v_2) - C(u_2,v_1) - C(u_1,v_2) + C(u_1,v_1) \geq 0\end{equation}
+```
+para toda $u_1,u_2,v_1,v_2 \in \boldsymbol{I}$ tal que $u_1 \leq u_2$ y $v_1 \leq v_2$
+
+### Frank Copulas
+
+Las Frank Copulas son cópulas arquimedianas, donde cabe distinguir que son de las más usadas para resolver problemas empíricos. Las Frank Copulas son útiles para este problema debido a que pueden expresar la relación entre dependencias tanto positivas como negativas, asimismo, tienen una estructura de dependencia simétrica. (\cite{var_copula})
+
+Para entrar más en contexto con este tipo de cópulas, primero se procede a explicar lo que es un cópula arquimediana. Suponiendo una dimensión de $d$, una cópula se le llama arquimediana cuando es de la forma: 
+
+```{=tex}
+\begin{equation}C(u_1, u_2, \dots, u_d) = \varphi^{-1}(\varphi(u_1) + \dots + \varphi(u_d))\end{equation}
+```
+donde a la función $\varphi$ se le conoce como función generadora, con el supuesto de que tiene solo un parámetro. Para el caso de las Frank Copulas, esta función generadora viene dada por: 
+
+```{=tex}
+\begin{equation}\varphi(u) = \ln \left( \dfrac{e^{-\vartheta u} - 1 }{ e^{-\vartheta} - 1} \right)\end{equation}
+```
+con $\vartheta > 0$. Como se está trabajando en el caso bivariado, la función $C$ se escribiría de la siguiente forma:
+
+```{=tex}
+\begin{equation}C(u_1, u_2) = -\dfrac{1}{\vartheta} \ln \left( 1 + \dfrac{(e^{-\vartheta u_1} - 1)(e^{-\vartheta u_2} - 1)  }{e^{-\vartheta} - 1}\right)\end{equation}
+```
+
+### Estimación del parámetro
+
+
+La estimación del parámetro $\vartheta$ se realiza mediante el método de máxima verosimilitud. Esta función para el caso de cópulas bivariadas se puede escribir como:
+
+```{=tex}
+\begin{equation}L = \displaystyle \prod_{i=1}^2 c_{(u_1,u_2)} \left\{ F_1(x_1),F_2(x_2) \right\} f_1(x_1) f_2(x_2)\end{equation}
+```
+y al aplicar una transformación logarítmica se puede reescribir como: 
+
+```{=tex}
+\begin{equation}\ln f(x_1, x_2; \vartheta, \rho) = \ln c(F_1(x_1),F_2(x_2); \rho) + \ln f_1(x_1;\vartheta) + \ln f_2(x_2;\vartheta)\end{equation}
+```
 
 
 
+### Rho de Spearman 
+
+Para encontrar la dependencia existente en la distribución conjunta producto de la cópula, se utiliza el test de estructura de dependencia. Si la data consiste de $x_{i} = (x_{i1} + x_{i2} + \dots + x_{id})$, donde $d$ indica la cantidad de observaciones e $i$ indica la $i$-ésima variable. Este test puede ser calculado con el \textit{Coeficiente de Correlación Rho de Spearman} cuya fórmula viene dada por: 
+
+```{=tex}
+\begin{equation}\rho = 1 - \dfrac{6 \sum_i d_i^2}{n(n^2-1)}\end{equation}
+```
+donde $n$ es la cantidad de observaciones y $d_i$ es la diferencia de rangos del $i$-ésimo elemento. 
+
+Un detalle importante a la hora de modelar cópulas es la transformación de los datos para que vivan dentro del intervalo $[0,1]$. Para ello, y en caso de ser necesario, se mapean los datos de la siguiente manera: 
+
+El $\rho$ de Spearman muestra la correlación lineal entre ambas variables, sin embargo, el tau de Kendall es otra medida que se ha vuelto más popular en el modelaje y comparación de cópulas. 
+
+### Tau de Kendall 
+
+Este estadístico es un medida de correlación de rango y es muy usado para determinar el grado de dependencia entre dos o más variables. Una prueba de hipótesis $\tau$ es una prueba cuya hipótesis nula ($H_0$) es suponer una correlación nula entra ambas variables ($\tau = 0$) mientras que la hipótesis alternativa sería suponer cierto grado de correlación ($\tau \neq 0$) , en ese sentido es similar al test de dependencia de Spearman. 
+
+Esta prueba es no paramétrica ya que no toma en cuenta la distribución de las variables $x_1$ y $x_2$ para su desarrollo. (\cite{goodness_test}) Esta medida será la usada para el estudio del modelo. Su fórmula viene dada por: 
+
+```{=tex}
+\begin{equation}\tau = 1 - \dfrac{4}{\vartheta} + \dfrac{4 D_1(\vartheta)}{\vartheta}\end{equation}
+```
+con $D_1(\vartheta) = \displaystyle \int_0^\vartheta \dfrac{x dx}{e^x - 1}$. Este coeficiente igual arroja valores entre -1 y 1, y la interpretación es análoga al caso del $\rho$ de Spearman. 
+
+El tau de Kendall también arroja valores entre -1 y 1 su interpretación es la siguiente:
+
+\begin{itemize}
+    \item Un valor de $\rho = 1$ indica perfecta correlación positiva entre las variables
+    \item Si $0 < \rho < 1$ muestra una correlación positiva 
+    \item Un valor de $\rho = 0$ indica que no existe correlación entre las variables
+    \item Si $-1 < \rho < 0$ muestra una correlación negativa 
+    \item Un valor de $\rho = -1$ indica perfecta correlación negativa entre las variables
+\end{itemize}
 
 
-## Parte escrita
+## Resultados
+
+Para determinar si al solicitante se le dará el crédito, el umbral será del 0.5, por lo que si el resultado de la regresión es mayor a 0.5, se le da el crédito y en caso contrario no. El resultado de la regresión arroja una curva ROC como se muestra a continuación: 
+
+```{r}
+library(pROC)
+library(caret)
+library(verification)
+library(ROCit)
+library(plotROC)
+
+indexes = sample(1:nrow(data), size=0.6*nrow(data))
+train <- data[indexes,]
+test <- data[-indexes,]
+
+Logistic.1 <- glm(Creditability ~ Account_Balance + Payment_Status_of_Previous_Credit + Value_Savings_Stocks + Length_of_current_employment + Most_valuable_available_asset + Type_of_apartment + Concurrent_Credits + Duration_of_Credit_monthly + Credit_Amount + Age_years)
+
+#summary(Logistic.1)
+
+logit_P <- predict(Logistic.1, newdata = test, type = 'response')
+logit_P <- ifelse(logit_P > 0.5, 1, 0)
+actual <- as.numeric(unlist(test[,1]))
+df <- data.frame(logit_P, actual)
+
+CM1 <- confusionMatrix(as.factor(logit_P), as.factor(actual), mode = "everything", positive = "1")
+
+```
+
+```{r fig.cap="Curva ROC"}
+# roc_score <- roc(actual, logit_P, plot = TRUE)
+
+# plot(rocit(score = logit_P, class = actual))
+
+rocplot <- ggplot(df, aes(m = logit_P, d = actual)) + 
+  geom_roc(n.cuts = 20, labels = FALSE) + 
+  geom_abline(linetype = "dashed")+
+  theme_bw() + 
+  labs(x = "1-Especificidad", y = "Sensibilidad", caption = "Elaboración propia con datos extraídos de Kaggle")
 
 
+rocplot
 
-## Parte de reflexión
+```
+
+Asimismo, este modelo arroja una precisión aproximada del 76 $\%$ con un intervalo de confianza de $]0.71, 0.80[$. Además se tiene una sensibilidad de 82 $\%$, lo que indica que el modelo es bueno para clasificar a buenos deudores como buenos. Por otro lado, se tiene una especificidad de apenas el 61$\%$ por lo que se concluye que el modelo no es óptimo para clasificar a malos deudores como malos. 
+
+El fijar el umbral para determinar la curva ROC se hizo meramente para mostrar que la regresión logística resulta ser buena, por lo que realmente este es un resultado secundario de la investigación. Cabe recordar que el propósito del trabajo es comparar la distribución marginal de las probabilidades de elegibilidad con variables como el monto del crédito, con el fin de calcular una distribución conjunta usando cópulas. 
+
+Dicho esto, si se calcula la correlación empírica entre las probabilidades de elegibilidad con el monto del crédito se llega a una correlación de -0.30. Esta correlación se calculó con el método del tau de Kendall ya que es el método más popular para comparar dependencia entre modelos de cópulas. Este resultado indica que, si el monto a solicitar por parte del cliente es muy alto, disminuyen las probabilidades de ser elegido. Lo mismo pasa de manera análoga cuando el monto del crédito es bajo, en donde las probabilidades de ser elegido aumentan. Vale la pena mencionar que no se alcanza una correlación perfecta, en parte, esto se debe a que hay muchos más factores que influyen en la elegibilidad de los solicitantes, no solo el monto. Además, dependiendo del método con el que se calcule la correlación, la misma puede variar. Por ejemplo, para el caso de la correlación de Spearman el resultado es de -0.44. 
+
+Lo anterior expuesto se puede identificar como el primer hallazgo y resulta ser muy útil ya que esta asociación negativa funciona como una especie de filtro a la hora de escoger la cópula que mejor ajusta los datos. Esto sucede porque no todas las cópulas pueden modelar relaciones negativas. Esto trae ciertas desventajas ya que se reduce el número de cópulas de dónde escoger para modelar la distribución conjunta. La dependencia negativa no es compatible con las cópulas de Clayton, Gumbel, Joe, BB1, BB6, BB7 y BB8. 
+
+De las cópulas posibles, se probaron múltiples combinaciones entre las cuales distinguen la gaussiana, la t-student y la Frank. Todo esto para determinar cuál era la que mejor se adaptaba a los datos. El AIC fue el método usado para determinar la mejor cópula. El hallazgo primario aquí sería que la Frank se escogió como la mejor con un AIC de -63.46, mientras que las demás tuvieron AIC de -55.04 y -53.04 respectivamente. Además, otro hallazgo primario que rectifica la escogencia de esta cópula para este problema es la relación que existe entre la correlación empírica y la teórica calculada por la cópula. Lo ideal sería que la dependencia teórica calculada por el modelo sea bastante similar a la dependencia empírica. En este caso, se da que la empírica corresponde a un valor aproximado de -0.30 mientras que la correlación teórica calculada por el modelo de cópula de Frank es de -0.36. Hay una diferencia de 0.06 puntos porcentuales entre ambas correlaciones, pero a groso modo, ambos explican el fenómeno bastante parecido indicando el buen ajuste de la cópula con los datos.
+

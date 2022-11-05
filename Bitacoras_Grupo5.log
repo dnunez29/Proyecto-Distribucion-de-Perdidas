@@ -1,31 +1,30 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.6)  2 NOV 2022 21:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.11.16)  4 NOV 2022 20:12
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
 **./Bitacoras_Grupo5.tex
 (Bitacoras_Grupo5.tex
-LaTeX2e <2022-06-01> patch level 3
-L3 programming layer <2022-06-16> (C:\Users\andre\AppData\Local\Programs\MiKTeX
-\tex/latex/memoir\memoir.cls
-Document Class: memoir 2022/02/20 v3.7q configurable book, report, article docu
+LaTeX2e <2021-11-15>
+L3 programming layer <2021-11-12>
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/memoir\memoi
+r.cls
+Document Class: memoir 2021/06/16 v3.7p configurable book, report, article docu
 ment class
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count185
-)
 \onelineskip=\skip47
 \lxvchars=\skip48
 \xlvchars=\skip49
-\@memcnta=\count186
-\c@@memmarkcntra=\count187
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+\@memcnta=\count183
+\c@@memmarkcntra=\count184
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifte
+x.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
 \stockheight=\skip50
 \stockwidth=\skip51
 \trimtop=\skip52
 \trimedge=\skip53
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/memoir\mem10.clo
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/memoir\mem10
+.clo
 File: mem10.clo 2008/01/30 v0.3 memoir class 10pt size option
 )
 \binding=\skip54
@@ -38,20 +37,20 @@ File: mem10.clo 2008/01/30 v0.3 memoir class 10pt size option
 \mem@maxheadheight=\skip61
 \mem@maxfootheight=\skip62
 \headwidth=\skip63
-\c@storedpagenumber=\count188
+\c@storedpagenumber=\count185
 \memPD=\dimen138
 \m@mabparskip=\skip64
 \thanksmarkwidth=\skip65
 \thanksmarksep=\skip66
 \droptitle=\skip67
-\c@book=\count189
-\c@part=\count190
-\c@chapter=\count191
-\c@section=\count192
-\c@subsection=\count193
-\c@subsubsection=\count194
-\c@paragraph=\count195
-\c@subparagraph=\count196
+\c@book=\count186
+\c@part=\count187
+\c@chapter=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
 \beforechapskip=\skip68
 \midchapskip=\skip69
 \afterchapskip=\skip70
@@ -73,8 +72,8 @@ File: mem10.clo 2008/01/30 v0.3 memoir class 10pt size option
 \beforesubparaskip=\skip86
 \aftersubparaskip=\skip87
 \pfbreakskip=\skip88
-\c@@ppsavesec=\count197
-\c@@ppsaveapp=\count198
+\c@@ppsavesec=\count194
+\c@@ppsaveapp=\count195
 \ragrparindent=\dimen139
 \everylistparindent=\dimen140
 \parsepi=\skip89
@@ -96,10 +95,10 @@ File: mem10.clo 2008/01/30 v0.3 memoir class 10pt size option
 \absrightindent=\skip103
 \absparindent=\skip104
 \absparsep=\skip105
-\c@vslineno=\count199
-\c@poemline=\count266
-\c@modulo@vs=\count267
-\c@memfvsline=\count268
+\c@vslineno=\count196
+\c@poemline=\count197
+\c@modulo@vs=\count198
+\c@memfvsline=\count199
 \vleftskip=\skip106
 \vrightskip=\skip107
 \stanzaskip=\skip108
@@ -107,35 +106,43 @@ File: mem10.clo 2008/01/30 v0.3 memoir class 10pt size option
 \vgap=\skip110
 \vindent=\skip111
 \vleftmargin=\dimen142
-\c@verse=\count269
-\c@chrsinstr=\count270
+\c@verse=\count266
+\c@chrsinstr=\count267
 \beforepoemtitleskip=\skip112
 \afterpoemtitleskip=\skip113
-\c@poem=\count271
+\c@poem=\count268
 \beforePoemTitleskip=\skip114
 \midPoemTitleskip=\skip115
 \afterPoemTitleskip=\skip116
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.
+sty
 Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \col@sep=\dimen143
-\ar@mcellbox=\box51
+\ar@mcellbox=\box50
 \extrarowheight=\dimen144
 \NC@list=\toks17
 \extratabsurround=\skip117
 \backup@length=\skip118
-\ar@cellbox=\box52
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/tools\dcolumn.sty
+\ar@cellbox=\box51
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\dcolum
+n.sty
 Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/tools\delarray.sty
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\delarr
+ay.sty
 Package: delarray 2014/10/28 v1.01 array delimiter package (DPC)
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\tabula
+rx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@col@width=\dimen145
 \TX@old@table=\dimen146
 \TX@old@col=\dimen147
 \TX@target=\dimen148
 \TX@delta=\dimen149
-\TX@cols=\count272
+\TX@cols=\count269
 \TX@ftn=\toks18
 )
 \heavyrulewidth=\dimen150
@@ -148,23 +155,23 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \cmidrulesep=\dimen157
 \cmidrulekern=\dimen158
 \defaultaddspace=\dimen159
-\@cmidla=\count273
-\@cmidlb=\count274
+\@cmidla=\count270
+\@cmidlb=\count271
 \@aboverulesep=\dimen160
 \@belowrulesep=\dimen161
-\@thisruleclass=\count275
-\@lastruleclass=\count276
+\@thisruleclass=\count272
+\@lastruleclass=\count273
 \@thisrulewidth=\dimen162
 \ctableftskip=\skip119
 \ctabrightskip=\skip120
-\abovecolumnspenalty=\count277
-\@linestogo=\count278
-\@cellstogo=\count279
-\@cellsincolumn=\count280
+\abovecolumnspenalty=\count274
+\@linestogo=\count275
+\@cellstogo=\count276
+\@cellsincolumn=\count277
 \crtok=\toks19
 \@mincolumnwidth=\dimen163
-\c@newflo@tctr=\count281
-\mem@margin@floatbox=\box53
+\c@newflo@tctr=\count278
+\mem@margin@floatbox=\box52
 \@contcwidth=\skip121
 \@contindw=\skip122
 \abovecaptionskip=\skip123
@@ -175,9 +182,9 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \subfloatbottomskip=\skip128
 \subfloatlabelskip=\skip129
 \subfloatcapmargin=\dimen164
-\c@@contsubnum=\count282
-\m@mscap@capbox=\box54
-\m@mscap@fbox=\box55
+\c@@contsubnum=\count279
+\m@mscap@capbox=\box53
+\m@mscap@fbox=\box54
 \sidecapsep=\dimen165
 \sidecapwidth=\dimen166
 \m@m@tempdima=\dimen167
@@ -189,8 +196,8 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \afterepigraphskip=\skip131
 \epigraphwidth=\skip132
 \epigraphrule=\skip133
-LaTeX Info: Redefining \em on input line 7655.
-LaTeX Info: Redefining \emph on input line 7663.
+LaTeX Info: Redefining \em on input line 7654.
+LaTeX Info: Redefining \emph on input line 7662.
 \tocentryskip=\skip134
 \tocbaseline=\skip135
 \cftparskip=\skip136
@@ -219,7 +226,7 @@ LaTeX Info: Redefining \emph on input line 7663.
 \cftsubparagraphindent=\skip157
 \cftsubparagraphnumwidth=\skip158
 \prechapterprecisshift=\dimen174
-\c@maxsecnumdepth=\count283
+\c@maxsecnumdepth=\count280
 \bibindent=\dimen175
 \bibitemsep=\skip159
 \indexcolsep=\skip160
@@ -240,7 +247,7 @@ LaTeX Info: Redefining \emph on input line 7663.
 \footinsdim=\skip170
 \footinsv@r=\insert250
 \@mpfootinsv@r=\insert249
-\m@m@k=\count284
+\m@m@k=\count281
 \m@m@h=\dimen178
 \m@mipn@skip=\skip171
 \sidefootins=\insert248
@@ -250,54 +257,59 @@ LaTeX Info: Redefining \emph on input line 7663.
 \sidefootvsep=\skip175
 \sidefootwidth=\skip176
 \m@mdownsf=\skip177
-\c@sidefootnote=\count285
+\c@sidefootnote=\count282
 \sidefootmarkwidth=\skip178
 \sidefootmarksep=\skip179
 \sidefootparindent=\skip180
-\c@pagenote=\count286
-\c@pagenoteshadow=\count287
+\c@pagenote=\count283
+\c@pagenoteshadow=\count284
 \mem@pn@lastkern=\skip181
 \every@verbatim=\toks21
 \afterevery@verbatim=\toks22
 \verbatim@line=\toks23
-\tab@position=\count288
+\tab@position=\count285
 \verbatim@in@stream=\read2
 \verbatimindent=\skip182
 \verbatim@out=\write3
 \bvboxsep=\skip183
-\c@memfbvline=\count289
-\c@bvlinectr=\count290
+\c@memfbvline=\count286
+\c@bvlinectr=\count287
 \bvnumlength=\skip184
 \fb@frw=\dimen179
 \fb@frh=\dimen180
 \FrameRule=\dimen181
 \FrameSep=\dimen182
-\c@cp@cntr=\count291
-\c@ism@mctr=\count292
-\c@xsm@mctr=\count293
-\c@csm@mctr=\count294
-\c@ksm@mctr=\count295
-\c@xksm@mctr=\count296
-\c@cksm@mctr=\count297
-\c@msm@mctr=\count298
-\c@xmsm@mctr=\count299
-\c@cmsm@mctr=\count300
-\c@bsm@mctr=\count301
-\c@workm@mctr=\count302
-\c@sheetsequence=\count303
-\c@lastsheet=\count304
-\c@lastpage=\count305
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/textcase\textcase.sty
-Package: textcase 2022/06/12 v1.02 Text only upper/lower case changing (DPC)
-Package textcase Info: Defining Legacy names on input line 20.
+
+LaTeX hooks Warning: Generic hook 'package/before/framed' is deprecated.
+(hooks)              Use hook 'package/framed/before' instead.
+
+\c@cp@cntr=\count288
+\c@ism@mctr=\count289
+\c@xsm@mctr=\count290
+\c@csm@mctr=\count291
+\c@ksm@mctr=\count292
+\c@xksm@mctr=\count293
+\c@cksm@mctr=\count294
+\c@msm@mctr=\count295
+\c@xmsm@mctr=\count296
+\c@cmsm@mctr=\count297
+\c@bsm@mctr=\count298
+\c@workm@mctr=\count299
+\c@sheetsequence=\count300
+\c@lastsheet=\count301
+\c@lastpage=\count302
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/textcase\tex
+tcase.sty
+Package: textcase 2022/07/10 v1.03 Text only upper/lower case changing (DPC)
 )
-\c@figure=\count306
-\c@lofdepth=\count307
+\c@figure=\count303
+\c@lofdepth=\count304
 \cftbeforefigureskip=\skip185
 \cftfigureindent=\skip186
 \cftfigurenumwidth=\skip187
-\c@table=\count308
-\c@lotdepth=\count309
+\c@table=\count305
+\c@lotdepth=\count306
 \cftbeforetableskip=\skip188
 \cfttableindent=\skip189
 \cfttablenumwidth=\skip190
@@ -331,56 +343,60 @@ Package tocloft [2008/07/23] emulated by memoir.
 Package tocvsec2 [2008/07/23] emulated by memoir.
 Package verbatim [2008/07/23] emulated by memoir.
 Package verse [2008/07/23] emulated by memoir.
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2022/04/08 v2.17n AMS math features
+
+LaTeX hooks Warning: Generic hook 'package/before/float' is deprecated.
+(hooks)              Use hook 'package/float/before' instead.
+
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsm
+ath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip191
 For additional information on amsmath, use the `?' option.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amst
+ext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsg
+en.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
 \ex@=\dimen183
-)) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+))
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsb
+sy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen184
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
-Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count310
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amso
+pn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count307
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count311
-\leftroot@=\count312
+\uproot@=\count308
+\leftroot@=\count309
 LaTeX Info: Redefining \overline on input line 399.
-LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count313
-\DOTSCASE@=\count314
+\classnum@=\count310
+\DOTSCASE@=\count311
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box56
-\strutbox@=\box57
-LaTeX Info: Redefining \big on input line 722.
-LaTeX Info: Redefining \Big on input line 723.
-LaTeX Info: Redefining \bigg on input line 724.
-LaTeX Info: Redefining \Bigg on input line 725.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
 \big@size=\dimen185
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count315
-LaTeX Info: Redefining \bmod on input line 905.
-LaTeX Info: Redefining \pmod on input line 910.
-LaTeX Info: Redefining \smash on input line 940.
-LaTeX Info: Redefining \relbar on input line 970.
-LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count316
+\macc@depth=\count312
+\c@MaxMatrixCols=\count313
 \dotsspace@=\muskip16
-\c@parentequation=\count317
-\dspbrk@lvl=\count318
+\c@parentequation=\count314
+\dspbrk@lvl=\count315
 \tag@help=\toks25
-\row@=\count319
-\column@=\count320
-\maxfields@=\count321
+\row@=\count316
+\column@=\count317
+\maxfields@=\count318
 \andhelp@=\toks26
 \eqnshift@=\dimen186
 \alignsep@=\dimen187
@@ -392,19 +408,25 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \multlinegap=\skip192
 \multlinetaggap=\skip193
 \mathdisplay@stack=\toks28
-LaTeX Info: Redefining \[ on input line 2953.
-LaTeX Info: Redefining \] on input line 2954.
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ams
+symb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ams
+fonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
-Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+))
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\lmodern.s
+ty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
@@ -437,345 +459,236 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc
+.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 2.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputen
+c.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks29
 \inpenc@posthook=\toks30
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcom
+p.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/upquote\upqu
+ote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
-Package: microtype 2022/06/23 v3.0f Micro-typographical refinements (RS)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mi
+crotype.sty
+Package: microtype 2021/10/31 v3.0 Micro-typographical refinements (RS)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\key
+val.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks31
 )
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\eto
+olbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count319
+)
 \MT@toks=\toks32
-\MT@tempbox=\box58
-\MT@count=\count322
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1045.
-LaTeX Info: Redefining \leftprotrusion on input line 1046.
-LaTeX Info: Redefining \rightprotrusion on input line 1056.
-LaTeX Info: Redefining \textls on input line 1234.
-\MT@outer@kern=\dimen192
-LaTeX Info: Redefining \textmicrotypecontext on input line 1858.
-\MT@listname@count=\count323
+\MT@count=\count320
+\MT@tempbox=\box57
+\MT@leftmarginkern=\dimen192
+\MT@rightmarginkern=\dimen193
+LaTeX Info: Redefining \textls on input line 1114.
+\MT@outer@kern=\dimen194
+LaTeX Info: Redefining \textmicrotypecontext on input line 1700.
+\MT@listname@count=\count321
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
-tex.def
-File: microtype-pdftex.def 2022/06/23 v3.0f Definitions specific to pdftex (RS)
-
-LaTeX Info: Redefining \lsstyle on input line 900.
-LaTeX Info: Redefining \lslig on input line 900.
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mi
+crotype-pdftex.def
+File: microtype-pdftex.def 2021/10/31 v3.0 Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 915.
+LaTeX Info: Redefining \lslig on input line 915.
 \MT@outer@space=\skip194
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
-File: microtype.cfg 2022/06/23 v3.0f microtype main configuration file (RS)
-)) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mi
+crotype.cfg
+File: microtype.cfg 2021/10/31 v3.0 microtype main configuration file (RS)
+))
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolo
+r.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg
+\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 227.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def
+\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex-dev/graphics\mathcolor.
-ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
-Package xcolor Info: Model `RGB' extended on input line 1369.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
-Package: xurl 2022/01/09 v 0.10 modify URL breaks
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip17
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.st
-y
-Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2022-06-20 v7.00s Hypertext links for LaTeX
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
-ty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
-ty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
-Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
-.sty
-Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
-Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
-lestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-))
-\c@section@level=\count324
-)
-\@linkdim=\dimen193
-\Hy@linkcounter=\count325
-\Hy@pagecounter=\count326
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2022-06-20 v7.00s Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
-Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-\Hy@SavedSpaceFactor=\count327
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2022-06-20 v7.00s Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Option `unicode' set `true' on input line 4045.
-Package hyperref Info: Hyper figures OFF on input line 4162.
-Package hyperref Info: Link nesting OFF on input line 4167.
-Package hyperref Info: Hyper index ON on input line 4170.
-Package hyperref Info: Plain pages OFF on input line 4177.
-Package hyperref Info: Backreferencing OFF on input line 4182.
-Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4408.
-\c@Hy@tempcnt=\count328
-LaTeX Info: Redefining \url on input line 4746.
-\XeTeXLinkMargin=\dimen194
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
-Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
-.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
-))
-\Fld@menulength=\count329
-\Field@Width=\dimen195
-\Fld@charsize=\dimen196
-Package hyperref Info: Hyper figures OFF on input line 6024.
-Package hyperref Info: Link nesting OFF on input line 6029.
-Package hyperref Info: Hyper index ON on input line 6032.
-Package hyperref Info: backreferencing OFF on input line 6039.
-Package hyperref Info: Link coloring OFF on input line 6044.
-Package hyperref Info: Link coloring with OCG OFF on input line 6049.
-Package hyperref Info: PDF/A mode OFF on input line 6054.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
-Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
-package with kernel methods
-)
-\Hy@abspage=\count330
-\c@Item=\count331
-\c@Hfootnote=\count332
-)
-Package hyperref Info: Driver (autodetected): hpdftex.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2022-06-20 v7.00s Hyperref driver for pdfTeX
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
-kage
-with kernel methods
-)
-\Fld@listcount=\count333
-\c@bookmark@seq@number=\count334
-
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
-echeck.sty
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
-ounter.sty
-Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
-)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
-)
-\Hy@SectionHShift=\skip195
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/memoir\memhfixc.sty
-Package: memhfixc 2021/06/16 v1.19 nameref/hyperref package fixes for memoir cl
-ass
-Redoing nameref's sectioning
-Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 102.
-\c@memhycontfloat=\count335
-\c@Hpagenote=\count336
-)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
-File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count337
-)) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.st
-y
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\gra
+phicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\gra
+phics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\tri
+g.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg
+\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\Gin@req@height=\dimen197
-\Gin@req@width=\dimen198
+\Gin@req@height=\dimen195
+\Gin@req@width=\dimen196
 )
-\cslhangindent=\skip196
-\csllabelwidth=\skip197
-\cslentryspacingunit=\skip198
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+\cslhangindent=\skip195
+\csllabelwidth=\skip196
+\cslentryspacingunit=\skip197
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.s
+ty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count338
-\calc@Bcount=\count339
-\calc@Adimen=\dimen199
-\calc@Bdimen=\dimen256
-\calc@Askip=\skip199
-\calc@Bskip=\skip256
+\calc@Acount=\count322
+\calc@Bcount=\count323
+\calc@Adimen=\dimen197
+\calc@Bdimen=\dimen198
+\calc@Askip=\skip198
+\calc@Bskip=\skip199
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count340
-\calc@Cskip=\skip257
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+\calc@Ccount=\count324
+\calc@Cskip=\skip256
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geo
+metry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvt
+ex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count341
-\Gm@cntv=\count342
-\c@Gm@tempcnt=\count343
-\Gm@bindingoffset=\dimen257
-\Gm@wd@mp=\dimen258
-\Gm@odd@mp=\dimen259
-\Gm@even@mp=\dimen260
-\Gm@layoutwidth=\dimen261
-\Gm@layoutheight=\dimen262
-\Gm@layouthoffset=\dimen263
-\Gm@layoutvoffset=\dimen264
+\Gm@cnth=\count325
+\Gm@cntv=\count326
+\c@Gm@tempcnt=\count327
+\Gm@bindingoffset=\dimen199
+\Gm@wd@mp=\dimen256
+\Gm@odd@mp=\dimen257
+\Gm@even@mp=\dimen258
+\Gm@layoutwidth=\dimen259
+\Gm@layoutheight=\dimen260
+\Gm@layouthoffset=\dimen261
+\Gm@layoutvoffset=\dimen262
 \Gm@dimlist=\toks33
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathpazo.sty
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geo
+metry.cfg))
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\mathp
+azo.sty
 Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup6
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2022/06/06 3.76 The Babel package
-\babel@savecnt=\count344
-\U@D=\dimen265
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babe
+l.sty
+Package: babel 2021/11/08 3.66 The Babel package
+\babel@savecnt=\count328
+\U@D=\dimen263
 \l@unhyphenated=\language79
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtb
+abel.def)
 \bbl@readstream=\read3
-\bbl@dirlevel=\count345
+\bbl@dirlevel=\count329
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopt
+s.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.l
-df
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-spanis
+h\spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
 \es@quottoks=\toks34
-\es@quotdepth=\count346
+\es@quotdepth=\count330
 Package babel Info: Making " an active character on input line 570.
 Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel
--spanish.tex
-Package babel Info: Importing font and identification data for spanish
-(babel)             from babel-es.ini. Reported on input line 11.
-)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/wallpaper\wallpaper.sty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wallpaper\wa
+llpaper.sty
 Package: wallpaper 2005/01/18, v1.01 easy wallpaper formatting (MHFW)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
-Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen266
-\ESO@tempdimb=\dimen267
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.
+sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\wpXoffset=\skip258
-\wpYoffset=\skip259
-\tileXoffset=\skip260
-\tileYoffset=\skip261
-\tilewidth=\skip262
-\tileheight=\skip263
-\tileX=\skip264
-\tileY=\skip265
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/eso-pic\eso-
+pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen264
+\ESO@tempdimb=\dimen265
+)
+\wpXoffset=\skip257
+\wpYoffset=\skip258
+\tileXoffset=\skip259
+\tileYoffset=\skip260
+\tilewidth=\skip261
+\tileheight=\skip262
+\tileX=\skip263
+\tileY=\skip264
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multic
+ol.sty
 Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
-\c@tracingmulticols=\count347
-\mult@box=\box59
-\multicol@leftmargin=\dimen268
-\c@unbalance=\count348
-\c@collectmore=\count349
-\doublecol@number=\count350
-\multicoltolerance=\count351
-\multicolpretolerance=\count352
-\full@width=\dimen269
-\page@free=\dimen270
-\premulticols=\dimen271
-\postmulticols=\dimen272
-\multicolsep=\skip266
-\multicolbaselineskip=\skip267
-\partial@page=\box60
-\last@line=\box61
-\maxbalancingoverflow=\dimen273
-\mult@rightbox=\box62
-\mult@grightbox=\box63
-\mult@firstbox=\box64
-\mult@gfirstbox=\box65
+\c@tracingmulticols=\count331
+\mult@box=\box58
+\multicol@leftmargin=\dimen266
+\c@unbalance=\count332
+\c@collectmore=\count333
+\doublecol@number=\count334
+\multicoltolerance=\count335
+\multicolpretolerance=\count336
+\full@width=\dimen267
+\page@free=\dimen268
+\premulticols=\dimen269
+\postmulticols=\dimen270
+\multicolsep=\skip265
+\multicolbaselineskip=\skip266
+\partial@page=\box59
+\last@line=\box60
+\maxbalancingoverflow=\dimen271
+\mult@rightbox=\box61
+\mult@grightbox=\box62
+\mult@firstbox=\box63
+\mult@gfirstbox=\box64
+\@tempa=\box65
 \@tempa=\box66
 \@tempa=\box67
 \@tempa=\box68
@@ -811,194 +724,233 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \@tempa=\box98
 \@tempa=\box99
 \@tempa=\box100
-\@tempa=\box101
-\c@minrows=\count353
-\c@columnbadness=\count354
-\c@finalcolumnbadness=\count355
-\last@try=\dimen274
-\multicolovershoot=\dimen275
-\multicolundershoot=\dimen276
-\mult@nat@firstbox=\box102
-\colbreak@box=\box103
-\mc@col@check@num=\count356
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
-Package: fancyhdr 2022/05/18 v4.0.3 Extensive control of page headers and foote
+\c@minrows=\count337
+\c@columnbadness=\count338
+\c@finalcolumnbadness=\count339
+\last@try=\dimen272
+\multicolovershoot=\dimen273
+\multicolundershoot=\dimen274
+\mult@nat@firstbox=\box101
+\colbreak@box=\box102
+\mc@col@check@num=\count340
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fan
+cyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip268
-\f@nch@O@elh=\skip269
-\f@nch@O@erh=\skip270
-\f@nch@O@olh=\skip271
-\f@nch@O@orh=\skip272
-\f@nch@O@elf=\skip273
-\f@nch@O@erf=\skip274
-\f@nch@O@olf=\skip275
-\f@nch@O@orf=\skip276
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
-Package: biblatex 2022/06/22 v3.18 programmable bibliographies (PK/MW)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count357
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+\f@nch@headwidth=\skip267
+\f@nch@O@elh=\skip268
+\f@nch@O@erh=\skip269
+\f@nch@O@olh=\skip270
+\f@nch@O@orh=\skip271
+\f@nch@O@elf=\skip272
+\f@nch@O@erf=\skip273
+\f@nch@O@olf=\skip274
+\f@nch@O@orf=\skip275
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\bib
+latex.sty
+Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdftexcmds
+\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\
+infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\lt
+xcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvoptions\kv
+options.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvsetkeys\
+kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
-\c@tabx@nest=\count358
-\c@listtotal=\count359
-\c@listcount=\count360
-\c@liststart=\count361
-\c@liststop=\count362
-\c@citecount=\count363
-\c@citetotal=\count364
-\c@multicitecount=\count365
-\c@multicitetotal=\count366
-\c@instcount=\count367
-\c@maxnames=\count368
-\c@minnames=\count369
-\c@maxitems=\count370
-\c@minitems=\count371
-\c@citecounter=\count372
-\c@maxcitecounter=\count373
-\c@savedcitecounter=\count374
-\c@uniquelist=\count375
-\c@uniquename=\count376
-\c@refsection=\count377
-\c@refsegment=\count378
-\c@maxextratitle=\count379
-\c@maxextratitleyear=\count380
-\c@maxextraname=\count381
-\c@maxextradate=\count382
-\c@maxextraalpha=\count383
-\c@abbrvpenalty=\count384
-\c@highnamepenalty=\count385
-\c@lownamepenalty=\count386
-\c@maxparens=\count387
-\c@parenlevel=\count388
-\blx@tempcnta=\count389
-\blx@tempcntb=\count390
-\blx@tempcntc=\count391
-\c@blx@maxsection=\count392
-\blx@maxsegment@0=\count393
-\blx@notetype=\count394
-\blx@parenlevel@text=\count395
-\blx@parenlevel@foot=\count396
-\blx@sectionciteorder@0=\count397
-\blx@sectionciteorderinternal@0=\count398
-\blx@entrysetcounter=\count399
-\blx@biblioinstance=\count400
-\labelnumberwidth=\skip277
-\labelalphawidth=\skip278
-\biblabelsep=\skip279
-\bibnamesep=\skip280
-\bibinitsep=\skip281
-\bibparsep=\skip282
-\bibhang=\skip283
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logre
+q.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count341
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logre
+q.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.s
+ty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count342
+\c@listtotal=\count343
+\c@listcount=\count344
+\c@liststart=\count345
+\c@liststop=\count346
+\c@citecount=\count347
+\c@citetotal=\count348
+\c@multicitecount=\count349
+\c@multicitetotal=\count350
+\c@instcount=\count351
+\c@maxnames=\count352
+\c@minnames=\count353
+\c@maxitems=\count354
+\c@minitems=\count355
+\c@citecounter=\count356
+\c@maxcitecounter=\count357
+\c@savedcitecounter=\count358
+\c@uniquelist=\count359
+\c@uniquename=\count360
+\c@refsection=\count361
+\c@refsegment=\count362
+\c@maxextratitle=\count363
+\c@maxextratitleyear=\count364
+\c@maxextraname=\count365
+\c@maxextradate=\count366
+\c@maxextraalpha=\count367
+\c@abbrvpenalty=\count368
+\c@highnamepenalty=\count369
+\c@lownamepenalty=\count370
+\c@maxparens=\count371
+\c@parenlevel=\count372
+\blx@tempcnta=\count373
+\blx@tempcntb=\count374
+\blx@tempcntc=\count375
+\blx@maxsection=\count376
+\blx@maxsegment@0=\count377
+\blx@notetype=\count378
+\blx@parenlevel@text=\count379
+\blx@parenlevel@foot=\count380
+\blx@sectionciteorder@0=\count381
+\blx@entrysetcounter=\count382
+\blx@biblioinstance=\count383
+\labelnumberwidth=\skip276
+\labelalphawidth=\skip277
+\biblabelsep=\skip278
+\bibnamesep=\skip279
+\bibinitsep=\skip280
+\bibparsep=\skip281
+\bibhang=\skip282
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count401
-\c@maxcomprange=\count402
-\c@mincompwidth=\count403
+\c@mincomprange=\count384
+\c@maxcomprange=\count385
+\c@mincompwidth=\count386
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
-File: blx-dm.def 2022/06/22 v3.18 biblatex localization (PK/MW)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx
+-dm.def
+File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count404
-\c@savedafterword=\count405
-\c@annotator=\count406
-\c@savedannotator=\count407
-\c@author=\count408
-\c@savedauthor=\count409
-\c@bookauthor=\count410
-\c@savedbookauthor=\count411
-\c@commentator=\count412
-\c@savedcommentator=\count413
-\c@editor=\count414
-\c@savededitor=\count415
-\c@editora=\count416
-\c@savededitora=\count417
-\c@editorb=\count418
-\c@savededitorb=\count419
-\c@editorc=\count420
-\c@savededitorc=\count421
-\c@foreword=\count422
-\c@savedforeword=\count423
-\c@holder=\count424
-\c@savedholder=\count425
-\c@introduction=\count426
-\c@savedintroduction=\count427
-\c@namea=\count428
-\c@savednamea=\count429
-\c@nameb=\count430
-\c@savednameb=\count431
-\c@namec=\count432
-\c@savednamec=\count433
-\c@translator=\count434
-\c@savedtranslator=\count435
-\c@shortauthor=\count436
-\c@savedshortauthor=\count437
-\c@shorteditor=\count438
-\c@savedshorteditor=\count439
-\c@labelname=\count440
-\c@savedlabelname=\count441
-\c@institution=\count442
-\c@savedinstitution=\count443
-\c@lista=\count444
-\c@savedlista=\count445
-\c@listb=\count446
-\c@savedlistb=\count447
-\c@listc=\count448
-\c@savedlistc=\count449
-\c@listd=\count450
-\c@savedlistd=\count451
-\c@liste=\count452
-\c@savedliste=\count453
-\c@listf=\count454
-\c@savedlistf=\count455
-\c@location=\count456
-\c@savedlocation=\count457
-\c@organization=\count458
-\c@savedorganization=\count459
-\c@origlocation=\count460
-\c@savedoriglocation=\count461
-\c@origpublisher=\count462
-\c@savedorigpublisher=\count463
-\c@publisher=\count464
-\c@savedpublisher=\count465
-\c@language=\count466
-\c@savedlanguage=\count467
-\c@origlanguage=\count468
-\c@savedoriglanguage=\count469
-\c@pageref=\count470
-\c@savedpageref=\count471
-\shorthandwidth=\skip284
-\shortjournalwidth=\skip285
-\shortserieswidth=\skip286
-\shorttitlewidth=\skip287
-\shortauthorwidth=\skip288
-\shorteditorwidth=\skip289
-\locallabelnumberwidth=\skip290
-\locallabelalphawidth=\skip291
-\localshorthandwidth=\skip292
-\localshortjournalwidth=\skip293
-\localshortserieswidth=\skip294
-\localshorttitlewidth=\skip295
-\localshortauthorwidth=\skip296
-\localshorteditorwidth=\skip297
+\c@afterword=\count387
+\c@savedafterword=\count388
+\c@annotator=\count389
+\c@savedannotator=\count390
+\c@author=\count391
+\c@savedauthor=\count392
+\c@bookauthor=\count393
+\c@savedbookauthor=\count394
+\c@commentator=\count395
+\c@savedcommentator=\count396
+\c@editor=\count397
+\c@savededitor=\count398
+\c@editora=\count399
+\c@savededitora=\count400
+\c@editorb=\count401
+\c@savededitorb=\count402
+\c@editorc=\count403
+\c@savededitorc=\count404
+\c@foreword=\count405
+\c@savedforeword=\count406
+\c@holder=\count407
+\c@savedholder=\count408
+\c@introduction=\count409
+\c@savedintroduction=\count410
+\c@namea=\count411
+\c@savednamea=\count412
+\c@nameb=\count413
+\c@savednameb=\count414
+\c@namec=\count415
+\c@savednamec=\count416
+\c@translator=\count417
+\c@savedtranslator=\count418
+\c@shortauthor=\count419
+\c@savedshortauthor=\count420
+\c@shorteditor=\count421
+\c@savedshorteditor=\count422
+\c@labelname=\count423
+\c@savedlabelname=\count424
+\c@institution=\count425
+\c@savedinstitution=\count426
+\c@lista=\count427
+\c@savedlista=\count428
+\c@listb=\count429
+\c@savedlistb=\count430
+\c@listc=\count431
+\c@savedlistc=\count432
+\c@listd=\count433
+\c@savedlistd=\count434
+\c@liste=\count435
+\c@savedliste=\count436
+\c@listf=\count437
+\c@savedlistf=\count438
+\c@location=\count439
+\c@savedlocation=\count440
+\c@organization=\count441
+\c@savedorganization=\count442
+\c@origlocation=\count443
+\c@savedoriglocation=\count444
+\c@origpublisher=\count445
+\c@savedorigpublisher=\count446
+\c@publisher=\count447
+\c@savedpublisher=\count448
+\c@language=\count449
+\c@savedlanguage=\count450
+\c@origlanguage=\count451
+\c@savedoriglanguage=\count452
+\c@pageref=\count453
+\c@savedpageref=\count454
+\shorthandwidth=\skip283
+\shortjournalwidth=\skip284
+\shortserieswidth=\skip285
+\shorttitlewidth=\skip286
+\shortauthorwidth=\skip287
+\shorteditorwidth=\skip288
+\locallabelnumberwidth=\skip289
+\locallabelalphawidth=\skip290
+\localshorthandwidth=\skip291
+\localshortjournalwidth=\skip292
+\localshortserieswidth=\skip293
+\localshorttitlewidth=\skip294
+\localshortauthorwidth=\skip295
+\localshorteditorwidth=\skip296
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
-File: blx-compat.def 2022/06/22 v3.18 biblatex compatibility (PK/MW)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx
+-compat.def
+File: blx-compat.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load BibTeX backend compatibility...
 Package biblatex Info: ... file 'blx-bibtex.def' found.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-bibtex.def
-File: blx-bibtex.def 2022/06/22 v3.18 biblatex compatibility (PK/MW)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx
+-bibtex.def
+File: blx-bibtex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 
 Package biblatex Warning: Using fall-back BibTeX(8) backend:
 (biblatex)                functionality may be reduced/unavailable.
@@ -1006,51 +958,54 @@ Package biblatex Warning: Using fall-back BibTeX(8) backend:
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
-File: biblatex.def 2022/06/22 v3.18 biblatex compatibility (PK/MW)
-\c@textcitecount=\count472
-\c@textcitetotal=\count473
-\c@textcitemaxnames=\count474
-\c@biburlbigbreakpenalty=\count475
-\c@biburlbreakpenalty=\count476
-\c@biburlnumpenalty=\count477
-\c@biburlucpenalty=\count478
-\c@biburllcpenalty=\count479
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\bib
+latex.def
+File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+\c@textcitecount=\count455
+\c@textcitetotal=\count456
+\c@textcitemaxnames=\count457
+\c@biburlbigbreakpenalty=\count458
+\c@biburlbreakpenalty=\count459
+\c@biburlnumpenalty=\count460
+\c@biburlucpenalty=\count461
+\c@biburllcpenalty=\count462
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count480
+\c@smartand=\count463
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-natbib.def
-File: blx-natbib.def 2022/06/22 v3.18 biblatex compatibility (PK/MW)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx
+-natbib.def
+File: blx-natbib.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
 Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
  overwriting.
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\authoryear
-.bbx
-File: authoryear.bbx 2022/06/22 v3.18 biblatex bibliography style (PK/MW)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx
+\authoryear.bbx
+File: authoryear.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
-bx
-File: standard.bbx 2022/06/22 v3.18 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count481
-\c@bbx:relatedtotal=\count482
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx
+\standard.bbx
+File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count464
+\c@bbx:relatedtotal=\count465
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\authoryear
-.cbx
-File: authoryear.cbx 2022/06/22 v3.18 biblatex citation style (PK/MW)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx
+\authoryear.cbx
+File: authoryear.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1061,156 +1016,313 @@ Package biblatex Info: Redefining '\textcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\bib
+latex.cfg
 File: biblatex.cfg 
 )
 
 Package biblatex Warning: 'firstinits' option is deprecated.
 (biblatex)                Please use 'giveninits' instead.
 
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Document encoding is UTF8 ....
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2022-06-16 L3 programming layer (loader) 
-
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count483
-\l__pdf_internal_box=\box104
-))
-Package biblatex Info: ... and expl3
-(biblatex)             2022-06-16 L3 programming layer (loader) 
-(biblatex)             is new enough (at least 2020/04/06),
-(biblatex)             setting 'casechanger=expl3'.
-
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3
-.sty
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
-e.sty
-Package: xparse 2022-06-22 L3 Experimental document command parser
 )
-Package: blx-case-expl3 2022/06/22 v3.18 expl3 case changing code for biblatex
-)) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.
+sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count484
+\c@float@type=\count466
 \float@exts=\toks35
-\float@box=\box105
+\float@box=\box103
 \@float@everytoks=\toks36
-\@floatcapt=\box106
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+\@floatcapt=\box104
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\longta
+ble.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip298
-\LTright=\skip299
-\LTpre=\skip300
-\LTpost=\skip301
-\LTchunksize=\count485
-\LTcapwidth=\dimen277
-\LT@head=\box107
-\LT@firsthead=\box108
-\LT@foot=\box109
-\LT@lastfoot=\box110
-\LT@gbox=\box111
-\LT@cols=\count486
-\LT@rows=\count487
-\c@LT@tables=\count488
-\c@LT@chunks=\count489
+\LTleft=\skip297
+\LTright=\skip298
+\LTpre=\skip299
+\LTpost=\skip300
+\LTchunksize=\count467
+\LTcapwidth=\dimen275
+\LT@head=\box105
+\LT@firsthead=\box106
+\LT@foot=\box107
+\LT@lastfoot=\box108
+\LT@gbox=\box109
+\LT@cols=\count468
+\LT@rows=\count469
+\c@LT@tables=\count470
+\c@LT@chunks=\count471
 \LT@p@ftn=\toks37
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\mul
+tirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip302
-\multirow@cntb=\count490
-\multirow@dima=\skip303
-\bigstrutjot=\dimen278
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen279
-\WF@size=\dimen280
-\c@WF@wrappedlines=\count491
-\WF@box=\box112
+\multirow@colwidth=\skip301
+\multirow@cntb=\count472
+\multirow@dima=\skip302
+\bigstrutjot=\dimen276
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wrapfig\wrap
+fig.sty
+\wrapoverhang=\dimen277
+\WF@size=\dimen278
+\c@WF@wrappedlines=\count473
+\WF@box=\box110
 \WF@everypar=\toks38
 Package: wrapfig 2003/01/31  v 3.6
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\col
+ortbl.sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks39
-\minrowclearance=\skip304
+\minrowclearance=\skip303
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdflscape\pd
+flscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\lsc
+ape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/tabu\tabu.sty
-Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box113
-\sift@deathcycles=\count492
-\@vwid@loff=\dimen281
-\@vwid@roff=\dimen282
 )
-\c@taburow=\count493
-\tabu@nbcols=\count494
-\tabu@cnt=\count495
-\tabu@Xcol=\count496
-\tabu@alloc=\count497
-\tabu@nested=\count498
-\tabu@target=\dimen283
-\tabu@spreadtarget=\dimen284
-\tabu@naturalX=\dimen285
-\tabucolX=\dimen286
-\tabu@Xsum=\dimen287
-\extrarowdepth=\dimen288
-\abovetabulinesep=\dimen289
-\belowtabulinesep=\dimen290
-\tabustrutrule=\dimen291
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tabu\tabu.st
+y
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/varwidth\var
+width.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box111
+\sift@deathcycles=\count474
+\@vwid@loff=\dimen279
+\@vwid@roff=\dimen280
+)
+\c@taburow=\count475
+\tabu@nbcols=\count476
+\tabu@cnt=\count477
+\tabu@Xcol=\count478
+\tabu@alloc=\count479
+\tabu@nested=\count480
+\tabu@target=\dimen281
+\tabu@spreadtarget=\dimen282
+\tabu@naturalX=\dimen283
+\tabucolX=\dimen284
+\tabu@Xsum=\dimen285
+\extrarowdepth=\dimen286
+\abovetabulinesep=\dimen287
+\belowtabulinesep=\dimen288
+\tabustrutrule=\dimen289
 \tabu@thebody=\toks40
 \tabu@footnotes=\toks41
-\tabu@box=\box114
-\tabu@arstrutbox=\box115
-\tabu@hleads=\box116
-\tabu@vleads=\box117
-\tabu@cellskip=\skip305
+\tabu@box=\box112
+\tabu@arstrutbox=\box113
+\tabu@hleads=\box114
+\tabu@vleads=\box115
+\tabu@cellskip=\skip304
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/threeparttable\threepar
-ttable.sty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/threeparttab
+le\threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box118
+\@tempboxb=\box116
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/threeparttablex\threepa
-rttablex.sty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/threeparttab
+lex\threeparttablex.sty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/environ\envi
+ron.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
-ty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\t
+rimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip306
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
-\UL@box=\box119
-\UL@hyphenbox=\box120
-\UL@skip=\skip307
+\TPTL@width=\skip305
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ulem\ulem.st
+y
+\UL@box=\box117
+\UL@hyphenbox=\box118
+\UL@skip=\skip306
 \UL@hook=\toks42
-\UL@height=\dimen292
-\UL@pe=\count499
-\UL@pixel=\dimen293
-\ULC@box=\box121
+\UL@height=\dimen290
+\UL@pe=\count481
+\UL@pixel=\dimen291
+\ULC@box=\box119
 Package: ulem 2019/11/18
-\ULdepth=\dimen294
-) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+\ULdepth=\dimen292
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/makecell\mak
+ecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen295
-\c@nlinenum=\count500
+\rotheadsize=\dimen293
+\c@nlinenum=\count482
 \TeXr@lab=\toks43
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bookmark\boo
+kmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyp
+erref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/kvdefineke
+ys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pdfescape\
+pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hycolor\hyco
+lor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/letltxmacro\
+letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/auxhook\auxh
+ook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen294
+\Hy@linkcounter=\count483
+\Hy@pagecounter=\count484
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1
+enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyp
+erref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/intcalc\in
+tcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexcmds\e
+texcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count485
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pue
+nc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count486
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen295
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bit
+set.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintcalc
+\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count487
+\Field@Width=\dimen296
+\Fld@charsize=\dimen297
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atbegsh
+i-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count488
+\c@Item=\count489
+\c@Hfootnote=\count490
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/memoir\memhf
+ixc.sty
+Package: memhfixc 2021/06/16 v1.19 nameref/hyperref package fixes for memoir cl
+ass
+
+LaTeX hooks Warning: Generic hook 'package/after/nameref' is deprecated.
+(hooks)              Use hook 'package/nameref/after' instead.
+
+\c@memhycontfloat=\count491
+\c@Hpagenote=\count492
+
+LaTeX hooks Warning: Generic hook 'package/after/hypcap' is deprecated.
+(hooks)              Use hook 'package/hypcap/after' instead.
+
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpd
+ftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\atverye
+nd-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count493
+\c@bookmark@seq@number=\count494
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfileche
+ck\rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquecoun
+ter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip307
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bookmark\bkm
+-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count495
+))
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xurl\xurl.st
+y
+Package: xurl 2020/12/30 v 0.09a modify URL breaks
+xurl: Set penalties for biblatex
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count501
-\@quotereset=\count502
+\@quotelevel=\count496
+\@quotereset=\count497
 
 Package biblatex Warning: Conflicting options.
 (biblatex)                '<namepart>inits' conflicts with 'uniquename=full'.
@@ -1218,11 +1330,22 @@ Package biblatex Warning: Conflicting options.
 
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 16
 7.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1ppl
+.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3
+backend-pdftex.def
+File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count498
+\l__pdf_internal_box=\box120
 ) (Bitacoras_Grupo5.aux
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
+
+LaTeX Warning: Label `tab:my-table' multiply defined.
+
 )
 \openout1 = `Bitacoras_Grupo5.aux'.
 
@@ -1248,7 +1371,9 @@ LaTeX Info: Redefining \microtypecontext on input line 167.
 Package microtype Info: Applying patch `item' on input line 167.
 Package microtype Info: Applying patch `toc' on input line 167.
 Package microtype Info: Applying patch `eqnum' on input line 167.
-Package microtype Info: Applying patch `footnote' on input line 167.
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 167.
+
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -1259,35 +1384,36 @@ LaTeX Info: Redefining \showhyphens on input line 167.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ppl.cfg
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt
+-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\
+supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count503
-\scratchdimen=\dimen296
-\scratchbox=\box122
-\nofMPsegments=\count504
-\nofMParguments=\count505
+\scratchcounter=\count499
+\scratchdimen=\dimen298
+\scratchbox=\box121
+\nofMPsegments=\count500
+\nofMParguments=\count501
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count506
-\MPscratchDim=\dimen297
-\MPnumerator=\count507
-\makeMPintoPDFobject=\count508
+\MPscratchCnt=\count502
+\MPscratchDim=\dimen299
+\MPnumerator=\count503
+\makeMPintoPDFobject=\count504
 \everyMPtoPDFconversion=\toks45
 )
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg
+\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\eps
+topdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 167.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1327,16 +1453,35 @@ LaTeX Info: Redefining \% on input line 167.
 Package biblatex Info: Trying to load language 'spanish'...
 Package biblatex Info: ... file 'spanish.lbx' found.
 
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\spanish.lb
-x
-File: spanish.lbx 2022/06/22 v3.18 biblatex localization (PK/MW)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx
+\spanish.lbx
+File: spanish.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Input encoding 'utf8' specified.
 Package biblatex Info: Data encoding 'utf8' specified.
 (biblatex)             No need to reencode data.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\exp
+l3.sty
+Package: expl3 2021-11-12 L3 programming layer (loader) 
+)
+Package biblatex Info: ... and expl3
+(biblatex)             2021-11-12 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx
+-case-expl3.sty
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/x
+parse\xparse.sty
+Package: xparse 2021-11-12 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
+)
 \openout4 = `Bitacoras_Grupo5-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
@@ -1344,29 +1489,61 @@ Package biblatex Info: ... file 'Bitacoras_Grupo5.bbl' found.
 (Bitacoras_Grupo5.bbl)
 Package biblatex Info: Reference section=0 on input line 167.
 Package biblatex Info: Reference segment=0 on input line 167.
+Package hyperref Info: Link coloring OFF on input line 167.
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nam
+eref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\ref
+count.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlest
+ring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count505
+)
+Redoing nameref's sectioning
+Redoing nameref's label
+LaTeX Info: Redefining \nameref on input line 167.
+LaTeX Info: Redefining \ref on input line 167.
+LaTeX Info: Redefining \pageref on input line 167.
+LaTeX Info: Redefining \nameref on input line 167.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 2
 00.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1pp
+l.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
 200.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omlzp
+lm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
 200.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omszp
+lm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
 200.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omxzp
+lm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 12.50409pt on input line 200.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt
+-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1375,7 +1552,9 @@ LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 200.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 12.50409pt on input line 200.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt
+-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
@@ -1384,7 +1563,9 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 200.
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
 200.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1zp
+lm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 <images/ucr_marca_de_agua.png, id=3, 180.675pt x 68.255pt>
@@ -1407,32 +1588,32 @@ Package pdftex.def Info: images/granosgirasol.png  used on input line 230.
 [1
 
 
-{C:/Users/andre/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/gra
-nosgirasol.png> <./images/ucr_marca_de_agua.png> <./images/EMat_escuela_matemat
-ica_horizontal_1.png>]
+{C:/Users/Daniel Nunez/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./im
+ages/granosgirasol.png> <./images/ucr_marca_de_agua.png> <./images/EMat_escuela
+_matematica_horizontal_1.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
 40.
-(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmss.fd
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (Bitacoras_Grupo5.toc
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \sptext on input line 2.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 2.
+(Font)              scaled to size 10.42007pt on input line 4.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 2.
+(Font)              scaled to size 7.91925pt on input line 4.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 2.
+(Font)              scaled to size 6.25204pt on input line 4.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 2.
+(Font)              scaled to size 10.42007pt on input line 4.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 2.
+(Font)              scaled to size 7.91925pt on input line 4.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 2.
-)
-pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has 
-been already used, duplicate ignored
+(Font)              scaled to size 6.25204pt on input line 4.
+)pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.242 \hypertarget
@@ -1550,20 +1731,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[10
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.871 \newpage
-              
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.2}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.871 \newpage
-              ]
-<Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf, id=123, 289.08pt x 216.81pt>
+[10]
+<Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf, id=153, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf>
@@ -1582,27 +1751,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[11
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.3}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.933 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.933 
-       <./Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf, id=140, 289.08pt x 216.81pt>
+[11 <./Bitacoras_Grupo5_files/figure-latex/Graph6-1.pdf>]
+<Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf, id=170, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf>
 Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf  used
  on input line 936.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf, id=141, 289.08pt x 216.81pt>
+<Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf, id=171, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf>
@@ -1621,19 +1778,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[12
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.983 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.4}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.983 
-       <./Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf>]
+[12 <./Bitacoras_Grupo5_files/figure-latex/Graph5-1.pdf>]
 LaTeX Info: Redefining \. on input line 1038.
 LaTeX Info: Redefining \% on input line 1038.
 LaTeX Info: Redefining \. on input line 1038.
@@ -1646,33 +1791,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[13
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1038 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.5}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1038 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{table.2.6}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1038 
-        <./Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf, id=165, 289.08pt x 216.81pt>
+[13 <./Bitacoras_Grupo5_files/figure-latex/Graph3-1.pdf>]
+<Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf, id=195, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf>
 Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf  used
  on input line 1041.
 (pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
-<Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf, id=166, 289.08pt x 216.81pt>
+<Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf, id=196, 289.08pt x 216.81pt>
 
 File: Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf Graphic file (type pdf)
 <use Bitacoras_Grupo5_files/figure-latex/Graph1-1.pdf>
@@ -1691,21 +1818,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[14
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1062 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1062 
-        <./Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf> <./Bitacoras_Grupo
-5_files/figure-latex/Graph1-1.pdf>]
-<Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf, id=183, 289
+[14 <./Bitacoras_Grupo5_files/figure-latex/Graph2-1.pdf> <./Bitacoras_Grupo5_fi
+les/figure-latex/Graph1-1.pdf>]
+<Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf, id=213, 289
 .08pt x 216.81pt>
 File: Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf Graphic
  file (type pdf)
@@ -1725,14 +1840,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
-[15
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1088 \newpage
-                <./Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-
-1.pdf>]
+[15 <./Bitacoras_Grupo5_files/figure-latex/Logistic Regression ROC-1.pdf>]
 LaTeX Info: Redefining \. on input line 1182.
 LaTeX Info: Redefining \% on input line 1182.
 LaTeX Info: Redefining \. on input line 1182.
@@ -1785,54 +1893,400 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
 
 [19]
-<images/Uve_Gowin.png, id=215, 531.1845pt x 287.8755pt>
+<Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de estudio
+-1.pdf, id=245, 289.08pt x 216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de es
+tudio-1.pdf Graphic file (type pdf)
+<use Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de est
+udio-1.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Correlacion entre 
+las variables de estudio-1.pdf  used on input line 1321.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+<Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de estudio
+-2.pdf, id=246, 289.08pt x 216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de es
+tudio-2.pdf Graphic file (type pdf)
+<use Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de est
+udio-2.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/Correlacion entre 
+las variables de estudio-2.pdf  used on input line 1322.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+
+Overfull \hbox (148.50658pt too wide) in paragraph at lines 1321--1323
+[][] [] 
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+324.
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+1325.
+
+(C:\Users\Daniel Nunez\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmtt.f
+d
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [20
+
+ <./Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variables de estu
+dio-1.pdf> <./Bitacoras_Grupo5_files/figure-latex/Correlacion entre las variabl
+es de estudio-2.pdf>]
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-9-1.pdf, id=266, 289.08pt x 
+216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (t
+ype pdf)
+<use Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-9-1.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-9-1.
+pdf  used on input line 1352.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-10-1.pdf, id=267, 289.08pt x
+ 216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (
+type pdf)
+<use Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-10-1
+.pdf  used on input line 1358.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 1363.
+LaTeX Info: Redefining \% on input line 1363.
+LaTeX Info: Redefining \. on input line 1363.
+LaTeX Info: Redefining \% on input line 1363.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[21 <./Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-9-1.pdf> <./Bitacoras_
+Grupo5_files/figure-latex/unnamed-chunk-10-1.pdf>]
+LaTeX Info: Redefining \. on input line 1443.
+LaTeX Info: Redefining \% on input line 1443.
+LaTeX Info: Redefining \. on input line 1443.
+LaTeX Info: Redefining \% on input line 1443.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[22]
+LaTeX Info: Redefining \. on input line 1519.
+LaTeX Info: Redefining \% on input line 1519.
+LaTeX Info: Redefining \. on input line 1519.
+LaTeX Info: Redefining \% on input line 1519.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[23]
+LaTeX Info: Redefining \. on input line 1578.
+LaTeX Info: Redefining \% on input line 1578.
+LaTeX Info: Redefining \. on input line 1578.
+LaTeX Info: Redefining \% on input line 1578.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[24]
+LaTeX Info: Redefining \. on input line 1651.
+LaTeX Info: Redefining \% on input line 1651.
+LaTeX Info: Redefining \. on input line 1651.
+LaTeX Info: Redefining \% on input line 1651.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[25]
+LaTeX Info: Redefining \. on input line 1726.
+LaTeX Info: Redefining \% on input line 1726.
+LaTeX Info: Redefining \. on input line 1726.
+LaTeX Info: Redefining \% on input line 1726.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[26]
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-14-1.pdf, id=321, 289.08pt x
+ 216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (
+type pdf)
+<use Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-14-1.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-14-1
+.pdf  used on input line 1771.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 1774.
+LaTeX Info: Redefining \% on input line 1774.
+LaTeX Info: Redefining \. on input line 1774.
+LaTeX Info: Redefining \% on input line 1774.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[27]
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-15-1.pdf, id=326, 289.08pt x
+ 216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file (
+type pdf)
+<use Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-15-1.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-15-1
+.pdf  used on input line 1789.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 1797.
+LaTeX Info: Redefining \% on input line 1797.
+LaTeX Info: Redefining \. on input line 1797.
+LaTeX Info: Redefining \% on input line 1797.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[28 <./Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-14-1.pdf> <./Bitacoras
+_Grupo5_files/figure-latex/unnamed-chunk-15-1.pdf>]
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-16-1.pdf, id=346, 289.08pt x
+ 216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (
+type pdf)
+<use Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-16-1.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-16-1
+.pdf  used on input line 1833.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 1862.
+LaTeX Info: Redefining \% on input line 1862.
+LaTeX Info: Redefining \. on input line 1862.
+LaTeX Info: Redefining \% on input line 1862.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[29 <./Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-16-1.pdf>]
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-17-1.pdf, id=359, 289.08pt x
+ 216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (
+type pdf)
+<use Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-17-1.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-17-1
+.pdf  used on input line 1893.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-18-1.pdf, id=360, 289.08pt x
+ 216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (
+type pdf)
+<use Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-18-1.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-18-1
+.pdf  used on input line 1905.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 1907.
+LaTeX Info: Redefining \% on input line 1907.
+LaTeX Info: Redefining \. on input line 1907.
+LaTeX Info: Redefining \% on input line 1907.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[30 <./Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-17-1.pdf>]
+LaTeX Info: Redefining \. on input line 1951.
+LaTeX Info: Redefining \% on input line 1951.
+LaTeX Info: Redefining \. on input line 1951.
+LaTeX Info: Redefining \% on input line 1951.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[31 <./Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-18-1.pdf>]
+LaTeX Info: Redefining \. on input line 2022.
+LaTeX Info: Redefining \% on input line 2022.
+LaTeX Info: Redefining \. on input line 2022.
+LaTeX Info: Redefining \% on input line 2022.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[32]
+LaTeX Info: Redefining \. on input line 2078.
+LaTeX Info: Redefining \% on input line 2078.
+LaTeX Info: Redefining \. on input line 2078.
+LaTeX Info: Redefining \% on input line 2078.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[33]
+<Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-25-1.pdf, id=416, 289.08pt x
+ 216.81pt>
+File: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-25-1.pdf Graphic file (
+type pdf)
+<use Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-25-1.pdf>
+Package pdftex.def Info: Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-25-1
+.pdf  used on input line 2135.
+(pdftex.def)             Requested size: 289.09251pt x 216.81938pt.
+LaTeX Info: Redefining \. on input line 2138.
+LaTeX Info: Redefining \% on input line 2138.
+LaTeX Info: Redefining \. on input line 2138.
+LaTeX Info: Redefining \% on input line 2138.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[34]
+LaTeX Info: Redefining \. on input line 2194.
+LaTeX Info: Redefining \% on input line 2194.
+LaTeX Info: Redefining \. on input line 2194.
+LaTeX Info: Redefining \% on input line 2194.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[35 <./Bitacoras_Grupo5_files/figure-latex/unnamed-chunk-25-1.pdf>]
+LaTeX Info: Redefining \. on input line 2196.
+LaTeX Info: Redefining \% on input line 2196.
+LaTeX Info: Redefining \. on input line 2196.
+LaTeX Info: Redefining \% on input line 2196.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.77002pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.77002pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.77002pt}.
+
+[36]
+<images/Uve_Gowin.png, id=442, 531.1845pt x 287.8755pt>
 File: images/Uve_Gowin.png Graphic file (type png)
 <use images/Uve_Gowin.png>
-Package pdftex.def Info: images/Uve_Gowin.png  used on input line 1321.
+Package pdftex.def Info: images/Uve_Gowin.png  used on input line 2201.
 (pdftex.def)             Requested size: 443.59825pt x 240.40813pt.
 
-Overfull \hbox (12.01978pt too wide) in paragraph at lines 1321--1322
+Overfull \hbox (12.01978pt too wide) in paragraph at lines 2201--2202
 [][] 
  []
 
-[20
+[37
 
- <./images/Uve_Gowin.png>] [21
+ <./images/Uve_Gowin.png>] [38
 
 ]
 \tf@toc=\write5
 \openout5 = `Bitacoras_Grupo5.toc'.
 
 (Bitacoras_Grupo5.aux
-LaTeX Info: Redefining \sptext on input line 28.
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \sptext on input line 34.
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
 )
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'Bitacoras_Grupo5.run.xml'.
 \openout1 = `Bitacoras_Grupo5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27791 strings out of 478351
- 472645 string characters out of 2837053
- 1051714 words of memory out of 3000000
- 45417 multiletter control sequences out of 15000+600000
- 533415 words of font info for 285 fonts, out of 8000000 for 9000
+ 27977 strings out of 478699
+ 480652 string characters out of 2841711
+ 1037700 words of memory out of 3000000
+ 45106 multiletter control sequences out of 15000+600000
+ 482033 words of font info for 346 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,15n,91p,1905b,1963s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:
-/Users/andre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/Use
-rs/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.
-pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12
-.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/upl
-b8a.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/
-uplr8a.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palati
-no/uplr8a.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/urw/pal
-atino/uplri8a.pfb>
-Output written on Bitacoras_Grupo5.pdf (23 pages, 384328 bytes).
+ 74i,16n,93p,1873b,1998s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.0@goodness_test} has been referenced but doe
+s not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@var_copula} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@james2021introduction} has been referenced b
+ut does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@eleg_def} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@perdida_def} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.0@credito_def} has been referenced but does no
+t exist, replaced by a fixed one
+
+{C:/Users/Daniel Nunez/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8
+r.enc}{C:/Users/Daniel Nunez/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/
+lm/lm-ts1.enc}{C:/Users/Daniel Nunez/AppData/Local/Programs/MiKTeX 2.9/fonts/en
+c/dvips/lm/lm-ec.enc}<C:/Users/Daniel Nunez/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Daniel Nunez/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Daniel N
+unez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
+><C:/Users/Daniel Nunez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Users/Daniel Nunez/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/mathpazo/fplmr.pfb><C:/Users/Daniel Nunez/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/Daniel Nunez/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Da
+niel Nunez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb>
+<C:/Users/Daniel Nunez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
+lmtt10.pfb><C:/Users/Daniel Nunez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/urw/palatino/uplb8a.pfb><C:/Users/Daniel Nunez/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Users/Daniel Nunez/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Daniel Nunez/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/D
+aniel Nunez/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.
+pfb>
+Output written on Bitacoras_Grupo5.pdf (40 pages, 597030 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 73915 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 666 PDF objects out of 1000 (max. 8388607)
+ 169 named destinations out of 1000 (max. 500000)
+ 84325 words of extra memory for PDF output out of 89155 (max. 10000000)
 
