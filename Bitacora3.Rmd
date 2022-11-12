@@ -27,36 +27,39 @@
 
 ```
 
+Para poder ajustar un modelo de cópulas bivariadas, primero se tienen que saber las funciones de distribución marginales univariadas para cada variable de estudio. En este se necesitan encontrar dos de estas marginales pues el modelo de cópulas a implementar va a considerar como dos variables, el monto del crédito solicitado y el valor de la regresión logística asociado a la probabilidad de elegibilidad asignado con el modelo. 
 
-```{r Correlacion entre las variables de estudio}
-
-library(fitdistrplus)
-library(actuar)
-
-
-hist(test$Credit_Amount, breaks=20, col="green")
-hist(logit_P_real)
-
-fit.credit <- fitdist( (test$Credit_Amount/100) , distr = "gamma")
-summary(fit.credit)
-
-fit.logit <- fitdist(logit_P_real, distr="norm")
-summary(fit.logit)
-
-
-```
-
+Por lo que primeramente se van a mostrar los gráficos de la distribución empírica de las variables de estudio, mediante histogramas.
 
 ```{r primer intento de copula, echo=FALSE, include=FALSE}
 library(copula)
 library(VineCopula)
 library(ggplot2)
+library(tidyverse)
+library(kableExtra)
 
 data.test.fija <- read.csv("test_fijo.csv")
 
 credit.fijo <- data.test.fija$credit.amount.fijo
 logit.fijo <- data.test.fija$logit.fijo
 ```
+
+```{r Correlacion entre las variables de estudio, echo=FALSE, include=FALSE}
+
+library(fitdistrplus)
+library(actuar)
+
+
+
+fit.credit <- fitdist( (credit.fijo/100) , distr = "gamma")
+summary(fit.credit)
+
+fit.logit <- fitdist(logit.fijo, distr="norm")
+summary(fit.logit)
+
+
+```
+
 
 
 ```{r fig.cap="Histograma de los montos de crédito de la base de prueba"}
@@ -77,7 +80,17 @@ graph.logit.fijo
 ```
 
 
-```{r}
+Con estas figuras se pueden observar ciertas tendencias de como se distribuyen las variables, lo que permite buscar ajustar una distribución paramétrica de acuerdo a su forma. Bajo este hilo, se sigue que el monto del crédito es bastante asimétrica hacia la derecha, mientras que la probabilidad de elegibilidad sigue una tendencia más simétrica. 
+
+Para el siguiente desarrollo se va a utlizar el lenguaje de programación R para realizar los modelos, cálculos y estimaciones. Primeramente, se va van a realizar distintos modelos para las distribuciones marginales de las variables de estudio donde por métodos como AIC y estimación de parámetros por máxima verosimilitud. Bajo esta metodología, se consigue que la mejor distribución que se ajusta para el monto del crédito es una distribución $Gamma(1.8115402, 1849)$ bajo una parametrización de forma y escala. Mientras que, al realizar este ajuste con la probabilidad de elegibilidad el modelo que mejor ajusta es una distribución $N(0.5625845, 0.1549248)$.
+
+Una vez, con estas distribuciones marginales se procede a modelar la correlación entre estas variables mediante cópulas para lograr estimar una función de distribución bivariada considerando las variables de estudio. 
+
+Como se mencionó en el marco teórico, el coeficiente de correlación que se va a utilizar es el de Kendall, conocido como tau de Kendall. Para los datos empíricos se obtiene que $\hat{\tau}_K = -0.3$ lo que indica una correlación negativa entre las variables, es decir que conforme el monto del crédito aumenta, las probabilidades de elegibilidad disminuyen. Con esta información, se procede a escoger una función de cópulas que más se ajuste a los datos observados para poder construir su función de distribución. Bajo métodos de escogencia de una función de cópulas como el AIC y la estimación de parámetros por medio de máxima verosimilitud se llega a un modelo con el mejor ajuste que sería una cópula de Frank con parámetro $\theta = -3.6$ y un $\tau_K = -0.36$, lo cual es bastante cercano a la correlación empírica calculada anteriormente. Es decir, se obtiene una función de cópulas (Arquimediana) que mantiene la correlación de los datos, lo cual también es lo buscado.
+
+Una vez con este modelo, y las marginales univariadas calculadas al principio, se procede a construir la función de distribución y densidad bivariada. Que es lo que se planea contestar con la pregunta de investigación planteada. Para su visualización se utilizan técnicas de graficación en tres dimensiones en dos dimensiones por lo que el siguiente gráfico muestra el contorno de la densidad bivariada.
+
+```{r echo=FALSE, include=FALSE}
 #correlacion empirica entre las variables (Tau de Kendall)
 corr.emp <- cor(credit.fijo, logit.fijo, method = "kendall")
 
@@ -88,7 +101,7 @@ corr.emp <- cor(credit.fijo, logit.fijo, method = "kendall")
 
 #Primero definimos las pseudo-observaciones (de las probabilidades no hace falta pues ya estan entre 0 y 1)
 pseudo.credit <- pobs(credit.fijo)
-pseudo.elegib <- pobs(logit_P_real)
+pseudo.elegib <- pobs(logit.fijo)
 
 u <- as.matrix(data.frame(pseudo.credit, logit.fijo))
 
@@ -107,56 +120,120 @@ tau(frankCopula(param=coef(fit)))
 ```
 
 
-## Diagnósticos del modelo
+```{r distribucion bivariada, echo=FALSE, include=FALSE}
+library(scatterplot3d)
+library(plotly)
+library(reshape2)
+my_dist <- mvdc(frankCopula(param=-3.6,dim=2), margins = c("gamma","norm"), paramMargins = list( list(shape=fit.credit$estimate[1], rate=fit.credit$estimate[2]/100  ),list(mean=fit.logit$estimate[1], sd=fit.logit$estimate[2])  ))
 
+# Generate random sample observations from the multivariate distribution
+v <- rMvdc(5000, my_dist)
+# Compute the density
+pdf_mvd <- dMvdc(v, my_dist)
+# Compute the CDF
+cdf_mvd <- pMvdc(v, my_dist)
 
-```{r gof-test, echo=FALSE, include=FALSE}
-# #Le hacemos fit a varias copulas para comparar
-# normal.mdl <- fitCopula(normalCopula(dim=2),data=u)
-# tcop.mdl <- fitCopula(tCopula(dim=2), data=u)
-# clayton.mdl <- fitCopula(claytonCopula(dim=2), data = u)
-# 
-# #AIC de los modelos (entre mas pequenno mejor)
-# aic.df <- data.frame( Copula = c("Frank", "Normal", "t", "Clayton"), AIC = c(AIC(fit), AIC(normal.mdl), AIC(tcop.mdl), AIC(clayton.mdl))  )
-# 
-# #SN de los modelos (Test Cramer-von-Mises)
-# mm <- as.matrix(data.frame(credit.fijo, logit.fijo))
-# 
-# #Gof test
-# gof.frank <- gofCopula(frankCopula(dim=2,param=-3.6), mm, N=50)
-# 
-# gof.normal <- gofCopula(normalCopula(dim=2), mm, N=50)
-# 
-# gof.t <- gofCopula(tCopula(dim=2,df.fixed = T), mm, N=50) 
-# 
-# gof.clayton <- gofCopula(claytonCopula(dim = 2), mm, N=50)
-# 
-# sn.df <- data.frame(Copula = c("Frank", "Normal", "t", "Clayton"), S_n  = c(gof.frank$statistic, gof.normal$statistic, gof.t$statistic, gof.clayton$statistic))
-```
+contourPDF <- data.frame("Monto" = as.numeric(v[,1]), "Elegibilidad" = as.numeric(v[,2]), "densidad" = pdf_mvd)
 
+contourCDF <- data.frame("Monto" = as.numeric(v[,1]), "Elegibilidad" = as.numeric(v[,2]), "dist" = cdf_mvd)
 
-
-```{r distribucion bivariada}
-# library(scatterplot3d)
-# my_dist <- mvdc(frankCopula(param=-3.6,dim=2), margins = c("gamma","norm"), paramMargins = list( list(shape=fit.credit$estimate[1], rate=fit.credit$estimate[2]  ),list(mean=fit.logit$estimate[1], sd=fit.logit$estimate[2])  ))
-# 
-# # Generate random sample observations from the multivariate distribution
-# v <- rMvdc(5000, my_dist)
-# # Compute the density
-# pdf_mvd <- dMvdc(v, my_dist)
-# # Compute the CDF
-# cdf_mvd <- pMvdc(v, my_dist)
-# 
-# # 3D plain scatterplot of the generated bivariate distribution
+# 3D plain scatterplot of the generated bivariate distribution
 # par(mfrow = c(1, 2))
 # scatterplot3d(v[,1],v[,2], pdf_mvd, color="red", main="Density", xlab = "u1", ylab="u2", zlab="pMvdc",pch=".")
 # scatterplot3d(v[,1],v[,2], cdf_mvd, color="red", main="CDF", xlab = "u1", ylab="u2", zlab="pMvdc",pch=".")
-# persp(my_dist, dMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Density")
-# contour(my_dist, dMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Contour plot")
+# persp(my_dist, dMvdc, xlim = c(0, 10000), ylim=c(0, 2), main = "Density")
+# contour(my_dist, dMvdc, xlim = c(0, 20000), ylim=c(0, 2), main = "Contour plot")
 # persp(my_dist, pMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "CDF")
 # contour(my_dist, pMvdc, xlim = c(-4, 4), ylim=c(0, 2), main = "Contour plot")
 
+
+dens <- ggplot(contourPDF, aes(x=Monto, y=Elegibilidad) ) + geom_density_2d() + scale_fill_distiller(palette = "Spectral", direction = -1) + theme_light()+
+  labs(x = "Monto", y = "Elegibilidad", caption = "Elaboración propia con datos extraídos de Kaggle")
+
 ```
+
+```{r dens, fig.cap="Contorno de la función de densidad bivariada"}
+dens
+```
+
+
+
+## Diagnósticos del modelo
+
+```{r gof-test, echo=FALSE, include=FALSE}
+#Le hacemos fit a varias copulas para comparar
+normal.mdl <- fitCopula(normalCopula(dim=2),data=u)
+tcop.mdl <- fitCopula(tCopula(dim=2), data=u)
+clayton.mdl <- fitCopula(claytonCopula(dim=2), data = u)
+
+#AIC de los modelos (entre mas pequenno mejor)
+aic.df <- data.frame( Copula = c("Frank", "Normal", "t", "Clayton"), AIC = c(AIC(fit), AIC(normal.mdl), AIC(tcop.mdl), AIC(clayton.mdl))  )
+
+#SN de los modelos (Test Cramer-von-Mises)
+mm <- as.matrix(data.frame(credit.fijo, logit.fijo))
+
+#Gof test
+gof.frank <- gofCopula(frankCopula(dim=2,param=-3.6), mm, N=50)
+
+gof.normal <- gofCopula(normalCopula(dim=2), mm, N=50)
+
+gof.t <- gofCopula(tCopula(dim=2,df.fixed = T), mm, N=50)
+
+gof.clayton <- gofCopula(claytonCopula(dim = 2), mm, N=50)
+
+sn.df <- data.frame(Copula = c("Frank", "Normal", "t", "Clayton"), S_n  = c(gof.frank$statistic, gof.normal$statistic, gof.t$statistic, gof.clayton$statistic))
+```
+
+
+
+Como se mencionó anteriormente, la escogencia de la cópula fue mediante AIC sin embargo para poder determinar que tan bien se ajusta una cópula, se utilza el método de \textit{Goodness-of-fit test} o \textit{Gof Test}. El cual se basa en calcular el estadístico de Cramér-von-Mises o $S_n$. Por lo que, ne la siguiente tabla se muestran los resultados de las pruebas realizadas.
+
+```{r }
+aic.df %>% kbl(caption="AIC de las diferentes familias de cópulas",
+      format="latex",
+      row.names = NA,
+      col.names = c("Cópula","AIC"), align = 'c')%>%
+      kable_styling(latex_options = c("HOLD_position"))
+
+```
+
+```{r }
+sn.df %>% kbl(caption="AIC de las diferentes familias de cópulas",
+      format="latex",
+      row.names = NA,
+      col.names = c("Cópula","Estadístico Cramér-von-Mises"), align = 'c')%>%
+      kable_styling(latex_options = c("HOLD_position"))
+
+```
+
+```{r simulaciones, echo=FALSE, include=FALSE}
+sim <- rMvdc(400, my_dist)
+
+simVsObs <- data.frame(rbind(cbind(sim, rep("Simulados")), cbind(credit.fijo, logit.fijo, rep("observados"))  ))
+colnames(simVsObs) <- c("Monto de crédito","Elegibilidad","Método")
+
+
+simVsObs$`Monto de crédito` <- as.numeric(simVsObs$`Monto de crédito`)
+simVsObs$Elegibilidad <- as.numeric(simVsObs$Elegibilidad)
+
+
+```
+
+Como se puede observar, tanto el AIC como el $S_n$ dan más bajos en el caso de una cópula de la familia Frank. Por lo que debido a estas pruebas se llega a la conclusión que el mejor modelo de cópulas para las variables de estudio es una cópula de Frank. También, vale la pena recalcar que las peores métricas se obtienen considerando un modelo de cópula de Clayton, lo cual corrobora el hecho que si se presenta una correlación negativa este modelo es peor y en algunos algoritmos ni se considera intentar ajustar con este modelo.
+
+Finalmente, también se realizó una serie de datos simulados con la función de distribución bivariada contra los datos reales para de manera visual poder analizar tendencias y comportamientos entre el modelo y la realidad.
+
+```{r Simulaciones vs Observados, fig.cap="Datos simulados con la función de distribución vs. datos observados"}
+graph.sim <- simVsObs %>% ggplot(aes(x = `Monto de crédito`, y=Elegibilidad, color=`Método` ))+
+  geom_point(size=1)+
+  theme_light()+
+  labs(x = "Monto", y = "", caption = "Elaboración propia con datos extraídos de Kaggle")
+graph.sim
+
+```
+
+
+
 
 ## Fichas de resultados
 
@@ -212,13 +289,75 @@ tau(frankCopula(param=coef(fit)))
 
 - \textbf{Resumen en una oración:} La correlación empírica era de -0.30 aproximadamente mientras que la correlación teórica calculada por el modelo de cópula de Frank es de -0.36. 
 
-- \textbf{Principal característica:} 
+- \textbf{Principal característica:} El modelo mantiene la correlación de los datos observados.
 
 - \textbf{Problemas con el tema:} Como se había mencionado anteriormente, hay múltiples formas de calcular la correlación por lo que la relación entre el estadístico teórico y empírico depende y varía con la forma en la que se calcula la correlación. 
 
 - \textbf{Resumen en un párrafo:} Otra buena forma de medir qué tan bien ajustado está el modelo a los datos es comparar sus correlaciones. Lo ideal sería que la dependencia teórica calculada por el modelo sea bastante similar a la dependencia empírica. En este caso, se da que la empírica corresponde a un valor aproximado de -0.30 mientras que la correlación teórica calculada por el modelo de cópula de Frank es de -0.36. Hay una diferencia de 0.06 puntos porcentuales entre ambas correlaciones, pero a groso modo, ambos explican el fenómeno de la asociación entre ambas variables bastante parecido indicando el buen ajuste del modelo.   
 
 \noindent\rule{14cm}{0.4pt}
+
+\textbf{Hallazgo \# 5}
+
+
+- \textbf{Nombre del hallazgo:} Distribución marginal de la variable de Monto de Crédito
+
+- \textbf{Resumen en una oración:} La distribución que mejor se ajusta a la variable Monto de Crédito es una distribución Gamma.
+
+- \textbf{Principal característica:} La distribución se ajusta como una $Gamma(1.8115,\,1849)$
+
+- \textbf{Problemas con el tema:} Este ajuste se realizó utilizando métodos estadísticos y podría tener errores por el método de cálculo. 
+
+- \textbf{Resumen en un párrafo:} Para poder construir las funciones de probabilidad bivariadas aparte de la función de cópulas, se necesitan las funciones de distribución para cada variable, a estas funciones se les llama marginales. La distribución que mejor se ajusta al monto de crédtio bajo el método de AIC y de estimación de parámetros mediante máxima verosimilitud es una distribución $Gamma(1.8115, 1849)$ bajo una parametrización de forma y escala.
+
+\noindent\rule{14cm}{0.4pt}
+
+
+\textbf{Hallazgo \# 6}
+
+
+- \textbf{Nombre del hallazgo:} Distribución marginal de la variable de Elegibilidad
+
+- \textbf{Resumen en una oración:} La distribución que mejor se ajusta a la variable Elegibilidad es una distribución Normal.
+
+- \textbf{Principal característica:} La distribución se ajusta como una $N(0.5626,\,1549)$
+
+- \textbf{Problemas con el tema:} Este ajuste se realizó utilizando métodos estadísticos y podría tener errores por el método de cálculo.
+
+- \textbf{Resumen en un párrafo:} Una vez con la distribución estimada de la variable para el monto de crédito, se procede a realizar un ajuste similar esta vez para la variable restante que es la elegibilidad de la persona. Así, la distribución que mejor se ajusta para la elegibilidad es una distribución $N(0.5626, 0.1549$. Por lo que ahora si se puede proceder a construir las funciones de probabilidad considerando las marginales y la función de cópulas estimadas.
+\noindent\rule{14cm}{0.4pt}
+
+
+\textbf{Hallazgo \# 7}
+
+
+- \textbf{Nombre del hallazgo:} La cópula de Frank consigue las mejores métricas
+
+- \textbf{Resumen en una oración:} Bajo métodos de diagnóstico como el AIC y $S_n$ se escoge la cópula de Frank como más adecuada.
+
+- \textbf{Principal característica:} La cópula del modelo pasa los diágnosticos y es la que mejor se ajusta.
+
+- \textbf{Problemas con el tema:} No se encontraron muchos diágnosticos para modelos de cópulas, por lo que los resultados se basan solo en AIC y el test $S_n$. 
+
+- \textbf{Resumen en un párrafo:} Otro método en el cual se basó para determinar cual cópula es la que mejor se ajusta, se utilizó un \textit{Goodness-of-fitness test}, el cual se basa en el cálculo del estadístico de Cramér-von-Mises, también conocido como $S_n$. Este estadístico se puede interpretar similar al AIC en el sentido que entre menor es el valor se obtiene un mejor modelo, pues el \textit{valor-p} asociado va a ser mayor y esto resulta en que no haya evidencia suficiente para rechazar la hipótesis nula, que es lo que se está buscando. Por lo que bajo esta prueba también se obtiene como resultado que la cópula que mejor se ajusta es una de Frank. Similarmente se puede ver como la evidencia estadística sugiere lo hallado con respecto a que si se tiene una correlación negativa la función de Clayton no es recomendable y esto se puede observar en como este modelo es el que peor métricas obtiene de los cuatro modelos.  
+
+\noindent\rule{14cm}{0.4pt}
+
+\textbf{Hallazgo \# 8}
+
+
+- \textbf{Nombre del hallazgo:} Las funciones de distribución y densidad bivariadas 
+
+- \textbf{Resumen en una oración:} Se encuentra la función de distribución y densidad bivariadas considerando las marginales y la cópula estimada.
+
+- \textbf{Principal característica:} La forma de las funciones de probabilidad bivariada que mejor ajusta a los datos observados.
+
+- \textbf{Problemas con el tema:}Estas funciones por construcción dependen de las marginales y la función de cópulas estimadas por lo que cualquier error que se pueda haber presentado en esas estimaciones pueden afectar considerablemente estas funciones.
+
+- \textbf{Resumen en un párrafo:} Una vez con las marginales y la función de cópulas estimadas se procede a la construcción de funciones de densidad y distribución de las funciones. Estas funciones son las que se buscan para contestar la pregunta de investigación por lo que es uno de los resultados más importantes del trabajo. Con estas funciones se pueden crear simulaciones de datos nuevos y a su vez permite una manera de representar las variables de estudio. Estas funciones al ser bivariadas representan funciones de dos dimensiones por lo que su resultado o probabilidad se da en una tercera dimensión. Esto complica la visualización usual de gráficos de densidad y distribución. Para esto se procede a utilizar técnicas como gráficos de contornos para facilitar la interpretación de estos resultados. A su vez, estas funciones también permiten calcular medidas de riesgo como el VaR o CVaR, que es lo que se piensa estimar en futuras bitácoras. 
+
+\noindent\rule{14cm}{0.4pt}
+
 
 
 
@@ -722,7 +861,6 @@ El tau de Kendall también arroja valores entre -1 y 1 su interpretación es la 
     \item Un valor de $\rho = -1$ indica perfecta correlación negativa entre las variables
 \end{itemize}
 
-
 ## Resultados
 
 Para determinar si al solicitante se le dará el crédito, el umbral será del 0.5, por lo que si el resultado de la regresión es mayor a 0.5, se le da el crédito y en caso contrario no. El resultado de la regresión arroja una curva ROC como se muestra a continuación: 
@@ -777,8 +915,13 @@ Lo anterior expuesto se puede identificar como el primer hallazgo y resulta ser 
 
 De las cópulas posibles, se probaron múltiples combinaciones entre las cuales distinguen la gaussiana, la t-student y la Frank. Todo esto para determinar cuál era la que mejor se adaptaba a los datos. El AIC fue el método usado para determinar la mejor cópula. El hallazgo primario aquí sería que la Frank se escogió como la mejor con un AIC de -63.46, mientras que las demás tuvieron AIC de -55.04 y -53.04 respectivamente. Además, otro hallazgo primario que rectifica la escogencia de esta cópula para este problema es la relación que existe entre la correlación empírica y la teórica calculada por la cópula. Lo ideal sería que la dependencia teórica calculada por el modelo sea bastante similar a la dependencia empírica. En este caso, se da que la empírica corresponde a un valor aproximado de -0.30 mientras que la correlación teórica calculada por el modelo de cópula de Frank es de -0.36. Hay una diferencia de 0.06 puntos porcentuales entre ambas correlaciones, pero a groso modo, ambos explican el fenómeno bastante parecido indicando el buen ajuste de la cópula con los datos.
 
+Otro método en el cual se basó para determinar cual cópula es la que mejor se ajusta, se utilizó un \textit{Goodness-of-fitness test}, el cual se basa en el cálculo del estadístico de Cramér-von-Mises, también conocido como $S_n$. Este estadístico se puede interpretar similar al AIC en el sentido que entre menor es el valor se obtiene un mejor modelo, pues el \textit{valor-p} asociado va a ser mayor y esto resulta en que no haya evidencia suficiente para rechazar la hipótesis nula, que es lo que se está buscando. Por lo que bajo esta prueba también se obtiene como resultado que la cópula que mejor se ajusta es una de Frank. Similarmente se puede ver como la evidencia estadística sugiere lo hallado con respecto a que si se tiene una correlación negativa la función de Clayton no es recomendable y esto se puede observar en como este modelo es el que peor métricas obtiene de los cuatro modelos.
 
-### Reflexión
+Para poder construir las funciones de probabilidad bivariadas aparte de la función de cópulas, se necesitan las funciones de distribución para cada variable, a estas funciones se les llama marginales. La distribución que mejor se ajusta al monto de crédtio bajo el método de AIC y de estimación de parámetros mediante máxima verosimilitud es una distribución $Gamma(1.8115, 1849)$ bajo una parametrización de forma y escala.Una vez con la distribución estimada de la variable para el monto de crédito, se procede a realizar un ajuste similar esta vez para la variable restante que es la elegibilidad de la persona. Así, la distribución que mejor se ajusta para la elegibilidad es una distribución $N(0.5626, 0.1549$. Por lo que ahora si se puede proceder a construir las funciones de probabilidad considerando las marginales y la función de cópulas estimadas.
+
+Una vez con las marginales y la función de cópulas estimadas se procede a la construcción de funciones de densidad y distribución de las funciones. Estas funciones son las que se buscan para contestar la pregunta de investigación por lo que es uno de los resultados más importantes del trabajo. Con estas funciones se pueden crear simulaciones de datos nuevos y a su vez permite una manera de representar las variables de estudio. Estas funciones al ser bivariadas representan funciones de dos dimensiones por lo que su resultado o probabilidad se da en una tercera dimensión. Esto complica la visualización usual de gráficos de densidad y distribución. Para esto se procede a utilizar técnicas como gráficos de contornos para facilitar la interpretación de estos resultados. A su vez, estas funciones también permiten calcular medidas de riesgo como el VaR o CVaR, que es lo que se piensa estimar en futuras bitácoras. 
+
+## Parte de reflexión
 
 A través del proceso de análisis de datos y del primer intento de modelaje, se tomó la decisión de modificar el rumbo de la investigación donde la misma ya no se enfocará en determinar la pérdida esperada del banco. Ahora su eje principal girará alrededor de encontrar la función de densidad conjunta entre la probabilidad de ser elegido para un crédito y el monto de dicho crédito. Se construirá esta función con cópulas, esto con el fin de contemplar la dependencia entre ambas variables. Una vez con esta función se pueden calcular probabilidades relacionadas con riesgo como el Value-at-Risk. 
 
