@@ -1,15 +1,88 @@
 # Bitácora 4
 
+## Fichas de resultados
+
+\textbf{Hallazgo \# 1}
+
+-   \textbf{Nombre del hallazgo:} Medidas de riesgo para el monto del crédito.
+
+-   \textbf{Resumen en una oración:} Se calculan medidas de riesgo como el VaR y el CVaR del monto de crédito utilizando la cópula ajustada.
+
+-   \textbf{Principal característica:} Se calculó el VaR y CVaR del monto de crédito del banco.
+
+-   \textbf{Problemas con el tema:} Como la base de datos no cuenta con la unidad (moneda) en la que se basan los montos por temas de confidencialidad, dificultan la interpretabilidad de dichos montos.
+
+-   \textbf{Resumen en un párrafo:} Se calcularon medidas de riesgo para el monto del crédito utilizando la cópula Frank ajustada y las marginales encontradas en los resultados anteriores. En este caso, el VaR al 95% da como resultado 8 233 y como el VaR no es una medida de riesgo coherente también se optó por calcular el CVaR o Expected Shortfall al 95% el cual da como resultado 10 265,53. Esto nos indica que el 95% de los montos de crédito solicitados al banco estuvieron por debajo de 8 233 mientras que el promedio del 5% restante es de 10 265,53. Esta información es de suma importancia para el banco ya que son últiles a la hora de realizar proyecciones en cuanto a los montos de crédito solicitados y al igual que en análisis de pérdidas esperadas que se pueden dar por temas de impagos crediticios.
+
+\noindent
+
+\rule{14cm}{0.4pt}
+
+\textbf{Hallazgo \# 2}
+
+-   \textbf{Nombre del hallazgo:} Dependencia de las colas de las cópulas Frank.
+
+-   \textbf{Resumen en una oración:} Al investigar sobre las cópulas de Frank se descubrió que las dependencias de las colas son 0.
+
+-   \textbf{Principal característica:} Las cópulas de Frank tienen dependencia de las colas igual a cero.
+
+-   \textbf{Problemas con el tema:} Se quería determinar si los datos tenían cierta dependencia en las colas pero por la naturaleza de la cópula es cero.
+
+-   \textbf{Resumen en un párrafo:}  Las cópulas Frank tienen una dependencia de colas igual a cero, es decir, $\lambda_U = \lambda_L = 0$, por lo que conforme una de las variables crece (o decrece) cerca de las colas, la otra variable no necesariamente va a tener una tendencia similar. Esto también indica que las cópulas Frank no son la mejor opción para modelar valores extremos. 
+
+
+\noindent
+
+
+\rule{14cm}{0.4pt}
+
+\textbf{Hallazgo \# 3}
+
+-   \textbf{Nombre del hallazgo:} Comparación de medidas de asociación empíricas y teóricas.
+
+-   \textbf{Resumen en una oración:} Se calculó el tau de Kendall para los datos empíricos y utilizando la fórmula teórica con el estimador por MLE de la cópula Frank.
+
+-   \textbf{Principal característica:} Corroborar el ajuste por MLE del estimador de la cópula Frank mediante el cálculo del tau de Kendall y el valor empírico.
+
+-   \textbf{Problemas con el tema:} Por la naturaleza de la integral se requirió de métodos numéricos para obtener un resultado.
+
+-   \textbf{Resumen en un párrafo:} La mayoría de cópulas tienen fórmulas para determinar el tau de Kendall como función del parámetro de la cópula, en este caso la fórmula teórica para la cópula Frank es: 
+
+$$\tau_K = 1 + \frac{4}{\theta}\Bigl[ D_1(\theta) - 1\Bigr] \text{ con } D_1(x) = \frac{1}{x}\int_0^\theta\frac{t}{e^t-1}dt$$
+Y realizando el cálculo de utilizando el parámetro estimado por máxima verosimilitud de la cópula Frank ajustada, da como resultado $\tau_K = -0.35731$ el cual es bastante cercano al resultado de la correlación empírica la cual ronda el -0.30. Esto indica que la cópula ajustada junto con su parámetro conservan la relación de las variables iniciales.
+
+\noindent
+
+\rule{14cm}{0.4pt}
+
+\textbf{Hallazgo \# 4}
+
+-   \textbf{Nombre del hallazgo:} Cuantiles de importancia para la elegibilidad
+
+-   \textbf{Resumen en una oración:} Se determinaron cuantiles de importancia en la distribución de la variable elegibilidad.
+
+-   \textbf{Principal característica:} Se realizaron cálculos para determinar información relevante en cuanto a la elegibilidad de las personas para un crédito.
+
+-   \textbf{Problemas con el tema:} Por temas de como se obtuvo la variable se dificultó la interpretación de dichos cuantiles.
+
+-   \textbf{Resumen en un párrafo:} A la variable elegibilidad obtenida de la regresión logística para determinar que tan elegible es una persona para un monto de crédito. Conforme a como se distribuye esta probabilidad de elegibilidad, se utilizó el modelo ajustado para obtener los siguientes resultados. El 95% de la masa de distribución se encuentra por debajo del 87% de elegibilidad mientras que el promedio del 5% restante no varía mucho y se encuentra en 87.42%. Esto quiere decir que el modelo de regresión logística atribuye en su mayoría porcentajes de elegibilidad por debajo del 90%.
+
+\noindent
+
+
+
+
 ## Resumen 
 
-La investigación propuesta consiste en la elaboración de un modelo de clasificación para determinar probabilidad de elegibilidad de un individuo para un crédito considerando diversas variables de interés como la edad y el monto solicitado. Hay diversos estudios que siguen una línea similiar, sin embargo, esta investigación se diferencia del resto por el hecho de que se va a realizar un análisis de dependencia de las variables y se marca como objetivo la creación de una función de distribución bivariada que contenta la probabilidad de elegibilidad. 
+La investigación propuesta consiste en la elaboración de un modelo de clasificación para determinar probabilidad de elegibilidad de un individuo para un crédito considerando diversas variables de interés como la edad y el monto solicitado. Hay diversos estudios que siguen una línea similiar, sin embargo, esta investigación se diferencia del resto por el hecho de que se va a realizar un análisis de dependencia de las variables y se marca como objetivo la creación de una función de distribución bivariada que contempla la probabilidad de elegibilidad. 
 
-De esta forma, se distinguen dos principales etapas en el trabajo, la primera es la construcción de esas probabilidades de elegibilidad mediante una regresión logística. Sin embargo, en esta etapa se presenta un inconveniente con la naturaleza de los datos, ya que hay muchas variables y cada variable tiene múltiples categorías. Para solventar esto, se realiza una depuración para combinar categorías que tengan relación y se usa la prueba Chi-Cuadrado para estudiar la significancia que estas variables tienen con la elegibilidad. 
+De esta forma, se distinguen dos principales etapas en el trabajo, la primera es la construcción de esas probabilidades de elegibilidad mediante una regresión logística. Sin embargo, en esta etapa se presenta un inconveniente con la naturaleza de los datos, ya que hay muchas variables y cada variable tiene múltiples categorías. Para solventar esto, se realiza una depuración para combinar categorías que tengan relación.
 
-La segunda etapa del trabajo consiste en la elaboración de una distribución bivariada para las probabilidades calculadas en el punto anterior; la otra variable de interés será el monto del crédito. El primer paso es encontrar la distribución marginal para cada variable y para el desarrollo de la distribución conjunta se utilizarán cópulas. Como se expondrá más adelante, hay muchos tipos diferentes de cópulas, por lo que el primer será encontrar la que más se ajuste a los datos por lo que habrá primero que hacer un análisis entre diferentes estadísticos para determinar la mejor cópula. Los estadísticos y diagnósticos que se utilizarán son el AIC y el Goodness-of-fit test.
+La segunda etapa del trabajo consiste en la elaboración de una distribución bivariada para las probabilidades calculadas en el punto anterior; la otra variable de interés será el monto del crédito. Como se expondrá más adelante, hay muchos tipos diferentes de cópulas, por lo que el primer será encontrar la que más se ajuste a los datos por lo que habrá primero que hacer un análisis entre diferentes estadísticos para determinar la mejor cópula. 
 
-Una vez concluidas ambas etapas, se destina una sección para exponer los resultados alcanzados. Por un lado se tiene una regresión logística con buena sensibilidad y una precisión de aproximadamente el 76\%. Asimismo, la distribución marginal para el monto del crédito resultó ser una  $Gamma(1.8115, 1849)$ y la para la probabilidad de elegibilidad es una $N(0.5626, 0.1549)$. Con estas distribuciones se prueban varias cópulas y se determina que el mejor ajuste se logran mediante una Frank Cópula, donde se logra una AIC de -63.46 y un Goodness-of-fit de 0.0266 que comparados con las otras cópulas, resultan ser los valores más pequeños. 
+Una vez concluidas ambas etapas, se destina una sección para exponer los resultados alcanzados. Por un lado se tiene una regresión logística con buena sensibilidad y una precisión de aproximadamente el 76\%. Y con las distribuciones marginales ajustadas se prueban varias cópulas y se determina que el mejor ajuste se logran mediante una Frank Cópula.
 
+Como conclusión del trabajo se logra obtener una función de distribución bivariada que presenta una correlación negativa, la cual es una Frank Cópula. Con esta función se puede realizar un análisis significativo para el banco y sus pérdidas crediticias.   
 
 ## Introducción 
 
@@ -607,9 +680,55 @@ Finalmente, también se realizó una serie de datos simulados con la función de
 graph.sim <- simVsObs %>% ggplot(aes(x = `Monto de crédito`, y=Elegibilidad, color=`Método` ))+
   geom_point(size=1)+
   theme_light()+
-  labs(x = "Monto", y = "", caption = "Elaboración propia con datos extraídos de Kaggle")
+  labs(x = "Monto", y = "Elegibilidad", caption = "Elaboración propia con datos extraídos de Kaggle")
 graph.sim
 ```
 
 ## Conclusión
 
+La pregunta de investigación que se planteó en un principio era encontrar una distribución bivariada para el monto de crédito y la probabilidad de elegibilidad, sin embargo, antes de encontrar esta distribución fue necesario realizar una serie de procedimientos previos. Se optó por esta pregunta debido al peso tan importante que tienen los créditos en la actualidad, por lo que se consideró que valía la pena estudiar la relación entre la elegibilidad de un individuo. 
+
+El primero fue determinar la probabilidad de elegibilidad la cual se calculó mediante una regresión logística que tuvo una precisión aproximada del 76 \%. El siguiente paso era determinar las funciones marginales de cada una de las dos variables estudiadas en donde para el caso del monto del crédito se llegó a una Gamma (1.8115, 1849). Por otro lado, para la probabilidad de elegibilidad se eligió una Normal(0.5625, 0.1549). 
+
+Una vez con las distribuciones marginales encontradas se sigue con el cálculo de la distribución bivariada para la cual se utilizan cópulas. Una de las ventajas que ofrecen las cópulas es que solo se necesitan las marginales para encontrar esa distribución bivariada. Dicho esto, a nivel metodológico fue bastante acertado usar este método pues ambas marginales ya se habían encontrado. Después de un exhaustivo proceso de selección de cópulas, se llegó que la más adecuada era la Frank. 
+
+Mediante esta cópula se llega a una correlación negativa entre la variable monto de crédito y la elegibilidad, lo que era lo esperado, ya que entre mayor sea el monto mayor serán los requerimientos para aplicar por el crédito y esto resulta en una probabilidad de elegibilidad menor.   
+
+Entre las limitaciones presentadas se distingue el uso de solo dos variables para crear la función de distribución bivariada ya que el uso de cópulas para más variables tiende a complicarse considerablemente, aunque podrían esperarse resultados mejores si se consideran más variables. 
+
+Otro limitación es que al usar una regresión logística para calcular las probabilidades de elegibilidad, por cada iteración de código que se corría, las probabilidades tendían a variar. Como consecuencia de ello, la distribución marginal de la variable podría variar. Para solventar esta limitante se optó por fijar las variables de elegibilidad y trabajar con ese set a lo largo de todo el código. 
+
+Entre las recomendaciones se destaca intentar mejorar los resultados de la regresión logística ya que para efectos de una entidad bancaria, una precisión del 76 \% puede llegar a considerarse baja. Otra recomendación sería modelar la relación de la eligibilidad con otra variable de interés como la edad del solicitante por ejemplo. 
+
+El uso de cópulas es común cuando se quieren modelar problemas de distribuciones bivariadas y de hecho se pueden encontrar trabajos que tengan que ver con esto, sin embargo, no se ofrece un análisis que relacione la probabilidad de incumplimiento con los montos del crédito.
+
+
+
+```{r echo=FALSE}
+#Codigo para los resultados
+
+#Calculo del VaR y CVaR
+
+v <- rMvdc(5000, my_dist)
+
+dv <- data.frame(monto = v[,1], eleg = v[,2])
+
+VaRMonto <- quantile(dv$monto,0.95)
+
+CVaRMonto <- mean(dv$monto[dv$monto > VaRMonto])
+
+VaREleg <- quantile(dv$eleg ,0.95)
+
+CVaREleg <- mean(dv$eleg[dv$eleg > VaREleg])
+
+# Calculo del tau de kendall
+
+D1 <- function(x) { x/ (exp(x) - 1)}
+
+theta <- my_dist@copula@parameters
+
+D1_theta <- integrate(D1, lower = 0, upper = theta)[[1]] / (theta)
+
+tau_teor <- 1 + ((4/theta)*(D1_theta - 1))
+
+```

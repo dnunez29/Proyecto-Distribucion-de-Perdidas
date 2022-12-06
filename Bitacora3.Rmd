@@ -315,7 +315,7 @@ graph.sim
 
 -   \textbf{Resumen en un párrafo:} Una vez con la distribución estimada de la variable para el monto de crédito, se procede a realizar un ajuste similar esta vez para la variable restante que es la elegibilidad de la persona. Así, la distribución que mejor se ajusta para la elegibilidad es una distribución $N(0.5626, 0.1549$. Por lo que ahora si se puede proceder a construir las funciones de probabilidad considerando las marginales y la función de cópulas estimadas. \noindent
 
-    \rule{14cm}{0.4pt}
+\rule{14cm}{0.4pt}
 
 \textbf{Hallazgo \# 7}
 
